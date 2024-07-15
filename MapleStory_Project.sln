@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Windows_Project", "Windows_Project\Windows_Project.vcxproj", "{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Maple_Engine_Windows", "Maple_Engine_Windows\Maple_Engine_Windows.vcxproj", "{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Maple_Engine_SOURCE", "Maple_Engine_SOURCE\Maple_Engine_SOURCE.vcxitems", "{359548B7-485D-4031-835C-367CC67792B5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shaders_SOURCE", "Shaders_SOURCE\Shaders_SOURCE.vcxitems", "{F16E2437-0E43-4B88-8E54-0DE8962BBB24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Debug|x64.ActiveCfg = Debug|x64
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Debug|x64.Build.0 = Debug|x64
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Debug|x86.Build.0 = Debug|Win32
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Release|x64.ActiveCfg = Release|x64
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Release|x64.Build.0 = Release|x64
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Release|x86.ActiveCfg = Release|Win32
+		{298E4825-54D5-4FB8-8FA9-FF1A48D477CB}.Release|x86.Build.0 = Release|Win32
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Debug|x64.ActiveCfg = Debug|x64
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Debug|x64.Build.0 = Debug|x64
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Debug|x86.ActiveCfg = Debug|Win32
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Debug|x86.Build.0 = Debug|Win32
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Release|x64.ActiveCfg = Release|x64
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Release|x64.Build.0 = Release|x64
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Release|x86.ActiveCfg = Release|Win32
+		{9E69CE8F-A6B6-46E7-87AE-91FD3F6BE340}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF3D989B-2BB8-48C9-A5D0-3F1BF2470E8C}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Maple_Engine_SOURCE\Maple_Engine_SOURCE.vcxitems*{359548b7-485d-4031-835c-367cc67792b5}*SharedItemsImports = 9
+		Maple_Engine_SOURCE\Maple_Engine_SOURCE.vcxitems*{9e69ce8f-a6b6-46e7-87ae-91fd3f6be340}*SharedItemsImports = 4
+		Shaders_SOURCE\Shaders_SOURCE.vcxitems*{f16e2437-0e43-4b88-8e54-0de8962bbb24}*SharedItemsImports = 9
+	EndGlobalSection
+EndGlobal

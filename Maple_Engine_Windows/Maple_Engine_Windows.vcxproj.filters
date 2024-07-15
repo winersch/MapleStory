@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{65d56b11-83d2-4152-8f5a-75470cff6ad8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Scenes\MPlayScene.cpp" />
+    <ClCompile Include="Scenes\MLoadScenes.h" />
+    <ClCompile Include="Contents\MPlayer.cpp" />
+    <ClCompile Include="Scenes\MTitleScene.cpp" />
+    <ClCompile Include="Scripts\MPlayerScript.cpp" />
+    <ClCompile Include="Contents\MCat.cpp" />
+    <ClCompile Include="Contents\MTile.cpp" />
+    <ClCompile Include="Scripts\MCameraScript.cpp" />
+    <ClCompile Include="Contents\MFloor.cpp" />
+    <ClCompile Include="Scenes\MLoadingScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Scenes\MPlayScene.h" />
+    <ClInclude Include="Contents\MPlayer.h" />
+    <ClInclude Include="Scenes\MTitleScene.h" />
+    <ClInclude Include="Scenes\MLoadResources.h" />
+    <ClInclude Include="Scripts\MPlayerScript.h" />
+    <ClInclude Include="Contents\MCat.h" />
+    <ClInclude Include="Contents\MTile.h" />
+    <ClInclude Include="Scripts\MCameraScript.h" />
+    <ClInclude Include="Contents\MFloor.h" />
+    <ClInclude Include="Scenes\MLoadingScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

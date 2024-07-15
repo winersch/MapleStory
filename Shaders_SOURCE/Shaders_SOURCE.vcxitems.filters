@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)TrianglePS.hlsl">
+      <Filter>PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)TriangleVS.hlsl">
+      <Filter>VS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Sprite-DefaultPS.hlsl">
+      <Filter>PS</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Sprite-DefaultVS.hlsl">
+      <Filter>VS</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="PS">
+      <UniqueIdentifier>{259cfb3d-9349-414a-af26-2724f200e399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VS">
+      <UniqueIdentifier>{609482e4-e346-4423-b1ba-c46c147db85c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LIB">
+      <UniqueIdentifier>{a4e7a454-a626-40fe-a569-80c172a1b435}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)ConstantBuffers.hlsli">
+      <Filter>LIB</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Samplers.hlsli">
+      <Filter>LIB</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Textures.hlsli">
+      <Filter>LIB</Filter>
+    </None>
+  </ItemGroup>
+</Project>

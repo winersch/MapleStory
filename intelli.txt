@@ -1,0 +1,14 @@
+Visual C++에서 "C:\Projects\C\Windows_Project\.vs\Windows_Project\v17\Browse.VC.db" 솔루션에 대한 검색 데이터베이스와 IntelliSense 파일을 저장하는 데 적절한 위치를 찾았습니다.
+
+Visual C++에서 "C:\Projects\C\Windows_Project\.vs\Windows_Project\v17" 폴더를 검사했으며 이 폴더는 다음 이유로 적절하지 않습니다.
+이 디렉터리의 검색 데이터베이스를 Visual Studio의 다른 인스턴스에서 열었으므로 다시 열 수 없습니다.  DESKTOP-1O0IDFM의 ksc 사용자가 열었습니다.
+
+C++ 고급 옵션에 '대체(fallback) 위치'가 지정되지 않았기 때문에 Visual C++에서 임시 디렉터리를 사용하려고 합니다.
+
+Visual C++에서 "C:\Users\ksc\AppData\Local\Temp\VC++\BROWSE.VC-ee7a9e72" 폴더를 검사했으며 이 폴더는 다음 이유로 적절합니다.
+디렉터리가 로컬 드라이브에 있습니다.
+
+'대체(fallback) 위치'는 C++ 고급 옵션에서 구성할 수 있습니다.
+
+이 위치를 사용하려면 [확인]을 누르십시오.
+이 세션에서 C++ 검색 정보와 IntelliSense를 사용하지 않도록 설정하려면 [취소]를 누르십시오.

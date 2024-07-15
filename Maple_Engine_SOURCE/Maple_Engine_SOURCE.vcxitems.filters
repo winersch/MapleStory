@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MEntity.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MSceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MResource.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MTexture.cpp">
+      <Filter>Resources\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MResources.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MApplication.cpp">
+      <Filter>High Level Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MLayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MTransform.cpp">
+      <Filter>Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MSpriteRenderer.cpp">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MInput.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MTime.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MCamera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MComponent.cpp">
+      <Filter>Component\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MCollider.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MBoxCollider2D.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MCircleCollider2D.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MCollisionManager.cpp">
+      <Filter>Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MObject.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MDontDestroyOnLoad.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MTilemapRenderer.cpp">
+      <Filter>Component\TileMapRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MAnimation.cpp">
+      <Filter>Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MAnimator.cpp">
+      <Filter>Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MRigidbody.cpp">
+      <Filter>Rigidbody</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MUIBase.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MUIManager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MUIButton.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MUIHUD.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MFmod.cpp">
+      <Filter>Fmod</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MAudioClip.cpp">
+      <Filter>Resources\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MAudioListener.cpp">
+      <Filter>Component\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MAudioSource.cpp">
+      <Filter>Component\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MShader.cpp">
+      <Filter>Resources\Graphics\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MMesh.cpp">
+      <Filter>Resources\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MGraphicDevice_DX11.cpp">
+      <Filter>Graphics\GraphicDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MMaterial.cpp">
+      <Filter>Resources\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MVertexBuffer.cpp">
+      <Filter>Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MConstantBuffer.cpp">
+      <Filter>Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MIndexBuffer.cpp">
+      <Filter>Graphics\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MInputLayout.cpp">
+      <Filter>Graphics\InputLayout</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MEntity.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MSceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MResource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MTexture.h">
+      <Filter>Resources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MResources.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MApplication.h">
+      <Filter>High Level Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MLayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MTransform.h">
+      <Filter>Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MSpriteRenderer.h">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MInput.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MTime.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCamera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MComponent.h">
+      <Filter>Component\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCollider.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MBoxCollider2D.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCircleCollider2D.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MCollisionManager.h">
+      <Filter>Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MDontDestroyOnLoad.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MTilemapRenderer.h">
+      <Filter>Component\TileMapRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MAnimation.h">
+      <Filter>Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MAnimator.h">
+      <Filter>Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MRigidbody.h">
+      <Filter>Rigidbody</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MUIBase.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MUIManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MUIButton.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MUIHUD.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MFmod.h">
+      <Filter>Fmod</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MAudioClip.h">
+      <Filter>Resources\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MAudioListener.h">
+      <Filter>Component\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MAudioSource.h">
+      <Filter>Component\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MGraphics.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MGraphicDevice_DX11.h">
+      <Filter>Graphics\GraphicDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MShader.h">
+      <Filter>Resources\Graphics\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MMesh.h">
+      <Filter>Resources\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MMaterial.h">
+      <Filter>Resources\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MVertexBuffer.h">
+      <Filter>Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MConstantBuffer.h">
+      <Filter>Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MIndexBuffer.h">
+      <Filter>Graphics\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MInputLayout.h">
+      <Filter>Graphics\InputLayout</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{bef52eb1-5c4b-42b5-83ba-cc6b6cff3564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{b0d39f09-ea84-4fa7-9c18-9b97110023bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{03f06026-b1ee-4bfc-af84-8bcf1d1cdaef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{132b8472-d15f-43ae-99f0-d41507f4684e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="High Level Interface">
+      <UniqueIdentifier>{72f62c98-8f7a-45a6-93fb-b7f5dd3f09bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{087916e5-8cb1-4259-ae9b-626ae7763d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Texture">
+      <UniqueIdentifier>{4fbb28ca-8cc0-4be6-8f5b-15903bb6e005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Script">
+      <UniqueIdentifier>{fb644a2f-bdb7-48d6-bff3-64b056b7c6c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{81de1bb3-403f-40ba-986c-a692006499df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Transform">
+      <UniqueIdentifier>{1eb5eb53-f8f8-49cf-a3c6-4a64ed3e34d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\SpriteRenderer">
+      <UniqueIdentifier>{6f82a57c-6a76-483f-be2a-e20ec5784dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{57e70453-5894-4ebd-9045-b4f8225572e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{2a1dc42b-829b-4044-a770-54e72e313d8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Component">
+      <UniqueIdentifier>{77b8d7c1-a51c-4234-b4b9-7f9e1b0ec1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Collider">
+      <UniqueIdentifier>{a6f6707e-d583-46ef-9b48-ffd60162c4bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\TileMapRenderer">
+      <UniqueIdentifier>{8971115d-c856-4769-a293-89bb96972e33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animator">
+      <UniqueIdentifier>{2856f64c-fe24-4c99-bfe0-ba48009bccb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rigidbody">
+      <UniqueIdentifier>{a7071c7d-ee16-4887-97b6-7bbae75f4a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{10b4c42b-2f42-40b4-85e1-4e8a3d3efb77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fmod">
+      <UniqueIdentifier>{711b22ba-402c-4a79-bb74-4518b4e4cf9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{2c8aaf34-7e87-48ff-adde-edcaff455c3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Audio">
+      <UniqueIdentifier>{99a2b53a-a0a1-403f-bbeb-509b13065d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Audio">
+      <UniqueIdentifier>{de4d196a-68c1-4f0b-8709-a4ebb5b91aae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{a784fa4f-98ef-4b25-afff-5245a1640a64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Material">
+      <UniqueIdentifier>{c46673bf-7e0d-4a4e-bb56-a0760348df2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Mesh">
+      <UniqueIdentifier>{45713d86-06dd-41a5-b4b9-0a3af2dc7492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Graphics">
+      <UniqueIdentifier>{fc96d853-6823-432a-b238-3a0598e30d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Graphics\Shader">
+      <UniqueIdentifier>{2724b0d1-9be4-4ba3-bfe3-02717e83107e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\GraphicDevice">
+      <UniqueIdentifier>{ffe5b79d-cbac-4b2b-962b-9a81c2c242c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Buffer">
+      <UniqueIdentifier>{77017f62-316b-4c73-a071-86acc449a9ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\InputLayout">
+      <UniqueIdentifier>{f08ce2b8-000f-4620-8561-e185b56f45f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)CloudOcean.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

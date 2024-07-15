@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{f16e2437-0e43-4b88-8e54-0de8962bbb24}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Sprite-DefaultPS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)Sprite-DefaultVS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)TrianglePS.hlsl" />
+    <FxCompile Include="$(MSBuildThisFileDirectory)TriangleVS.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)ConstantBuffers.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Samplers.hlsli" />
+    <None Include="$(MSBuildThisFileDirectory)Textures.hlsli" />
+  </ItemGroup>
+</Project>

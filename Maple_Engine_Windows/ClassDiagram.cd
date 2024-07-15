@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="maple::Application" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAQABAABQBAQQAgIQBACACCAAAAABAAAEQAAAI=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MApplication.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Player" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAQAAAAAAIAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Contents\MPlayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::PlayerScript" Collapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAQAAAAAAIAAAAAAAgAAAABAAAAAAAAA=</HashCode>
+      <FileName>Scripts\MPlayerScript.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::TitleScene" Collapsed="true">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAQAAAAAAIIAAAAAQAIAAAJAAAAAAAAA=</HashCode>
+      <FileName>Scenes\MTitleScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::PlayScene" Collapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAACAAAAAQAAAAAAIAAACAAQAAAAAJAAAAAAAAA=</HashCode>
+      <FileName>Scenes\MPlayScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Camera" Collapsed="true">
+    <Position X="20" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAQBAQAAAIAAAQAAACAAAABAAABAAACA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MCamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Input" Collapsed="true">
+    <Position X="22.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAgAAAACCEAAAAwAKAAAAABAAAAAAAEAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MInput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Layer" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAQAAIAAAQAAAAAAIAAAAAAAAAAEABAAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Resource" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAIAAAAAAAAAAIABAAAAACIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MResource.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Resources" Collapsed="true">
+    <Position X="22.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MResources.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Scene" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAAAAAAQAAgAAAIAAAQAAQAAAABJAAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::SceneManager" Collapsed="true">
+    <Position X="24.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAQAAAABAKAAAAAAAAAgAABAAACAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MSceneManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::SpriteRenderer" Collapsed="true">
+    <Position X="13.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQQAAAAAAAAAQBAAAAIIAAAACAAAAAAABAAAAAAIAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MSpriteRenderer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Time" Collapsed="true">
+    <Position X="26" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAESABAAAAAAAAAAAAAAACABAAAAEAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MTime.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Transform" Collapsed="true">
+    <Position X="17.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAQAAAAAAIBQAAAAAAgAAABAAAAAAAoA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MTransform.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::GameObject" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAAIAQAAAoAAJAAAAAAAAAAAABAAAAIAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MGameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Component" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAIAIAAAQAAAAAAIBAAAAAAAAEAABBCAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Entity" Collapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAQAAABAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MEntity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::Script" Collapsed="true">
+    <Position X="15.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAQAAAAAAIAAAAAAAAAAAABAAAAAhAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MScript.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::math::Math" Collapsed="true">
+    <Position X="24.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MMath.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::graphics::Texture" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAQAAAAhAAAAAAAABBQABAECAAAAAIAAEQAAAI=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MTexture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="maple::math::Math" Collapsed="true">
+    <Position X="26" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MMath.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="maple::math::Vector2" Collapsed="true">
+    <Position X="22.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MMath.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="maple::math::Vector2" Collapsed="true">
+    <Position X="24.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAABgAAAAAIA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MMath.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="maple::eKeyState" Collapsed="true">
+    <Position X="26" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAI=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MInput.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="maple::eKeyCode" Collapsed="true">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAvv//YQM=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MInput.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="maple::enums::eComponentType" Collapsed="true">
+    <Position X="22.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgIAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MEnums.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="maple::enums::eLayerType" Collapsed="true">
+    <Position X="22.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAgAAAAAAAAAAAAAAAAAQEAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MEnums.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="maple::enums::eResourceType" Collapsed="true">
+    <Position X="24.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIIAAAAAAAA=</HashCode>
+      <FileName>C:\Projects\C\Windows_Project\Maple_Engine_SOURCE\MEnums.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
