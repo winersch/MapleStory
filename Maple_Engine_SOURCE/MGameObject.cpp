@@ -56,12 +56,12 @@ namespace maple {
 			comp->LateUpdate();
 		}
 	}
-	void GameObject::Render() {
+	void GameObject::Render(HDC hdc) {
 		for (Component* comp : mComponents) {
 			if (comp == nullptr) {
 				continue;
 			}
-			comp->Render();
+			comp->Render(hdc);
 		}
 	}
 	void GameObject::initializeTransform() {

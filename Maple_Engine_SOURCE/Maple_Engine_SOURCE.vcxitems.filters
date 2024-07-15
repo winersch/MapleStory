@@ -109,30 +109,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MAudioSource.cpp">
       <Filter>Component\Audio</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MShader.cpp">
-      <Filter>Resources\Graphics\Shader</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MMesh.cpp">
-      <Filter>Resources\Mesh</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MGraphicDevice_DX11.cpp">
-      <Filter>Graphics\GraphicDevice</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MMaterial.cpp">
-      <Filter>Resources\Material</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MVertexBuffer.cpp">
-      <Filter>Graphics\Buffer</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MConstantBuffer.cpp">
-      <Filter>Graphics\Buffer</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MIndexBuffer.cpp">
-      <Filter>Graphics\Buffer</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MInputLayout.cpp">
-      <Filter>Graphics\InputLayout</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -249,33 +225,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MAudioSource.h">
       <Filter>Component\Audio</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MGraphics.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MGraphicDevice_DX11.h">
-      <Filter>Graphics\GraphicDevice</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MShader.h">
-      <Filter>Resources\Graphics\Shader</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MMesh.h">
-      <Filter>Resources\Mesh</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MMaterial.h">
-      <Filter>Resources\Material</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MVertexBuffer.h">
-      <Filter>Graphics\Buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MConstantBuffer.h">
-      <Filter>Graphics\Buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MIndexBuffer.h">
-      <Filter>Graphics\Buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)MInputLayout.h">
-      <Filter>Graphics\InputLayout</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -346,30 +295,6 @@
     </Filter>
     <Filter Include="Component\Audio">
       <UniqueIdentifier>{de4d196a-68c1-4f0b-8709-a4ebb5b91aae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Graphics">
-      <UniqueIdentifier>{a784fa4f-98ef-4b25-afff-5245a1640a64}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Material">
-      <UniqueIdentifier>{c46673bf-7e0d-4a4e-bb56-a0760348df2a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Mesh">
-      <UniqueIdentifier>{45713d86-06dd-41a5-b4b9-0a3af2dc7492}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Graphics">
-      <UniqueIdentifier>{fc96d853-6823-432a-b238-3a0598e30d8a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Graphics\Shader">
-      <UniqueIdentifier>{2724b0d1-9be4-4ba3-bfe3-02717e83107e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Graphics\GraphicDevice">
-      <UniqueIdentifier>{ffe5b79d-cbac-4b2b-962b-9a81c2c242c1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Graphics\Buffer">
-      <UniqueIdentifier>{77017f62-316b-4c73-a071-86acc449a9ac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Graphics\InputLayout">
-      <UniqueIdentifier>{f08ce2b8-000f-4620-8561-e185b56f45f2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

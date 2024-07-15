@@ -27,21 +27,14 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MCollider.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MCollisionManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MComponent.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MConstantBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MDontDestroyOnLoad.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MFmod.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MGameObject.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MGraphicDevice_DX11.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MGraphics.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MIndexBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MInput.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MInputLayout.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MLayer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MMaterial.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MMath.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MMesh.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MResource.h" />
@@ -50,7 +43,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MScript.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MShader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MSpriteRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MTilemapRenderer.h" />
@@ -60,7 +52,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MUIButton.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MUIHUD.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MUIManager.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MVertexBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)MAnimation.cpp" />
@@ -80,7 +71,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MCollider.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MCollisionManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MComponent.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)MConstantBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MDontDestroyOnLoad.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MEntity.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
@@ -95,19 +85,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MGraphicDevice_DX11.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)MIndexBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MInput.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)MInputLayout.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MLayer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)MMaterial.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MMath.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)MMesh.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MResource.cpp" />
@@ -126,7 +111,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)MScript.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)MShader.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MSpriteRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MTilemapRenderer.cpp" />
@@ -141,7 +125,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MUIButton.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MUIHUD.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MUIManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)MVertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="$(MSBuildThisFileDirectory)CloudOcean.png" />

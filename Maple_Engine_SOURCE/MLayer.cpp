@@ -58,7 +58,7 @@ namespace maple {
 		}
 	}
 
-	void Layer::Render() {
+	void Layer::Render(HDC hdc) {
 		for (GameObject* gameobj : mGameObjects) {
 			if (gameobj == nullptr) {
 				continue;
@@ -68,7 +68,7 @@ namespace maple {
 				continue;
 			}
 
-			gameobj->Render();
+			gameobj->Render(hdc);
 		}
 	}
 

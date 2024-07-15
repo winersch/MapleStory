@@ -35,9 +35,9 @@ namespace maple {
 			OnLateUpdate();
 	}
 
-	void UIBase::Render() {
+	void UIBase::Render(HDC hdc) {
 		if (mbEnabled)
-			OnRender();
+			OnRender(hdc);
 	}
 
 	void UIBase::UIClear() {
@@ -59,7 +59,7 @@ namespace maple {
 	void UIBase::OnLateUpdate() {
 	}
 
-	void UIBase::OnRender() {
+	void UIBase::OnRender(HDC hdc) {
 	}
 
 	void UIBase::OnClear() {

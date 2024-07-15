@@ -3,8 +3,6 @@
 #include "MComponent.h"
 #include "MTexture.h"
 #include "MMath.h"
-#include "MMaterial.h"
-#include "MMesh.h"
 
 namespace maple {
 
@@ -16,15 +14,14 @@ namespace maple {
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
-		void Render() override;
+		void Render(HDC hdc) override;
 
-		void SetSprite(graphics::Texture* sprite) { mSprite = sprite; }
-		void SetMaterial(Material* material) { mMaterial = material; }
+		void SetTexture(graphics::Texture* texture) { mTexture = texture; }
+		void SetSize(math::Vector2 size) { mSize = size; }
 
 	private:
-		graphics::Texture* mSprite;
-		Material* mMaterial;
-		Mesh* mMesh;
+		graphics::Texture* mTexture;
+		math::Vector2 mSize;
 	};
 
 }

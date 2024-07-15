@@ -20,7 +20,7 @@ namespace maple {
 		for (UINT row = 0; row < (UINT)eLayerType::Max; row++) {
 			for (UINT col = 0; col < (UINT)eLayerType::Max; col++) {
 				if (mCollisionLayerMatrix[row][col] == true) {
-					LayerCollision((eLayerType)row, (eLayerType)col);
+					LayerCollision(scene, (eLayerType)row, (eLayerType)col);
 				}
 			}
 		}
@@ -30,7 +30,7 @@ namespace maple {
 	void CollisionManager::LateUpdate() {
 	}
 
-	void CollisionManager::Render() {
+	void CollisionManager::Render(HDC hdc) {
 	}
 
 	void CollisionManager::Clear() {
@@ -54,24 +54,24 @@ namespace maple {
 
 	}
 
-	void CollisionManager::LayerCollision(eLayerType left, eLayerType right) {
-		const std::vector<GameObject*>& leftObjs = SceneManager::GetGameObjects(left);//scene->GetLayer(left)->GetGameObjects();
-		const std::vector<GameObject*>& rightObjs = SceneManager::GetGameObjects(right); // scene->GetLayer(right)->GetGameObjects();
+	void CollisionManager::LayerCollision(Scene* scene, eLayerType left, eLayerType right) {
+		const std::vector<GameObject*>& lefts = SceneManager::GetGameObjects(left);//scene->GetLayer(left)->GetGameObjects();
+		const std::vector<GameObject*>& rights = SceneManager::GetGameObjects(right); // scene->GetLayer(right)->GetGameObjects();
 
-		for (GameObject* leftObj : leftObjs) {
-			if (leftObj->IsActive() == false)
+		for (GameObject* left : lefts) {
+			if (left->IsActive() == false)
 				continue;
-			Collider* leftCol = leftObj->GetComponent<Collider>();
+			Collider* leftCol = left->GetComponent<Collider>();
 			if (leftCol == nullptr)
 				continue;
 
-			for (GameObject* rightObj : rightObjs) {
-				if (rightObj->IsActive() == false)
+			for (GameObject* right : rights) {
+				if (right->IsActive() == false)
 					continue;
-				Collider* rightCol = rightObj->GetComponent<Collider>();
+				Collider* rightCol = right->GetComponent<Collider>();
 				if (rightCol == nullptr)
 					continue;
-				if (leftObj == rightObj)
+				if (left == right)
 					continue;
 
 				ColliderCollision(leftCol, rightCol);
@@ -126,7 +126,7 @@ namespace maple {
 		Vector2 leftPos = leftTr->GetPosition() + left->GetOffset();
 		Vector2 rightPos = rightTr->GetPosition() + right->GetOffset();
 
-		// size 1,1 일떄 기본크기가 100픽셀
+		// size 1,1 일?? 기본크기가 100픽셀
 		Vector2 leftSize = left->GetSize() * 100.0f;
 		Vector2 rightSize = right->GetSize() * 100.0f;
 
@@ -148,7 +148,7 @@ namespace maple {
 			//circle -circle
 			Vector2 leftCirclePos = leftPos + (leftSize / 2.0f);
 			Vector2 rightCirclePos = rightPos + (rightSize / 2.0f);
-			float distance = (leftCirclePos - rightCirclePos).Length();
+			float distance = (leftCirclePos - rightCirclePos).length();
 			if (distance <= (leftSize.x / 2.0f + rightSize.x / 2.0f)) {
 				return true;
 			}
@@ -156,38 +156,8 @@ namespace maple {
 
 		if ((leftType == enums::eColliderType::Circle2D && rightType == enums::eColliderType::Rect2D)
 			|| (leftType == enums::eColliderType::Rect2D && rightType == enums::eColliderType::Circle2D)) {
-			// 좌표와 크기 값을 각각 설정
-			Vector2 circlePos, rectPos, circleSize, rectSize;
-
-			if (leftType == enums::eColliderType::Circle2D) {
-				circlePos = leftPos;
-				circleSize = leftSize;
-				rectPos = rightPos;
-				rectSize = rightSize;
-			}
-			else {
-				circlePos = rightPos;
-				circleSize = rightSize;
-				rectPos = leftPos;
-				rectSize = leftSize;
-			}
-
-			// 원의 속성
-			Vector2 circleCenter = circlePos + (circleSize / 2.0f);
-			float circleRadius = circleSize.x / 2.0f;
-
-			// 사각형의 속성
-			Vector2 rectCenter = rectPos;
-			Vector2 rectHalfSize = rectSize / 2.0f;
-
-			// 원의 중심에서 사각형의 중심까지의 거리 계산
-			float deltaX = circleCenter.x - max(rectCenter.x - rectHalfSize.x, min(circleCenter.x, rectCenter.x + rectHalfSize.x));
-			float deltaY = circleCenter.y - max(rectCenter.y - rectHalfSize.y, min(circleCenter.y, rectCenter.y + rectHalfSize.y));
-
-			// 거리가 원의 반지름보다 작거나 같으면 충돌 발생
-			if ((deltaX * deltaX + deltaY * deltaY) <= (circleRadius * circleRadius)) {
-				return true;
-			}
+			// circle - rect
+			// 숙제
 
 		}
 

@@ -23,7 +23,7 @@ namespace maple {
 	void Component::LateUpdate() {
 	}
 
-	void Component::Render() {
+	void Component::Render(HDC hdc) {
 	}
 
 }

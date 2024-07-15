@@ -12,10 +12,12 @@
     <ClCompile Include="Scenes\MTitleScene.cpp" />
     <ClCompile Include="Scripts\MPlayerScript.cpp" />
     <ClCompile Include="Contents\MCat.cpp" />
+    <ClCompile Include="Scripts\MCatScript.cpp" />
+    <ClCompile Include="Scenes\MToolScene.cpp" />
     <ClCompile Include="Contents\MTile.cpp" />
     <ClCompile Include="Scripts\MCameraScript.cpp" />
     <ClCompile Include="Contents\MFloor.cpp" />
-    <ClCompile Include="Scenes\MLoadingScene.cpp" />
+    <ClCompile Include="Scripts\MFloorScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scenes\MPlayScene.h" />
@@ -24,10 +26,12 @@
     <ClInclude Include="Scenes\MLoadResources.h" />
     <ClInclude Include="Scripts\MPlayerScript.h" />
     <ClInclude Include="Contents\MCat.h" />
+    <ClInclude Include="Scripts\MCatScript.h" />
+    <ClInclude Include="Scenes\MToolScene.h" />
     <ClInclude Include="Contents\MTile.h" />
     <ClInclude Include="Scripts\MCameraScript.h" />
     <ClInclude Include="Contents\MFloor.h" />
-    <ClInclude Include="Scenes\MLoadingScene.h" />
+    <ClInclude Include="Scripts\MFloorScript.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

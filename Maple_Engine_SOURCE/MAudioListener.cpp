@@ -21,14 +21,13 @@ namespace maple {
 	}
 
 	void AudioListener::LateUpdate() {
-		Transform* tr = nullptr;
-		tr = GetOwner()->GetComponent<Transform>();
+		Transform* tr = GetOwner()->GetComponent<Transform>();
+		Vector2 pos = tr->GetPosition();
 
-		Vector3 pos;
-		Fmod::Set3DListenerAttributes(pos);
+		Fmod::Set3DListenerAttributes(&pos);
 	}
 
-	void AudioListener::Render() {
+	void AudioListener::Render(HDC hdc) {
 	}
 
 

@@ -23,7 +23,7 @@ namespace maple {
 		virtual void Initialize();
 		virtual void Update();
 		virtual void LateUpdate();
-		virtual void Render();
+		virtual void Render(HDC hdc);
 
 		template <typename T>
 		T* AddComponent() {
@@ -47,15 +47,18 @@ namespace maple {
 			}
 			return component;
 		}
-		eState GetState() const { return mState; }
+		eState GetState() { return mState; }
 		void SetActive(bool power) {
-			if (power == true) mState = eState::Active;
-			if (power == false) mState = eState::Paused;
+			if (power) {
+				mState = eState::Active;
+			} else {
+				mState = eState::Paused;
+			}
 		}
-		bool IsActive() const { return mState == eState::Active; }
-		bool IsDead() const { return mState == eState::Dead; }
+		bool IsActive() { return mState == eState::Active; }
+		bool IsDead() { return mState == eState::Dead; }
 		void SetLayerType(eLayerType layerType) { mLayerType = layerType; }
-		eLayerType GetLayerType() const { return mLayerType; }
+		eLayerType GetLayerType() { return mLayerType; }
 
 	private:
 		void initializeTransform();

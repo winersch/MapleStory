@@ -22,8 +22,10 @@
     <ClCompile Include="Contents\MCat.cpp" />
     <ClCompile Include="Contents\MTile.cpp" />
     <ClCompile Include="Contents\MFloor.cpp" />
-    <ClCompile Include="Scenes\MLoadingScene.cpp" />
+    <ClCompile Include="Scripts\MFloorScript.cpp" />
     <ClCompile Include="Scripts\MCameraScript.cpp" />
+    <ClCompile Include="Scenes\MToolScene.cpp" />
+    <ClCompile Include="Scripts\MCatScript.cpp" />
     <ClCompile Include="Scripts\MPlayerScript.cpp" />
     <ClCompile Include="Scenes\MTitleScene.cpp" />
     <ClCompile Include="Scenes\MLoadScenes.h">
@@ -45,8 +47,10 @@
     <ClInclude Include="Contents\MCat.h" />
     <ClInclude Include="Contents\MTile.h" />
     <ClInclude Include="Contents\MFloor.h" />
-    <ClInclude Include="Scenes\MLoadingScene.h" />
+    <ClInclude Include="Scripts\MFloorScript.h" />
     <ClInclude Include="Scripts\MCameraScript.h" />
+    <ClInclude Include="Scenes\MToolScene.h" />
+    <ClInclude Include="Scripts\MCatScript.h" />
     <ClInclude Include="Scripts\MPlayerScript.h" />
     <ClInclude Include="Scenes\MLoadResources.h" />
     <ClInclude Include="Scenes\MTitleScene.h" />

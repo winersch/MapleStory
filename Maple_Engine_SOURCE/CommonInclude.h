@@ -13,8 +13,6 @@
 #include <functional>
 #include <filesystem>
 #include <math.h>
-#include <mutex>
-#include <thread>
 
 
 #include <mmsystem.h>
@@ -27,6 +25,3 @@
 
 #include "MEnums.h"
 #include "MMath.h"
-
-#define CAST_UINT(value) static_cast<UINT>(value)
-#define CAST_FLOAT(value) static_cast<float>(value)

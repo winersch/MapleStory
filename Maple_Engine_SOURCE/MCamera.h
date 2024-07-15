@@ -6,15 +6,8 @@ namespace maple {
 	using namespace maple::math;
 	class Camera : public Component{
 	public:
-		enum class eProjectionType {
-			Perspective,
-			Orthographic
-		};
-
-		static Matrix GetGpuViewMatrix() { return ViewMatrix; }
-		static Matrix GetGpuProjectionMatrix() { return ProjectionMatrix; }
-		static void SetGpuViewMatrix(Matrix matrix) { ViewMatrix = matrix; }
-		static void SetGpuProjectionMatrix(Matrix matrix) { ProjectionMatrix = matrix; }
+		Vector2 CalculatePosition(Vector2 pos) {return pos - mDistance;};
+		Vector2 CaluateTilePosition(Vector2 pos) { return pos + mDistance; };
 
 		Camera();
 		~Camera();
@@ -22,26 +15,17 @@ namespace maple {
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
-		void Render() override;
+		void Render(HDC hdc) override;
 
-		void CreateViewMatrix();
-		void CreateProjectionMatrix(eProjectionType type);
-
-		void SetProjectionType(eProjectionType type) { mProjectionType = type; }
-		void SetSize(float size) { mSize = size; }
+		void SetTarget(GameObject* target) { mTarget = target; }
 
 	private:
-		static Matrix ViewMatrix;
-		static Matrix ProjectionMatrix;
+		//std::vector<GameObject*> mGameObjects;
+		class GameObject* mTarget;
 
-		eProjectionType mProjectionType;
-
-		Matrix mViewMatrix;
-		Matrix mProjectionMatrix;
-		float mAspectRatio;
-		float mNear;
-		float mFar;
-		float mSize; 
+		Vector2 mDistance;
+		Vector2 mResolution;
+		Vector2 mLookPosition;
 		
 	};
 

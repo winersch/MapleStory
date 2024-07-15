@@ -10,9 +10,11 @@ namespace maple {
 	public:
 		static void Initialize();
 		static void Update();
-		static void Render();
+		static void Render(HDC hdc);
 
-		__forceinline static float DeltaTime() { return DeltaTimeValue; };
+		__forceinline static float DeltaTime() {
+			return DeltaTimeValue;
+		};
 
 
 	private:

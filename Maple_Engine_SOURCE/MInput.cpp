@@ -18,7 +18,7 @@ namespace maple {
 		VK_LBUTTON, VK_RBUTTON, VK_MBUTTON
 	};
 
-	void Input::Initialize() {
+	void Input::Initailize() {
 		createKeys();
 	}
 
@@ -53,7 +53,7 @@ namespace maple {
 			}
 			getMousePositionByWindow();
 		} else {
-			clearKeys();
+			clearKey();
 		}
 
 	}
@@ -91,15 +91,15 @@ namespace maple {
 		mMousePosition.x = -1.0f;
 		mMousePosition.y = -1.0f;
 
-		if ((UINT)mousePos.x > 0 && (UINT)mousePos.x < width)
-			mMousePosition.x = (float)mousePos.x;
+		if (mousePos.x > 0 && mousePos.x < width)
+			mMousePosition.x = mousePos.x;
 
-		if ((UINT)mousePos.y > 0 && (UINT)mousePos.y < height)
-			mMousePosition.y = (float)mousePos.y;
+		if (mousePos.y > 0 && mousePos.y < height)
+			mMousePosition.y = mousePos.y;
 
 	}
 
-	void Input::clearKeys() {
+	void Input::clearKey() {
 		for (Key& key : Keys) {
 			if (key.state == eKeyState::Down || key.state == eKeyState::Pressed) {
 				key.state = eKeyState::Up;

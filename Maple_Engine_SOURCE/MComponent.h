@@ -11,16 +11,16 @@ namespace maple {
 
 	public:
 		Component(enums::eComponentType type);
-		virtual ~Component();
+		~Component();
 
 		virtual void Initialize();
 		virtual void Update();
 		virtual void LateUpdate();
-		virtual void Render();
+		virtual void Render(HDC hdc);
 
 		void SetOwner(GameObject* owner) { mOwner = owner; }
-		GameObject* GetOwner() const { return mOwner; }
-		enums::eComponentType GetType() const { return mType; }
+		GameObject* GetOwner() { return mOwner; }
+		enums::eComponentType GetType() { return mType; }
 
 	private:
 		GameObject* mOwner;

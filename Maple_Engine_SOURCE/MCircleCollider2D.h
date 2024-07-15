@@ -12,10 +12,8 @@ namespace maple {
 		virtual void Initialize();
 		virtual void Update();
 		virtual void LateUpdate();
-		virtual void Render();
+		virtual void Render(HDC hdc);
 
-	private:
-		float mRadius;
 	};
 
 }

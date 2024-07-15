@@ -20,7 +20,7 @@ namespace maple::object {
 	}
 
 	template <typename T>
-	static T* Instantiate(maple::enums::eLayerType type, math::Vector3 position) {
+	static T* Instantiate(enums::eLayerType type, math::Vector2 position) {
 		T* gameObject = new T();
 		gameObject->SetLayerType(type);
 		Scene* activeScene = SceneManager::GetActiveScene();
