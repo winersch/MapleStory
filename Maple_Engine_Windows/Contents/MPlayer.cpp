@@ -20,8 +20,8 @@ namespace maple {
 		GameObject::LateUpdate();
 	}
 
-	void Player::Render(HDC hdc) {
-		GameObject::Render(hdc);
+	void Player::Render() {
+		GameObject::Render();
 	}
 
 }

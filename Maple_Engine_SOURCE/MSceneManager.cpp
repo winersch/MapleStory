@@ -8,17 +8,26 @@ namespace maple {
 	Scene* SceneManager::mActiveScene = nullptr; // 정의 및 초기화
 	Scene* SceneManager::mDontDestroyOnLoad = nullptr;
 
-	Scene* SceneManager::LoadScene(const std::wstring& name) {
-		if (mActiveScene) {
-			mActiveScene->OnExit();
-		}
-		std::map <std::wstring, Scene*>::iterator iter
+	bool SceneManager::SetActiveScene(const std::wstring& name) {
+		std::map<std::wstring, Scene*>::iterator iter
 			= mScene.find(name);
-		if (iter == mScene.end()) {
-			return nullptr;
-		}
+
+		if (iter == mScene.end())
+			return false;
+
 		mActiveScene = iter->second;
+		return true;
+	}
+
+	Scene* SceneManager::LoadScene(const std::wstring& name) {
+		if (mActiveScene)
+			mActiveScene->OnExit();
+
+		if (!SetActiveScene(name))
+			return nullptr;
+
 		mActiveScene->OnEnter();
+
 		return mActiveScene;
 	}
 
@@ -49,9 +58,9 @@ namespace maple {
 
 	}
 
-	void SceneManager::Render(HDC hdc) {
-		mActiveScene->Render(hdc);
-		mDontDestroyOnLoad->Render(hdc);
+	void SceneManager::Render() {
+		mActiveScene->Render();
+		mDontDestroyOnLoad->Render();
 
 	}
 

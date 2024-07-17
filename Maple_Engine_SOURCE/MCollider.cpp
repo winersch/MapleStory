@@ -30,7 +30,7 @@ namespace maple {
 
 	}
 
-	void Collider::Render(HDC hdc) {
+	void Collider::Render() {
 
 	}
 

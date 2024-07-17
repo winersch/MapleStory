@@ -6,7 +6,8 @@
 namespace maple {
 
 	AudioSource::AudioSource()
-		: Component(eComponentType::AudioSource) {
+		: Component(eComponentType::AudioSource)
+		, mAudioClip(nullptr) {
 	}
 
 	AudioSource::~AudioSource() {
@@ -20,12 +21,12 @@ namespace maple {
 
 	void AudioSource::LateUpdate() {
 		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector2 pos = tr->GetPosition();
+		Vector3 pos = tr->GetPosition();
 
-		mAudioClip->Set3DAttributes(pos);
+		//mAudioClip->Set3DAttributes(pos);
 	}
 
-	void AudioSource::Render(HDC hdc) {
+	void AudioSource::Render() {
 	}
 
 	void AudioSource::Play() {

@@ -20,8 +20,8 @@ namespace maple {
 		Scene::LateUpdate();
 	}
 
-	void DontDestroyOnLoad::Render(HDC hdc) {
-		Scene::Render(hdc);
+	void DontDestroyOnLoad::Render() {
+		Scene::Render();
 	}
 
 	void DontDestroyOnLoad::OnEnter() {

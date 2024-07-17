@@ -35,7 +35,7 @@ namespace maple{
 		void InActive();
 		void Update();
 		void LateUpdate();
-		void Render(HDC hdc);
+		void Render();
 		/// <summary>
 		/// UI가 사라질때 호출되는 함수
 		/// </summary>
@@ -46,7 +46,7 @@ namespace maple{
 		virtual void OnInActive();
 		virtual void OnUpdate();
 		virtual void OnLateUpdate();
-		virtual void OnRender(HDC hdc);
+		virtual void OnRender();
 		virtual void OnClear();
 
 		eUIType GetType() { return mType; }

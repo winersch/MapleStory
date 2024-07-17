@@ -29,7 +29,7 @@ namespace maple {
 			bool bPressed;
 		};
 
-		static void Initailize();
+		static void Initialize();
 		static void Update();
 
 		static bool GetKeyDown(eKeyCode code);
@@ -47,7 +47,7 @@ namespace maple {
 		static void updateKeyDown(Key& key);
 		static void updateKeyUp(Key& key);
 		static void getMousePositionByWindow();
-		static void clearKey();
+		static void clearKeys();
 
 		//eKeyState mState[] = eKeyState::Up;
 		static std::vector<Key> Keys;

@@ -27,20 +27,20 @@ namespace maple {
 		PrevFrequency.QuadPart = CurrentFrequency.QuadPart;
 	}
 
-	void Time::Render(HDC hdc) {
-		static float time = 0.0f;
+	void Time::Render() {
+		//static float time = 0.0f;
 
-		time += DeltaTimeValue;
-		float fps = 1.0f / DeltaTimeValue;
+		//time += DeltaTimeValue;
+		//float fps = 1.0f / DeltaTimeValue;
 
 
-		wchar_t str[50] = L"";
-		swprintf_s(str, 50, L"fps : %d", (int)fps);
-		int len = wcsnlen_s(str, (size_t)50);
+		//wchar_t str[50] = L"";
+		//swprintf_s(str, 50, L"fps : %d", (int)fps);
+		//int len = wcsnlen_s(str, (size_t)50);
 
-		
+		//
 
-		TextOut(hdc, 0, 0, str, len);
+		//TextOut(hdc, 0, 0, str, len);
 	}
 
 }

@@ -1,46 +1,32 @@
 #pragma once
+#include <DirectXTex.h>
+#include <DirectXTex.inl>
+//#include <DirectxTexEXR.h>
+
 #include "MResource.h"
+#include "MGraphicDevice_DX11.h"
 
 namespace maple::graphics {
 
 	class Texture : public Resource{
 
 	public:
-		enum class eTextureType {
-			Bmp,
-			Png,
-			None,
-		};
-
-		static Texture* Create(const std::wstring& name, UINT width, UINT height);
-
 		Texture();
 		~Texture();
 
+		virtual HRESULT Save(const std::wstring& path) override;
 		virtual HRESULT Load(const std::wstring& path) override;
-		COLORREF GetPixel(int x, int y);
 
-		UINT GetWidth() { return mWidth; }
-		void SetWidth(UINT width) { mWidth = width; }
-		UINT GetHeight() { return mHeight; }
-		void SetHeight(UINT height) { mHeight = height; }
-		HDC GetHdc() { return mHdc; }
-		eTextureType GetTextureType() { return mType; }
-		Gdiplus::Image* GetImage() { return mImage; }
-		HBITMAP GetBitmap() { return mBitmap; }
-		bool IsAlpha() { return mbAlpha; }
+		void Bind(eShaderStage stage, UINT startSlot);
 
 	private:
-		bool mbAlpha;
-		eTextureType mType;
-		Gdiplus::Image* mImage;
-		HBITMAP mBitmap;
-		HDC mHdc;
+		ScratchImage mImage;
 
-		UINT mWidth;
-		UINT mHeight;
+		D3D11_TEXTURE2D_DESC mDesc;
+		Microsoft::WRL::ComPtr<ID3D11Texture2D> mTexture;
 
-
+		Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> mSRV;
+		Microsoft::WRL::ComPtr<ID3D11RenderTargetView> mRTV;
 
 	};
 

@@ -22,8 +22,8 @@ namespace maple {
 		GameObject::LateUpdate();
 	}
 
-	void Floor::Render(HDC hdc) {
-		GameObject::Render(hdc);
+	void Floor::Render() {
+		GameObject::Render();
 	}
 
 }

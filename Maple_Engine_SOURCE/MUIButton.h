@@ -16,7 +16,7 @@ namespace maple {
 		virtual void OnInActive() override;
 		virtual void OnUpdate() override;
 		virtual void OnLateUpdate() override;
-		virtual void OnRender(HDC hdc) override;
+		virtual void OnRender() override;
 		virtual void OnClear() override;
 
 		virtual void ButtonClick();

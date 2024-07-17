@@ -26,10 +26,11 @@ namespace maple {
 		Animation();
 		~Animation();
 
-		HRESULT Load(const std::wstring& path) override;
+		virtual HRESULT Save(const std::wstring& path) override;
+		virtual HRESULT Load(const std::wstring& path) override;
 
 		void Update();
-		void Render(HDC hdc);
+		void Render();
 
 
 		void CreateAnimation(const std::wstring& name
@@ -42,7 +43,7 @@ namespace maple {
 
 		void Reset();
 
-		bool IsCompleted() { return mbComplete; }
+		bool IsCompleted() const { return mbComplete; }
 		void SetAnimator(class Animator* animator) { mAnimator = animator; }
 
 

@@ -18,8 +18,6 @@ namespace maple::enums {
 	enum class eLayerType {
 		None,
 		BackGround,
-		Tile,
-		Animal,
 		Player,
 		Floor,
 		Particle,
@@ -29,11 +27,13 @@ namespace maple::enums {
 
 	enum class eResourceType {
 		Texture,
-		AudioClip,
+		Mesh,
+		Material,
 		Animation,
+		AudioClip,
+		Shader,
 		Prefab,
 		End,
-
 	};
 
 	enum class eColliderType {

@@ -12,14 +12,14 @@ namespace maple {
 		virtual void Initialize();
 		virtual void Update();
 		virtual void LateUpdate();
-		virtual void Render(HDC hdc);
+		virtual void Render();
 
+		Vector2 GetVelocity() const { return mVelocity; }
 		void SetMass(float mass) { mMass = mass; }
 		void AddForce(Vector2 force) { mForce = force; }
 		void SetGround(bool ground) { mbGround = ground; }
 		bool GetGround() { return mbGround; }
 		void SetVelocity(Vector2 velocity) { mVelocity = velocity; }
-		Vector2 GetVelocity() { return mVelocity; }
 
 	private:
 		bool mbGround;

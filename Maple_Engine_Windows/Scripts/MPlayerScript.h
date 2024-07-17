@@ -24,7 +24,7 @@ namespace maple {
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
-		void Render(HDC hdc) override;
+		void Render() override;
 
 		void AttackEffect();
 
@@ -32,7 +32,6 @@ namespace maple {
 		void OnCollisionStay(Collider* other) override;
 		void OnCollisionExit(Collider* other) override;
 
-		void SetPixelMapTexture(graphics::Texture* texture) { mPixelMap = texture; }
 
 	private:
 		void idle();
@@ -42,7 +41,6 @@ namespace maple {
 	private:
 		eState mState;
 		Animator* mAnimator;
-		graphics::Texture* mPixelMap;
 		
 				
 	};

@@ -21,8 +21,8 @@ namespace maple {
 		GameObject::LateUpdate();
 	}
 
-	void Cat::Render(HDC hdc) {
-		GameObject::Render(hdc);
+	void Cat::Render() {
+		GameObject::Render();
 	}
 
 
