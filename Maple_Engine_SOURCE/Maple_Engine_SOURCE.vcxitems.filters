@@ -109,6 +109,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MAudioSource.cpp">
       <Filter>Component\Audio</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MGraphics.cpp">
+      <Filter>Graphic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -225,6 +228,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MAudioSource.h">
       <Filter>Component\Audio</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MGraphics.h">
+      <Filter>Graphic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -296,10 +302,8 @@
     <Filter Include="Component\Audio">
       <UniqueIdentifier>{de4d196a-68c1-4f0b-8709-a4ebb5b91aae}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="$(MSBuildThisFileDirectory)CloudOcean.png">
-      <Filter>Resources</Filter>
-    </Image>
+    <Filter Include="Graphic">
+      <UniqueIdentifier>{d330f5cb-d66e-4249-b814-d81abd00ab5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
