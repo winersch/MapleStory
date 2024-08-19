@@ -1,6 +1,8 @@
 #pragma once
 #include "..\\Maple_Engine_SOURCE\\MScene.h"
+#include "..\\Maple_Engine_SOURCE\\MTexture.h"
 //#include "..\\Maple_Engine_Windows\Contents\MPlayer.h"
+
 
 namespace maple {
 
@@ -21,7 +23,10 @@ namespace maple {
 
 	private:
 		class Player* mPlayer;
-
+		GameObject* mCatObject;
+		std::vector<graphics::Texture*> mCat;
+		float mTime;
+		int mIndex;
 	};
 
 }

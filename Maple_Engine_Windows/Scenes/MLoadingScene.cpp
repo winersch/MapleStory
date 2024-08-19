@@ -63,12 +63,17 @@ namespace maple {
 		}
 		m.lock();
 		{
-			Resources::Load<graphics::Texture>(L"Player", L"..\\Resources\\CloudOcean.png");
-			//Resources::Load<graphics::Texture>(L"Cat", L"..\\Resources\\ChickenAlpha.bmp");
-			//Resources::Load<graphics::Texture>(L"Player", L"..\\Resources\\Player.bmp");
-			//Resources::Load<graphics::Texture>(L"SpringFloor", L"..\\Resources\\SpringFloor.bmp");
-			//Resources::Load<graphics::Texture>(L"HPBAR", L"..\\Resources\\HPBAR.bmp");
-			//Resources::Load<graphics::Texture>(L"PixelMap", L"..\\Resources\\pixelMap.bmp");
+			Resources::Load<graphics::Texture>(L"Player", L"..\\Resources\\Cat\\stand\\0.png");
+			Resources::Load<graphics::Texture>(L"BG", L"..\\Resources\\Entrence.png");
+			Resources::Load<graphics::Texture>(L"Alter", L"..\\Resources\\rootabyss\\bellum\\alter\\0.png");
+			Resources::Load<graphics::Texture>(L"enH0_0", L"..\\Resources\\rootabyss\\tile\\enH0\\0.png");
+			Resources::Load<graphics::Texture>(L"enH0_1", L"..\\Resources\\rootabyss\\tile\\enH0\\1.png");
+			Resources::Load<graphics::Texture>(L"enH0_2", L"..\\Resources\\rootabyss\\tile\\enH0\\2.png");	
+
+
+
+
+
 
 			renderer::Initialize();
 

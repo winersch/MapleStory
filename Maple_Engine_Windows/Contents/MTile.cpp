@@ -8,6 +8,13 @@ namespace maple {
 
 
 
+	Tile::Tile()
+	{
+	}
+
+	Tile::~Tile() {
+	}
+
 	void Tile::Initialize() {
 		GameObject::Initialize();
 	}

@@ -133,6 +133,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MInputLayout.cpp">
       <Filter>Graphics\InputLayout</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MReadXML.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
@@ -276,6 +277,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MInputLayout.h">
       <Filter>Graphics\InputLayout</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MReadXML.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">

@@ -43,6 +43,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MMesh.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)MReadXML.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MResources.h" />
@@ -109,6 +110,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MMesh.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)MReadXML.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MResources.cpp" />

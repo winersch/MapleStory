@@ -64,7 +64,7 @@ namespace maple {
 		float width = (winRect.right - winRect.left);
 		float height = (winRect.bottom - winRect.top);
 		mAspectRatio = width / height;
-
+		
 		switch (type) {
 			case eProjectionType::Perspective:
 				mProjectionMatrix = Matrix::CreatePerspectiveFieldOfViewLH(XM_2PI / 6.0f, mAspectRatio, mNear, mFar);

@@ -87,7 +87,7 @@ namespace maple {
 		mGameObjects.push_back(gameobject);
 	}
 	void Layer::EraseGameObject(GameObject* eraseGameObj) {
-		// std::erase() iter넣어줘서 해당 이터레이와 같은 객체 삭제
+		// std::erase() iter넣어줘서 해당 이터레이터와 같은 객체 삭제
 		std::erase_if(mGameObjects,
 			[=](GameObject* gameObj) {
 				return gameObj == eraseGameObj;

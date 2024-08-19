@@ -4,30 +4,95 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{65d56b11-83d2-4152-8f5a-75470cff6ad8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObjects">
+      <UniqueIdentifier>{b2578da7-bc8f-4d02-bdb1-2fc773511b7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{e8add074-a50c-4978-9eb7-7df9ba4658f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skill">
+      <UniqueIdentifier>{576ad987-078f-492f-8904-c6ff7a21f73b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Scenes\MPlayScene.cpp" />
     <ClCompile Include="Scenes\MLoadScenes.h" />
-    <ClCompile Include="Contents\MPlayer.cpp" />
-    <ClCompile Include="Scenes\MTitleScene.cpp" />
-    <ClCompile Include="Scripts\MPlayerScript.cpp" />
-    <ClCompile Include="Contents\MCat.cpp" />
     <ClCompile Include="Contents\MTile.cpp" />
-    <ClCompile Include="Scripts\MCameraScript.cpp" />
-    <ClCompile Include="Contents\MFloor.cpp" />
-    <ClCompile Include="Scenes\MLoadingScene.cpp" />
+    <ClCompile Include="MAlter.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Contents\MCat.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Contents\MFloor.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Contents\MPlayer.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\MPlayerScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\MCameraScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\MLoadingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\MPlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\MTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="MAlterScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="MKarmaFury.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="MSkill.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Scenes\MPlayScene.h" />
-    <ClInclude Include="Contents\MPlayer.h" />
-    <ClInclude Include="Scenes\MTitleScene.h" />
     <ClInclude Include="Scenes\MLoadResources.h" />
-    <ClInclude Include="Scripts\MPlayerScript.h" />
-    <ClInclude Include="Contents\MCat.h" />
     <ClInclude Include="Contents\MTile.h" />
-    <ClInclude Include="Scripts\MCameraScript.h" />
-    <ClInclude Include="Contents\MFloor.h" />
-    <ClInclude Include="Scenes\MLoadingScene.h" />
+    <ClInclude Include="MAlter.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Contents\MCat.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Contents\MFloor.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Contents\MPlayer.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\MPlayerScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\MCameraScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\MLoadingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\MPlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\MTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MAlterScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="MKarmaFury.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="MSkill.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

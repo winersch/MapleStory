@@ -9,6 +9,7 @@ namespace maple::enums {
 		Script,
 		SpriteRenderer,
 		Animator,
+		Skill,
 		Camera,
 		AudioListener,
 		AudioSource,
@@ -18,10 +19,12 @@ namespace maple::enums {
 	enum class eLayerType {
 		None,
 		BackGround,
-		Player,
 		Floor,
+		Object,
+		NPC,
+		Player,
+		Effect,
 		Particle,
-
 		Max = 16,
 	};
 

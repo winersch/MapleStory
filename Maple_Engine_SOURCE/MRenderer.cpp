@@ -169,7 +169,6 @@ namespace maple::renderer {
 		vertexes[1].color = Vector4(1.0f, 0.0f, 0.0f, 1.0f);
 		vertexes[1].uv = Vector2(1.0f, 0.0f);
 
-		vertexes[2].pos = Vector3(-0.5f, -0.5f, 0.0f);
 		vertexes[2].pos = Vector3(0.5f, -0.5f, 0.0f);
 		vertexes[2].color = Vector4(0.0f, 0.0f, 1.0f, 1.0f);
 		vertexes[2].uv = Vector2(1.0f, 1.0f);
@@ -229,18 +228,19 @@ namespace maple::renderer {
 
 	void LoadMeterails() {
 
-		Material* triangleMaterial = new Material();
+		auto triangleMaterial = new Material();
 		triangleMaterial->SetShader(maple::Resources::Find<graphics::Shader>(L"TriangleShader"));
 		maple::Resources::Insert(L"TriangleMaterial", triangleMaterial);
 
-		Material* spriteMaterial = new Material();
-		graphics::Texture* texture = Resources::Find<graphics::Texture>(L"Player");
+		auto spriteMaterial = new Material();
+		graphics::Texture* texture = Resources::Find<graphics::Texture>(L"Alter");
 
 		spriteMaterial->SetAlbedoTexture(texture);
 		spriteMaterial->SetShader(maple::Resources::Find<graphics::Shader>(L"Sprite-Default-Shader"));
 		maple::Resources::Insert(L"Sprite-Default-Material", spriteMaterial);
 
 	}
+
 	void LoadConstantBuffers() {
 		constantBuffers[CBSLOT_TRANSFORM] = new ConstantBuffer(eCBType::Transform);
 		constantBuffers[CBSLOT_TRANSFORM]->Create(sizeof(TransformCB));

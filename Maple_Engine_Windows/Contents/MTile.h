@@ -1,10 +1,14 @@
 #pragma once
-#include "..\\Maple_Engine_SOURCE\\\MGameObject.h"
+#include "MGameObject.h"
 
 namespace maple {
 
 	class Tile : public GameObject {
 	public:
+
+		Tile();
+		~Tile();
+
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;

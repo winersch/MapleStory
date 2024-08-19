@@ -40,7 +40,7 @@ namespace maple {
 
 		if (mMaterial)
 			mMaterial->BindShader();
-
+		 
 		if (mSprite)
 			mSprite->Bind(eShaderStage::PS, (UINT)eTextureType::Sprite);
 

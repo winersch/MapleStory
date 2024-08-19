@@ -1,6 +1,7 @@
 #pragma once
 #include "MTexture.h"
 #include "MResource.h"
+#include "MSpriteRenderer.h"
 
 namespace maple {
 
@@ -8,15 +9,11 @@ namespace maple {
 
 	public:
 		struct Sprite {
-			Vector2 leftTop;
-			Vector2 size;
-			Vector2 offset;
+			graphics::Texture* texture;
 			float duration;
 
 			Sprite()
-				: leftTop(Vector2::Zero)
-				, size(Vector2::Zero)
-				, offset(Vector2::Zero)
+				: texture(nullptr)
 				, duration(0.0f)
 			{
 
@@ -33,13 +30,7 @@ namespace maple {
 		void Render();
 
 
-		void CreateAnimation(const std::wstring& name
-			, graphics::Texture* spriteSheet
-			, Vector2 leftTop
-			, Vector2 size
-			, Vector2 offset
-			, UINT spriteLength
-			, float duration);
+		void CreateAnimation(std::vector<Sprite> &animationFrame, SpriteRenderer* spriteRenderer);
 
 		void Reset();
 
@@ -50,12 +41,12 @@ namespace maple {
 	private:
 		class Animator* mAnimator;
 		graphics::Texture* mTexture;
+		SpriteRenderer* mSpriteRenderer;
 
-		std::vector<Sprite> mAnimationSheet;
+		std::vector<Sprite> mAnimationFrame;
 		int mIndex;
 		float mTime;
 		bool mbComplete;
-
 	};
 
 }

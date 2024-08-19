@@ -9,6 +9,7 @@
 #include "MFmod.h"
 #include "MRenderer.h"
 
+
 namespace maple {
 	Application::Application()
 		: mHwnd(nullptr)

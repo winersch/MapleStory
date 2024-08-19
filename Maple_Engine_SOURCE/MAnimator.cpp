@@ -56,58 +56,54 @@ namespace maple {
 	}
 
 	void Animator::CreateAnimation(const std::wstring& name, graphics::Texture* spriteSheet, Vector2 leftTop, Vector2 size, Vector2 offset, UINT spriteLength, float duration) {
-		Animation* animation = nullptr;
-		animation = FindAnimation(name);
-		if (animation != nullptr) {
-			return;
-		}
-		animation = new Animation();
-		animation->SetName(name);
-		animation->CreateAnimation(name, spriteSheet, leftTop, size, offset, spriteLength, duration);
-		animation->SetAnimator(this);
-
-		Events* events = new Events();
-		mEvents.insert(std::make_pair(name, events));
-
-		mAnimations.insert(std::make_pair(name, animation));
-
-	}
-
-	void Animator::CreateAnimationByFolder(/*const std::wstring& name, const std::wstring& path, Vector2 offset, float duration*/) {
 		//Animation* animation = nullptr;
 		//animation = FindAnimation(name);
 		//if (animation != nullptr) {
 		//	return;
 		//}
+		//animation = new Animation();
+		//animation->SetName(name);
+		//animation->CreateAnimation(name, spriteSheet, leftTop, size, offset, spriteLength, duration);
+		//animation->SetAnimator(this);
 
-		//int fileCount = 0;
-		//std::filesystem::path fs(path);
-		//std::vector<graphics::Texture*> images = {};
-		//
-		//for (auto& p : std::filesystem::recursive_directory_iterator(fs)) {
-		//	std::wstring fileName = p.path().filename();
-		//	std::wstring fullName = p.path();
+		//Events* events = new Events();
+		//mEvents.insert(std::make_pair(name, events));
 
-		//	graphics::Texture* texture = Resources::Load<graphics::Texture>(fileName, fullName);
-		//	images.push_back(texture);
-		//	fileCount++;
-		//}
+		//mAnimations.insert(std::make_pair(name, animation));
 
-		//UINT sheetWidth = images[0]->GetWidth() * fileCount;
-		//UINT sheetHeight = images[0]->GetHeight();
-		//graphics::Texture* spriteSheet = graphics::Texture::Create(name, sheetWidth, sheetHeight);
+	}
 
-		//UINT imageWidth = images[0]->GetWidth();
-		//UINT imageHeight = images[0]->GetHeight();
-		//for (size_t i = 0; i < images.size(); i++) {
-		//	BitBlt(spriteSheet->GetHdc(), i * imageWidth, 0
-		//		, imageWidth, imageHeight
-		//		, images[i]->GetHdc()
-		//		, 0, 0, SRCCOPY);
-		//}
-		//CreateAnimation(name, spriteSheet
-		//	, Vector2(0.0f, 0.0f), Vector2(imageWidth, imageHeight)
-		//	, offset, fileCount, duration);
+	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path, std::vector<float> duration, SpriteRenderer* spriteRenderer) {
+		Animation* animation = nullptr;
+		animation = FindAnimation(name);
+		if (animation != nullptr) {
+			return;
+		}
+
+		animation = new Animation();
+		animation->SetName(name);
+		animation->SetAnimator(this);
+
+		std::filesystem::path fs(path);
+		std::vector<Animation::Sprite> sprites = {};
+		int cnt = 0;
+
+		for (auto& p : std::filesystem::recursive_directory_iterator(fs)) {
+			std::wstring fileName = p.path().filename();
+			std::wstring fullName = p.path();
+			Animation::Sprite sprite = {};
+
+			graphics::Texture* texture = Resources::Load<graphics::Texture>(fileName, fullName);
+			sprite.texture = texture;
+			sprite.duration = duration[cnt];
+			cnt++;
+			sprites.push_back(sprite);
+		}
+
+		animation->CreateAnimation(sprites, spriteRenderer);
+
+		mAnimations.insert(make_pair(name,animation));
+
 	}
 
 	Animation* Animator::FindAnimation(const std::wstring& name) {

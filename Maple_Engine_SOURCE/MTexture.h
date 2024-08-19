@@ -19,6 +19,9 @@ namespace maple::graphics {
 
 		void Bind(eShaderStage stage, UINT startSlot);
 
+		size_t GetWidth() const { return mImage.GetMetadata().width; };
+		size_t GetHeight() const { return mImage.GetMetadata().height; };
+
 	private:
 		ScratchImage mImage;
 
