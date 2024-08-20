@@ -12,7 +12,6 @@
 #include "MCamera.h"
 #include "MRenderer.h"
 #include "MAnimator.h"
-#include "..\\Maple_Engine_Windows\Contents\MCat.h"
 #include "MBoxCollider2D.h"
 #include "MCollisionManager.h"
 #include "..\\Maple_Engine_Windows\\Contents\\MTile.h"
@@ -27,12 +26,15 @@
 #include "MGraphicDevice_DX11.h"
 #include "MMaterial.h"
 #include "MTime.h"
+#include "..\\Maple_Engine_Windows\\MSceneObject.h"
+#include "..\\MAlterScript.h"
 
 namespace maple {
 
 	PlayScene::PlayScene()
-		:mPlayer(nullptr)
-
+		: mPlayer(nullptr)
+		, mGameObjects({})
+		, mTime(0.0f)
 	{
 
 	}
@@ -56,6 +58,8 @@ namespace maple {
 			CameraScript* cameraScript = camera->AddComponent<CameraScript>();
 			renderer::mainCamera = cameraComp;
 
+
+			// player
 			mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
 			object::DontDestroyOnLoad(mPlayer);
 
@@ -68,6 +72,18 @@ namespace maple {
 			playerTransform->SetPosition(0.0f, 0.0f, 0.0f);
 
 			PlayerScript* playerScript = mPlayer->AddComponent<PlayerScript>();
+
+			GameObject* alter = object::Instantiate<GameObject>(enums::eLayerType::NPC, Vector3(0.0f, 0.0f, 0.0f));
+			AlterScript* alterScript = alter->AddComponent<AlterScript>();
+			//SpriteRenderer* alterSr = alter->AddComponent<SpriteRenderer>();
+			//Texture* alterTex = Resources::Find<graphics::Texture>(L"Alter");
+			//alterSr->SetSprite(alterTex);
+
+			//Transform* alterTransform = alter->GetComponent<Transform>();
+			//alterTransform->SetScale(alterTex->GetWidth(), alterTex->GetHeight(), 0.0f);
+
+
+			mGameObjects.insert(std::make_pair(L"Alter", alter));
 
 			//GameObject* alter = object::Instantiate<GameObject>(enums::eLayerType::NPC, Vector3(-0.0f, 0.0f, 0.0f));
 

@@ -17,12 +17,6 @@
   <ItemGroup>
     <ClCompile Include="Scenes\MLoadScenes.h" />
     <ClCompile Include="Contents\MTile.cpp" />
-    <ClCompile Include="MAlter.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Contents\MCat.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="Contents\MFloor.cpp">
       <Filter>GameObjects</Filter>
     </ClCompile>
@@ -53,16 +47,13 @@
     <ClCompile Include="MSkill.cpp">
       <Filter>Skill</Filter>
     </ClCompile>
+    <ClCompile Include="MSceneObject.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scenes\MLoadResources.h" />
     <ClInclude Include="Contents\MTile.h" />
-    <ClInclude Include="MAlter.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Contents\MCat.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="Contents\MFloor.h">
       <Filter>GameObjects</Filter>
     </ClInclude>
@@ -92,6 +83,9 @@
     </ClInclude>
     <ClInclude Include="MSkill.h">
       <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="MSceneObject.h">
+      <Filter>GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

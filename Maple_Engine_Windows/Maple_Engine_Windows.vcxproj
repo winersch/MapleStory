@@ -19,12 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Contents\MCat.cpp" />
     <ClCompile Include="Contents\MTile.cpp" />
     <ClCompile Include="Contents\MFloor.cpp" />
-    <ClCompile Include="MAlter.cpp" />
     <ClCompile Include="MAlterScript.cpp" />
     <ClCompile Include="MKarmaFury.cpp" />
+    <ClCompile Include="MSceneObject.cpp" />
     <ClCompile Include="MSkill.cpp" />
     <ClCompile Include="Scenes\MLoadingScene.cpp" />
     <ClCompile Include="Scripts\MCameraScript.cpp" />
@@ -46,12 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contents\MPlayer.h" />
-    <ClInclude Include="Contents\MCat.h" />
     <ClInclude Include="Contents\MTile.h" />
     <ClInclude Include="Contents\MFloor.h" />
-    <ClInclude Include="MAlter.h" />
     <ClInclude Include="MAlterScript.h" />
     <ClInclude Include="MKarmaFury.h" />
+    <ClInclude Include="MSceneObject.h" />
     <ClInclude Include="MSkill.h" />
     <ClInclude Include="Scenes\MLoadingScene.h" />
     <ClInclude Include="Scripts\MCameraScript.h" />

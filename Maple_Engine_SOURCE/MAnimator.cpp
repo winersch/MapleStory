@@ -73,7 +73,7 @@ namespace maple {
 
 	}
 
-	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path, std::vector<float> duration, SpriteRenderer* spriteRenderer) {
+	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path, std::vector<float>& duration, SpriteRenderer* spriteRenderer) {
 		Animation* animation = nullptr;
 		animation = FindAnimation(name);
 		if (animation != nullptr) {
@@ -89,7 +89,7 @@ namespace maple {
 		int cnt = 0;
 
 		for (auto& p : std::filesystem::recursive_directory_iterator(fs)) {
-			std::wstring fileName = p.path().filename();
+			std::wstring fileName = p.path();
 			std::wstring fullName = p.path();
 			Animation::Sprite sprite = {};
 

@@ -51,7 +51,7 @@ namespace maple {
 
 		void CreateAnimationByFolder(const std::wstring& name
 			, const std::wstring& path
-			, std::vector<float> duration
+			, std::vector<float>& duration
 			, SpriteRenderer* SpriteRenderer);
 
 		Animation* FindAnimation(const std::wstring& name);

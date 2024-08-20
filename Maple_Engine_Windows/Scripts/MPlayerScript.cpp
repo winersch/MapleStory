@@ -6,7 +6,6 @@
 #include "MGameObject.h"
 #include "MResources.h"
 #include "MObject.h"
-#include "..\\Maple_Engine_Windows\\Contents\\MCat.h"
 #include "MRigidbody.h"
 #include "MUIManager.h"
 
@@ -14,7 +13,9 @@ namespace maple {
 
 	PlayerScript::PlayerScript()
 		:mState(eState::Idle)
-		, mAnimator(nullptr){
+		, mAnimator(nullptr)
+	
+	{
 	}
 
 	PlayerScript::~PlayerScript() {

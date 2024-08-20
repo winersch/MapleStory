@@ -39,7 +39,8 @@ namespace maple {
 		if (mAnimationFrame[mIndex].duration < mTime) {
 			mTime = 0;
 			if (mIndex < mAnimationFrame.size()-1) {
-				mSpriteRenderer->SetSprite(mAnimationFrame[mIndex].texture);
+				mAnimator->GetOwner()->GetComponent<SpriteRenderer>()->SetSprite(mAnimationFrame[mIndex].texture);
+				//mSpriteRenderer->SetSprite(mAnimationFrame[mIndex].texture);
 				mIndex++;
 			} else {
 				mbComplete = true;
@@ -61,6 +62,7 @@ namespace maple {
 		for (size_t i = 0; i < animationFrame.size(); i++) {
 			mAnimationFrame[i] = animationFrame[i];
 		}
+		int a = 0;
 	}
 
 	void Animation::Reset() {

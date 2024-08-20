@@ -23,10 +23,8 @@ namespace maple {
 
 	private:
 		class Player* mPlayer;
-		GameObject* mCatObject;
-		std::vector<graphics::Texture*> mCat;
+		std::map<std::wstring, GameObject*> mGameObjects;
 		float mTime;
-		int mIndex;
 	};
 
 }

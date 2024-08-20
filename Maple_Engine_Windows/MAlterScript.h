@@ -1,5 +1,6 @@
 #pragma once
 #include "MScript.h"
+#include "MAnimator.h"
 
 
 
@@ -16,6 +17,9 @@ namespace maple {
 		void Update() override;
 		void LateUpdate() override;
 		void Render() override;
+
+	private:
+		Animator* mAnimator;
 	};
 
 
