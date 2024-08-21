@@ -30,7 +30,7 @@ namespace maple {
 		void Render();
 
 
-		void CreateAnimation(std::vector<Sprite> &animationFrame, SpriteRenderer* spriteRenderer);
+		void CreateAnimation(std::vector<std::pair<int, Animation::Sprite>>& animationFrame);
 
 		void Reset();
 

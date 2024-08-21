@@ -22,6 +22,7 @@ namespace maple::enums {
 		Floor,
 		Object,
 		NPC,
+		Monster,
 		Player,
 		Effect,
 		Particle,

@@ -21,7 +21,7 @@ namespace maple {
 		virtual void OnExit();
 
 		
-		void AddGameObject(GameObject* gameObject, const enums::eLayerType type);
+		void AddGameObject(GameObject* gameObject, const std::wstring& name, const enums::eLayerType type);
 		void EraseGameObject(GameObject* gameObj);
 		Layer* GetLayer(const enums::eLayerType type) { return mLayers[(UINT)type]; }
 		
@@ -31,7 +31,7 @@ namespace maple {
 
 	private:
 		std::vector<Layer*> mLayers;
-
+		std::map<std::wstring, GameObject*> mGameObjects;
 	};
 
 }

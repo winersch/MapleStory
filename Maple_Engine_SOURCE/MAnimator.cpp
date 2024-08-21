@@ -1,6 +1,7 @@
 #include "MAnimator.h"
 #include "MTexture.h"
 #include "MResources.h"
+#include <regex>
 
 namespace maple {
 
@@ -73,7 +74,7 @@ namespace maple {
 
 	}
 
-	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path, std::vector<float>& duration, SpriteRenderer* spriteRenderer) {
+	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path) {
 		Animation* animation = nullptr;
 		animation = FindAnimation(name);
 		if (animation != nullptr) {
@@ -85,22 +86,33 @@ namespace maple {
 		animation->SetAnimator(this);
 
 		std::filesystem::path fs(path);
-		std::vector<Animation::Sprite> sprites = {};
-		int cnt = 0;
+		std::vector<std::pair<int,Animation::Sprite>> sprites = {};
 
 		for (auto& p : std::filesystem::recursive_directory_iterator(fs)) {
 			std::wstring fileName = p.path();
 			std::wstring fullName = p.path();
 			Animation::Sprite sprite = {};
 
+			std::wregex pattern(LR"((\d+)_(\d+))");
+			std::wsmatch match;
+			float duration = 0.0f;
+			int start, end;
+			if (std::regex_search(fileName, match, pattern)) {
+				start = std::stoi(match[1].str());
+				end = std::stoi(match[2].str());
+				duration = (end - start) / 1000.0f;
+			}
+
 			graphics::Texture* texture = Resources::Load<graphics::Texture>(fileName, fullName);
 			sprite.texture = texture;
-			sprite.duration = duration[cnt];
-			cnt++;
-			sprites.push_back(sprite);
+			sprite.duration = duration;
+			sprites.push_back(std::make_pair(start,sprite));
 		}
+		std::sort(sprites.begin(), sprites.end(), [](const std::pair<int, Animation::Sprite>& a, const std::pair<int, Animation::Sprite>& b) {
+			return a.first < b.first;
+			});
 
-		animation->CreateAnimation(sprites, spriteRenderer);
+		animation->CreateAnimation(sprites);
 
 		mAnimations.insert(make_pair(name,animation));
 

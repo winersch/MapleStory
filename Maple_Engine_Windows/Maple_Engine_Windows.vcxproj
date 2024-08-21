@@ -22,6 +22,8 @@
     <ClCompile Include="Contents\MTile.cpp" />
     <ClCompile Include="Contents\MFloor.cpp" />
     <ClCompile Include="MAlterScript.cpp" />
+    <ClCompile Include="MBellum.cpp" />
+    <ClCompile Include="MBellumScript.cpp" />
     <ClCompile Include="MKarmaFury.cpp" />
     <ClCompile Include="MSceneObject.cpp" />
     <ClCompile Include="MSkill.cpp" />
@@ -48,6 +50,8 @@
     <ClInclude Include="Contents\MTile.h" />
     <ClInclude Include="Contents\MFloor.h" />
     <ClInclude Include="MAlterScript.h" />
+    <ClInclude Include="MBellum.h" />
+    <ClInclude Include="MBellumScript.h" />
     <ClInclude Include="MKarmaFury.h" />
     <ClInclude Include="MSceneObject.h" />
     <ClInclude Include="MSkill.h" />

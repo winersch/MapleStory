@@ -23,11 +23,7 @@ namespace maple {
 
 	void PlayerScript::Initialize() {
 		Animator* mAnimator = GetOwner()->AddComponent<Animator>();
-		std::vector<float> duration;
-		for (size_t i = 0; i < 9; i++) {
-			duration.push_back(0.15f);
-		}
-		mAnimator->CreateAnimationByFolder(L"Idle", L"..\\Resources\\Cat\\stand", duration, GetOwner()->GetComponent<SpriteRenderer>());
+		mAnimator->CreateAnimationByFolder(L"Idle", L"..\\Resources\\Cat\\stand");
 
 		
 		mAnimator->PlayAnimation(L"Idle", true);

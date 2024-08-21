@@ -5,6 +5,10 @@
 #include "MGameObject.h"
 #include "MTexture.h"
 #include "MResources.h"
+#include "MSceneManager.h"
+#include "MObject.h"
+#include "MBellum.h" 
+#include "MBellumScript.h"
 
 namespace maple {
 
@@ -12,13 +16,16 @@ namespace maple {
 
 
 	AlterScript::AlterScript()
-		: mAnimator(nullptr) {
+		: mAnimator(nullptr)
+		, mbClicked(false){
 	}
 
 	AlterScript::~AlterScript() {
 	}
 
 	void AlterScript::Initialize() {
+		Script::Initialize();
+
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		graphics::Texture* tex = Resources::Find<graphics::Texture>(L"Alter");
 		tr->SetPosition(0.0f, 0.0f, 0.0f);
@@ -31,29 +38,54 @@ namespace maple {
 		}
 		SpriteRenderer* sr = GetOwner()->AddComponent<SpriteRenderer>();
 
-		mAnimator->CreateAnimationByFolder(L"AlterIdle", L"..\\Resources\\rootabyss\\bellum\\alter", duration, sr);
+		mAnimator->CreateAnimationByFolder(L"AlterIdle", L"..\\Resources\\rootabyss\\bellum\\alter");
 
 		mAnimator->PlayAnimation(L"AlterIdle", true);
 	}
 
 	void AlterScript::Update() {
-
-		Vector2 mousePos = Input::GetMousePosition();
-		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector2 pos;
-		
-		pos.x = tr->GetPosition().x;
-		pos.y = tr->GetPosition().y;
-
-
-
-
+		Script::Update();
+		if (mbClicked == false) {
+			onClick();
+		}
 	}
 
 	void AlterScript::LateUpdate() {
+		Script::LateUpdate();
 	}
 
 	void AlterScript::Render() {
+		Script::Render();
+	}
+
+	void AlterScript::onClick() {
+		Vector2 mousePos = Input::GetMousePosition();
+		Transform* tr = GetOwner()->GetComponent<Transform>();
+		Vector2 posLeftDown, posRightUp;
+		Vector2 size;
+		size.x = tr->GetScale().x;
+		size.y = tr->GetScale().y;
+
+		posLeftDown.x = tr->GetPosition().x - size.x / 2;
+		posLeftDown.y = tr->GetPosition().y - size.y / 2;
+
+		posRightUp.x = tr->GetPosition().x + size.x / 2;
+		posRightUp.y = tr->GetPosition().y + size.y / 2;
+		
+		if (mousePos.x > posLeftDown.x && mousePos.x < posRightUp.x &&
+			mousePos.y > posLeftDown.y && mousePos.y < posRightUp.y) {
+			if (Input::GetKeyDown(eKeyCode::LButton)) {
+				summonBellum();
+				mbClicked = true;
+			}
+		}
+	}
+
+	void AlterScript::summonBellum() {
+		GameObject* bellum = object::Instantiate<GameObject>(enums::eLayerType::Monster);
+		//SceneManager::GetActiveScene()->AddGameObject(bellum, L"Bellum", enums::eLayerType::Monster);
+		BellumScript* bellumScript = bellum->AddComponent<BellumScript>();
+
 	}
 
 }

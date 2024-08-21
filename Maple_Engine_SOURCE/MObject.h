@@ -33,14 +33,14 @@ namespace maple::object {
 		return gameObject;
 	}
 	
-	static void DontDestroyOnLoad(GameObject* gameObject) {
+	static void DontDestroyOnLoad(GameObject* gameObject, const std::wstring& name) {
 		Scene* activeScene = SceneManager::GetActiveScene();
 		// 현재씬에서 게임오브젝트를 지워준다.
 		activeScene->EraseGameObject(gameObject);
 
 		// 해당 게임오브젝트를 -> DontDestroy씬으로 넣어준다.
 		Scene* dontDestroyOnLoad = SceneManager::GetDontDestroyOnLoad();
-		dontDestroyOnLoad->AddGameObject(gameObject, gameObject->GetLayerType());
+		dontDestroyOnLoad->AddGameObject(gameObject, name , gameObject->GetLayerType());
 
 	}
 	//static void Destroy(GameObject* obj) {

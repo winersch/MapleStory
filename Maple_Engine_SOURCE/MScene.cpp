@@ -5,7 +5,9 @@
 namespace maple {
 
 	Scene::Scene()
-		: mLayers{} {
+		: mLayers{}
+		, mGameObjects({})
+	{
 		mLayers.resize((UINT)enums::eLayerType::Max);
 		for (size_t i = 0; i < (UINT)enums::eLayerType::Max; i++) {
 			mLayers[i] = new Layer();
@@ -62,11 +64,12 @@ namespace maple {
 
 	
 
-	void Scene::AddGameObject(GameObject* gameobject, const enums::eLayerType type) {
-		if (gameobject == nullptr) {
+	void Scene::AddGameObject(GameObject* gameObject, const std::wstring& name, const enums::eLayerType type) {
+		if (gameObject == nullptr) {
 			return;
 		}
-		mLayers[(UINT)type]->AddGameObject(gameobject);
+		mLayers[(UINT)type]->AddGameObject(gameObject);
+		mGameObjects[name] = gameObject;
 	}
 
 	void Scene::EraseGameObject(GameObject* gameObj) {

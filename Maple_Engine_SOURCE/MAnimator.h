@@ -50,9 +50,7 @@ namespace maple {
 			, float duration);
 
 		void CreateAnimationByFolder(const std::wstring& name
-			, const std::wstring& path
-			, std::vector<float>& duration
-			, SpriteRenderer* SpriteRenderer);
+			, const std::wstring& path);
 
 		Animation* FindAnimation(const std::wstring& name);
 		void PlayAnimation(const std::wstring& name, bool loop = true);

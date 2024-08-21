@@ -50,6 +50,12 @@
     <ClCompile Include="MSceneObject.cpp">
       <Filter>GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="MBellum.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MBellumScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scenes\MLoadResources.h" />
@@ -86,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="MSceneObject.h">
       <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MBellum.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MBellumScript.h">
+      <Filter>Scripts</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -63,16 +63,13 @@ namespace maple {
 		}
 		m.lock();
 		{
-			Resources::Load<graphics::Texture>(L"Player", L"..\\Resources\\Cat\\stand\\0.png");
-			Resources::Load<graphics::Texture>(L"BG", L"..\\Resources\\Entrence.png");
-			Resources::Load<graphics::Texture>(L"Alter", L"..\\Resources\\rootabyss\\bellum\\alter\\0.png");
-			Resources::Load<graphics::Texture>(L"enH0_0", L"..\\Resources\\rootabyss\\tile\\enH0\\0.png");
-			Resources::Load<graphics::Texture>(L"enH0_1", L"..\\Resources\\rootabyss\\tile\\enH0\\1.png");
-			Resources::Load<graphics::Texture>(L"enH0_2", L"..\\Resources\\rootabyss\\tile\\enH0\\2.png");	
-
-
-
-
+			Resources::Load<graphics::Texture>(L"Player", L"..\\Resources\\Cat\\stand\\0_100.png");
+			Resources::Load<graphics::Texture>(L"Alter", L"..\\Resources\\rootabyss\\bellum\\alter\\0_100.png");
+			Resources::Load<graphics::Texture>(L"Bellum", L"..\\Resources\\rootabyss\\bellum\\summon\\0_330.png");
+			//Resources::Load<graphics::Texture>(L"BG", L"..\\Resources\\Entrence.png");
+			//Resources::Load<graphics::Texture>(L"enH0_0", L"..\\Resources\\rootabyss\\tile\\enH0\\0.png");
+			//Resources::Load<graphics::Texture>(L"enH0_1", L"..\\Resources\\rootabyss\\tile\\enH0\\1.png");
+			//Resources::Load<graphics::Texture>(L"enH0_2", L"..\\Resources\\rootabyss\\tile\\enH0\\2.png");	
 
 
 			renderer::Initialize();

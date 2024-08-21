@@ -28,6 +28,8 @@
 #include "MTime.h"
 #include "..\\Maple_Engine_Windows\\MSceneObject.h"
 #include "..\\MAlterScript.h"
+#include "..\\MBellum.h"
+#include "..\\MBellumScript.h"
 
 namespace maple {
 
@@ -40,6 +42,7 @@ namespace maple {
 	}
 
 	PlayScene::~PlayScene() {
+
 	}
 
 	void PlayScene::Initialize() {
@@ -61,7 +64,7 @@ namespace maple {
 
 			// player
 			mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-			object::DontDestroyOnLoad(mPlayer);
+			//object::DontDestroyOnLoad(mPlayer, L"Player");
 
 			SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
 			Texture* playerTex = Resources::Find<graphics::Texture>(L"Player");
@@ -75,12 +78,7 @@ namespace maple {
 
 			GameObject* alter = object::Instantiate<GameObject>(enums::eLayerType::NPC, Vector3(0.0f, 0.0f, 0.0f));
 			AlterScript* alterScript = alter->AddComponent<AlterScript>();
-			//SpriteRenderer* alterSr = alter->AddComponent<SpriteRenderer>();
-			//Texture* alterTex = Resources::Find<graphics::Texture>(L"Alter");
-			//alterSr->SetSprite(alterTex);
 
-			//Transform* alterTransform = alter->GetComponent<Transform>();
-			//alterTransform->SetScale(alterTex->GetWidth(), alterTex->GetHeight(), 0.0f);
 
 
 			mGameObjects.insert(std::make_pair(L"Alter", alter));
@@ -142,7 +140,25 @@ namespace maple {
 
 	void PlayScene::Update() {
 		Scene::Update();
-		
+		Vector2 mousePos = Input::GetMousePosition();
+		//Transform* tr = mGameObjects.find(L"Alter")->second->GetComponent<Transform>();
+		//Vector2 posLeftDown, posRightUp;
+		//Vector2 size;
+		//size.x = tr->GetScale().x;
+		//size.y = tr->GetScale().y;
+
+		//posLeftDown.x = tr->GetPosition().x - size.x / 2;
+		//posLeftDown.y = tr->GetPosition().y - size.y / 2;
+
+		//posRightUp.x = tr->GetPosition().x + size.x / 2;
+		//posRightUp.y = tr->GetPosition().y + size.y / 2;
+		//
+		//if (mousePos.x > posLeftDown.x && mousePos.x < posRightUp.x &&
+		//	mousePos.y > posLeftDown.y && mousePos.y < posRightUp.y) {
+		//	if (Input::GetKeyDown(eKeyCode::LButton)) {
+		//		mGameObjects.find(L"Bellum")->second->GetComponent<BellumScript>()->Summon();
+		//	}
+		//}
 	}
 
 	void PlayScene::LateUpdate() {

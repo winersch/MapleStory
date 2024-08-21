@@ -9,7 +9,7 @@ namespace maple {
 	}
 
 	Layer::~Layer() {
-		for (auto* gameobj : mGameObjects) {
+		for (GameObject* gameobj : mGameObjects) {
 			if (gameobj == nullptr) {
 				continue;
 			}

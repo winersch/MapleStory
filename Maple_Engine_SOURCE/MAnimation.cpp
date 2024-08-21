@@ -56,13 +56,12 @@ namespace maple {
 
 	}
 
-	void Animation::CreateAnimation(std::vector<Sprite>& animationFrame, SpriteRenderer* spriteRenderer) {
-		mSpriteRenderer = spriteRenderer;
+	void Animation::CreateAnimation(std::vector<std::pair<int, Animation::Sprite>>& animationFrame) {
 		mAnimationFrame.resize(animationFrame.size());
 		for (size_t i = 0; i < animationFrame.size(); i++) {
-			mAnimationFrame[i] = animationFrame[i];
+			mAnimationFrame[i] = animationFrame[i].second;
 		}
-		int a = 0;
+
 	}
 
 	void Animation::Reset() {
