@@ -19,9 +19,9 @@ namespace maple::enums {
 	enum class eLayerType {
 		None,
 		BackGround,
-		Floor,
 		Object,
 		NPC,
+		Floor,
 		Monster,
 		Player,
 		Effect,

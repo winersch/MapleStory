@@ -9,6 +9,7 @@
 #include "MObject.h"
 #include "MBellum.h" 
 #include "MBellumScript.h"
+#include "MRenderer.h"
 
 namespace maple {
 
@@ -28,7 +29,7 @@ namespace maple {
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		graphics::Texture* tex = Resources::Find<graphics::Texture>(L"Alter");
-		tr->SetPosition(0.0f, 0.0f, 0.0f);
+		tr->SetPosition(-195.0f, -290.0f, 0.0f);
 		tr->SetScale(tex->GetWidth(), tex->GetHeight(), 0.0f);
 
 		mAnimator = GetOwner()->AddComponent<Animator>();
@@ -59,7 +60,15 @@ namespace maple {
 	}
 
 	void AlterScript::onClick() {
+
 		Vector2 mousePos = Input::GetMousePosition();
+
+		Vector3 worldMousePos = renderer::mainCamera->ScreenToWorld(mousePos);
+
+		mousePos.x = worldMousePos.x;
+		mousePos.y = worldMousePos.y;
+
+		//Vector2 mousePos = Input::GetMousePosition();
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 posLeftDown, posRightUp;
 		Vector2 size;

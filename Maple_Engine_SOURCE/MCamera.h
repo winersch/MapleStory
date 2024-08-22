@@ -30,6 +30,9 @@ namespace maple {
 		void SetProjectionType(eProjectionType type) { mProjectionType = type; }
 		void SetSize(float size) { mSize = size; }
 
+		Vector3 GetLeftTopPosition() const;
+		Vector3 ScreenToWorld(const Vector2& mousePos) const;
+
 	private:
 		static Matrix ViewMatrix;
 		static Matrix ProjectionMatrix;

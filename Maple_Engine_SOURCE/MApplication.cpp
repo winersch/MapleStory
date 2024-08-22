@@ -8,7 +8,7 @@
 #include "MUIManager.h"
 #include "MFmod.h"
 #include "MRenderer.h"
-
+#include "..\\Maple_Engine_Windows\\MLoadScenes.h"
 
 namespace maple {
 	Application::Application()
@@ -39,6 +39,7 @@ namespace maple {
 		UIManager::Initialize();
 		SceneManager::Initialize();
 
+		LoadScenes();
 	}
 
 	void Application::AdjustWindowRect(HWND hwnd, UINT width, UINT height) {
@@ -61,12 +62,12 @@ namespace maple {
 	}
 
 	void Application::Run() {
-		if (mbLoaded == false)
-			mbLoaded = true;
-		Update();
-		LateUpdate();
-		Render();
-		Destroy();
+		if (mbLoaded) {
+			Update();
+			LateUpdate();
+			Render();
+			Destroy();
+		}
 	}
 	void Application::Update() {
 		Input::Update();

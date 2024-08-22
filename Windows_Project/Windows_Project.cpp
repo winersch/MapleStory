@@ -9,8 +9,8 @@
 #include "..\\Maple_Engine_SOURCE\\MTexture.h"
 #include "..\\Maple_Engine_SOURCE\\MSceneManager.h"
 
-#include "..\\Maple_Engine_Windows\\Scenes\MLoadScenes.h"
-#include "..\\Maple_Engine_Windows\\Scenes\MLoadResources.h"
+//#include "..\\Maple_Engine_Windows\\MLoadScenes.h"
+//#include "..\\Maple_Engine_Windows\\MLoadResources.h"
 
 #include <time.h>
 
@@ -61,7 +61,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 프로그램의 인�
 	HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINDOWSPROJECT));
 
 	MSG msg;
-	maple::LoadScenes();
+	//maple::LoadScenes();
 
 	// GetMessage : 프로세스에서 발생한 메세지를 메세지 큐에서 가져오는 함수
 	//				메세지큐에 아무것도 없다면 아무 메세지도 가져오지 않는다.

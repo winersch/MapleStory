@@ -13,6 +13,6 @@ namespace maple {
 
 		SceneManager::CreateScene<LoadingScene>(L"LoadingScene");
 
-		SceneManager::LoadScene(L"LoadingScene");
+		//SceneManager::LoadScene(L"LoadingScene");
 	}
 }

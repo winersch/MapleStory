@@ -19,48 +19,38 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Contents\MTile.cpp" />
-    <ClCompile Include="Contents\MFloor.cpp" />
     <ClCompile Include="MAlterScript.cpp" />
     <ClCompile Include="MBellum.cpp" />
     <ClCompile Include="MBellumScript.cpp" />
+    <ClCompile Include="MCameraScript.cpp" />
+    <ClCompile Include="MFloor.cpp" />
     <ClCompile Include="MKarmaFury.cpp" />
+    <ClCompile Include="MLoadingScene.cpp" />
+    <ClCompile Include="MPlayer.cpp" />
+    <ClCompile Include="MPlayerScript.cpp" />
+    <ClCompile Include="MPlayScene.cpp" />
     <ClCompile Include="MSceneObject.cpp" />
     <ClCompile Include="MSkill.cpp" />
-    <ClCompile Include="Scenes\MLoadingScene.cpp" />
-    <ClCompile Include="Scripts\MCameraScript.cpp" />
-    <ClCompile Include="Scripts\MPlayerScript.cpp" />
-    <ClCompile Include="Scenes\MTitleScene.cpp" />
-    <ClCompile Include="Scenes\MLoadScenes.h">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Contents\MPlayer.cpp" />
-    <ClCompile Include="Scenes\MPlayScene.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="MTile.cpp" />
+    <ClCompile Include="MTitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Contents\MPlayer.h" />
-    <ClInclude Include="Contents\MTile.h" />
-    <ClInclude Include="Contents\MFloor.h" />
     <ClInclude Include="MAlterScript.h" />
     <ClInclude Include="MBellum.h" />
     <ClInclude Include="MBellumScript.h" />
+    <ClInclude Include="MCameraScript.h" />
+    <ClInclude Include="MFloor.h" />
     <ClInclude Include="MKarmaFury.h" />
+    <ClInclude Include="MLoadingScene.h" />
+    <ClInclude Include="MLoadResources.h" />
+    <ClInclude Include="MLoadScenes.h" />
+    <ClInclude Include="MPlayer.h" />
+    <ClInclude Include="MPlayerScript.h" />
+    <ClInclude Include="MPlayScene.h" />
     <ClInclude Include="MSceneObject.h" />
     <ClInclude Include="MSkill.h" />
-    <ClInclude Include="Scenes\MLoadingScene.h" />
-    <ClInclude Include="Scripts\MCameraScript.h" />
-    <ClInclude Include="Scripts\MPlayerScript.h" />
-    <ClInclude Include="Scenes\MLoadResources.h" />
-    <ClInclude Include="Scenes\MTitleScene.h" />
-    <ClInclude Include="Scenes\MPlayScene.h" />
+    <ClInclude Include="MTile.h" />
+    <ClInclude Include="MTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

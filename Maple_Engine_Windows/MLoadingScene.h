@@ -17,7 +17,6 @@ namespace maple {
 
 		void OnEnter() override;
 		void OnExit()  override;
-
 	private:
 		void resourcesLoad(std::mutex& m);
 

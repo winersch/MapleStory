@@ -15,29 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Scenes\MLoadScenes.h" />
-    <ClCompile Include="Contents\MTile.cpp" />
-    <ClCompile Include="Contents\MFloor.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Contents\MPlayer.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Scripts\MPlayerScript.cpp">
-      <Filter>Scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="Scripts\MCameraScript.cpp">
-      <Filter>Scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\MLoadingScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\MPlayScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenes\MTitleScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="MAlterScript.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
@@ -56,31 +33,32 @@
     <ClCompile Include="MBellumScript.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="MFloor.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MPlayer.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MTile.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MPlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="MTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="MLoadingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="MCameraScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="MPlayerScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Scenes\MLoadResources.h" />
-    <ClInclude Include="Contents\MTile.h" />
-    <ClInclude Include="Contents\MFloor.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Contents\MPlayer.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Scripts\MPlayerScript.h">
-      <Filter>Scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="Scripts\MCameraScript.h">
-      <Filter>Scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\MLoadingScene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\MPlayScene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\MTitleScene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="MAlterScript.h">
       <Filter>Scripts</Filter>
     </ClInclude>
@@ -99,6 +77,32 @@
     <ClInclude Include="MBellumScript.h">
       <Filter>Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="MFloor.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MPlayer.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MTile.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MPlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MLoadingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MCameraScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="MPlayerScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="MLoadResources.h" />
+    <ClInclude Include="MLoadScenes.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

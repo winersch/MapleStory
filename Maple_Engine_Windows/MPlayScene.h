@@ -2,7 +2,7 @@
 #include "..\\Maple_Engine_SOURCE\\MScene.h"
 #include "..\\Maple_Engine_SOURCE\\MTexture.h"
 //#include "..\\Maple_Engine_Windows\Contents\MPlayer.h"
-
+#include "MTile.h"
 
 namespace maple {
 
@@ -20,10 +20,12 @@ namespace maple {
 		void OnEnter() override;
 		void OnExit() override;
 
+		void LoadTileMap(const std::wstring& path);
 
 	private:
 		class Player* mPlayer;
 		std::map<std::wstring, GameObject*> mGameObjects;
+		std::map<std::wstring, std::vector<Tile*>> mTileMap;
 		float mTime;
 	};
 

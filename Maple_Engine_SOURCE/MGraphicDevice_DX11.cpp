@@ -326,7 +326,8 @@ namespace maple::graphics {
 	}
 
 	void GraphicDevice_DX11::ClearRenderTargetView() {
-		FLOAT backgroundColor[4] = { 0.7f, 0.7f, 0.7f, 1.0f };
+		//FLOAT backgroundColor[4] = { 255.0f, 255.0f, 255.0f, 1.0f };
+		FLOAT backgroundColor[4] = { 13.0f / 255.0f, 13.0f / 255.0f, 17.0f / 255.0f, 1.0f };
 		mContext->ClearRenderTargetView(mRenderTargetView.Get(), backgroundColor);
 	}
 
