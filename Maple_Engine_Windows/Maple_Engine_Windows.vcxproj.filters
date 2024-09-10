@@ -57,6 +57,12 @@
     <ClCompile Include="MPlayerScript.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="MMapObject.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MBossMonster.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MAlterScript.h">
@@ -103,6 +109,12 @@
     </ClInclude>
     <ClInclude Include="MLoadResources.h" />
     <ClInclude Include="MLoadScenes.h" />
+    <ClInclude Include="MMapObject.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MBossMonster.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -1,6 +1,7 @@
 #pragma once
 #include "MScript.h"
 #include "MTransform.h"
+#include "MGameObject.h"
 
 namespace maple {
 
@@ -14,7 +15,10 @@ namespace maple {
 		void LateUpdate() override;
 		void Render() override;
 
+		void SetTarget(GameObject* target) { mTarget = target; }
+
 	private:
+		GameObject* mTarget;
 
 	};
 

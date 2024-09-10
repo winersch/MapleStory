@@ -233,7 +233,7 @@ namespace maple::renderer {
 		maple::Resources::Insert(L"TriangleMaterial", triangleMaterial);
 
 		auto spriteMaterial = new Material();
-		graphics::Texture* texture = Resources::Find<graphics::Texture>(L"Alter");
+		graphics::Texture* texture = Resources::Find<graphics::Texture>(L"White");
 
 		spriteMaterial->SetAlbedoTexture(texture);
 		spriteMaterial->SetShader(maple::Resources::Find<graphics::Shader>(L"Sprite-Default-Shader"));

@@ -1,6 +1,7 @@
 #include "MAnimator.h"
 #include "MTexture.h"
 #include "MResources.h"
+#include "MReadXML.h"
 #include <regex>
 
 namespace maple {
@@ -12,7 +13,7 @@ namespace maple {
 		, mAnimations{}
 		, mActiveAnimation(nullptr)
 		, mbLoop(false)
-		
+		, mEvents{}
 	{
 	}
 
@@ -114,8 +115,38 @@ namespace maple {
 
 		animation->CreateAnimation(sprites);
 
+		Events* events = new Events();
+		mEvents.insert(std::make_pair(name, events));
 		mAnimations.insert(make_pair(name,animation));
 
+	}
+
+	void Animator::CreateAnimationWithOffset(const std::wstring& name, std::vector<std::wstring>& path, std::vector<float>& duration, std::vector<Vector3>& offset
+		, std::vector<std::vector<Animation::Hitbox>> hitboxes, std::vector<bool> hide) {
+
+		Animation* animation = nullptr;
+
+		animation = new Animation();
+		animation->SetName(name);
+		animation->SetAnimator(this);
+
+		std::vector<std::pair<int, Animation::Sprite>> sprites = {};
+
+		for (size_t i = 0; i < path.size(); i++) {
+			graphics::Texture* texture = Resources::Load<graphics::Texture>(path[i], path[i]);
+			Animation::Sprite sprite = {};
+			sprite.texture = texture;
+			sprite.duration = duration[i];
+			sprites.push_back(std::make_pair(i, sprite));
+		}
+
+		animation->CreateAnimation(sprites);
+		animation->SetOffset(offset);
+		animation->SetHide(hide);
+		animation->SetHitboxes(hitboxes);
+		Events* events = new Events();
+		mEvents.insert(std::make_pair(name, events));
+		mAnimations.insert(make_pair(name, animation));
 	}
 
 	Animation* Animator::FindAnimation(const std::wstring& name) {
@@ -127,13 +158,14 @@ namespace maple {
 		return iter->second;
 	}
 
-	void Animator::PlayAnimation(const std::wstring& name, bool loop) {
+	void Animator::PlayAnimation(const std::wstring& name, bool loop, bool flip) {
 		Animation* animation = FindAnimation(name);
 		if (animation == nullptr) {
 			return;
 		}
 		mActiveAnimation = animation;
 		mActiveAnimation->Reset();
+		mActiveAnimation->setFlip(flip);
 		mbLoop = loop;
 		Events* currentEvents = FindEvents(mActiveAnimation->GetName());
 		if (currentEvents) {
@@ -142,6 +174,21 @@ namespace maple {
 		Events* nextEvents = FindEvents(mActiveAnimation->GetName());
 		if (nextEvents) {
 			nextEvents->StartEvent();
+		}
+	}
+
+	void Animator::StopAnimation() {
+		if (mActiveAnimation) {
+			// 현재 애니메이션의 완료 이벤트 호출
+			Events* events = FindEvents(mActiveAnimation->GetName());
+			if (events) {
+				events->EndEvent();
+			}
+
+			// 애니메이션 중단
+			mActiveAnimation->Reset();
+			mActiveAnimation->SetComplete(true);
+			mbLoop = false;
 		}
 	}
 

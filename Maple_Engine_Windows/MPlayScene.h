@@ -3,6 +3,7 @@
 #include "..\\Maple_Engine_SOURCE\\MTexture.h"
 //#include "..\\Maple_Engine_Windows\Contents\MPlayer.h"
 #include "MTile.h"
+#include "MMapObject.h"
 
 namespace maple {
 
@@ -21,11 +22,16 @@ namespace maple {
 		void OnExit() override;
 
 		void LoadTileMap(const std::wstring& path);
+		void LoadMapObject(const std::wstring& path);
+		void LoadBossMonster(const std::wstring& path);
+
+		GameObject* GetGameObject(const std::wstring& name) { return mGameObjects[name]; }
 
 	private:
 		class Player* mPlayer;
 		std::map<std::wstring, GameObject*> mGameObjects;
 		std::map<std::wstring, std::vector<Tile*>> mTileMap;
+		std::map<std::wstring, std::vector<MapObject*>> mMapObjects;
 		float mTime;
 	};
 

@@ -326,8 +326,8 @@ namespace maple::graphics {
 	}
 
 	void GraphicDevice_DX11::ClearRenderTargetView() {
-		//FLOAT backgroundColor[4] = { 255.0f, 255.0f, 255.0f, 1.0f };
-		FLOAT backgroundColor[4] = { 13.0f / 255.0f, 13.0f / 255.0f, 17.0f / 255.0f, 1.0f };
+		FLOAT backgroundColor[4] = { 0.005f, 0.005f, 0.005f, 1.0f };
+		//FLOAT backgroundColor[4] = { 5.0f / 255.0f, 5.0f / 255.0f, 7.0f / 255.0f, 1.0f };
 		mContext->ClearRenderTargetView(mRenderTargetView.Get(), backgroundColor);
 	}
 
@@ -349,7 +349,7 @@ namespace maple::graphics {
 		swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 		swapChainDesc.BufferDesc.Width = application.GetWidth();
 		swapChainDesc.BufferDesc.Height = application.GetHeight();
-		swapChainDesc.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+		swapChainDesc.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM_SRGB;
 		swapChainDesc.BufferDesc.RefreshRate.Numerator = 144;
 		swapChainDesc.BufferDesc.RefreshRate.Denominator = 1;
 		swapChainDesc.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;

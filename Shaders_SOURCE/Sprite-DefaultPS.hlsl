@@ -15,17 +15,20 @@ struct VSOutput {
 
 float4 main(VSOutput input) : SV_Target
 {
-    float brightness = 2.8f; // 밝기 계수 (1.0은 원본 밝기)
-    float contrast = 1.0f;   // 대비 계수 (1.0은 원본 대비)
+    float brightness = 2.5f; // 밝기 계수 (1.0은 원본 밝기)
+    float contrast = 1.005f;   // 대비 계수 (1.0은 원본 대비)
 
     // 텍스처에서 색상을 샘플링
     float4 color = sprite.Sample(anisotropicSampler, input.uv);
 
-    // 밝기 조절
-    color.rgb *= brightness;
+    //// 밝기 조절
+    //color.rgb *= brightness;
 
-    // 대비 조절
-    color.rgb = ((color.rgb - 0.5f) * contrast) + 0.5f;
+    //// 대비 조절
+    //color.rgb = ((color.rgb - 0.5f) * contrast) + 0.5f;
+
+    //// 감마 조절
+    //color.rgb = pow(color.rgb, 2.2);
 
     return color;
 }

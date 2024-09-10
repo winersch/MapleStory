@@ -24,7 +24,7 @@ namespace maple {
 		void AddGameObject(GameObject* gameObject, const std::wstring& name, const enums::eLayerType type);
 		void EraseGameObject(GameObject* gameObj);
 		Layer* GetLayer(const enums::eLayerType type) { return mLayers[(UINT)type]; }
-		
+		//GameObject* GetGameObject(const std::wstring& name) { return mGameObjects[name]; }
 
 	private:
 		void createLayers();

@@ -52,12 +52,12 @@ namespace maple {
 
 		{
 			Scene::Initialize();
-
+			
 			// main camera
-			GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None, Vector3(000.0f, -300.0f, -1000.0f));
+			GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None, Vector3(000.0f, -300.0f, -500.0f));
 			Camera* cameraComp = camera->AddComponent<Camera>();
 			cameraComp->SetProjectionType(Camera::eProjectionType::Orthographic);
-			cameraComp->SetSize(1000.0f);
+			cameraComp->SetSize(500.0f);
 
 			CameraScript* cameraScript = camera->AddComponent<CameraScript>();
 			renderer::mainCamera = cameraComp;
@@ -65,7 +65,8 @@ namespace maple {
 
 			// player
 			mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-			//object::DontDestroyOnLoad(mPlayer, L"Player");
+			object::DontDestroyOnLoad(mPlayer, L"Player");
+			cameraScript->SetTarget(mPlayer);
 
 			SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
 			Texture* playerTex = Resources::Find<graphics::Texture>(L"Player");
@@ -77,16 +78,18 @@ namespace maple {
 
 			PlayerScript* playerScript = mPlayer->AddComponent<PlayerScript>();
 
-			GameObject* alter = object::Instantiate<GameObject>(enums::eLayerType::NPC, Vector3(0.0f, 0.0f, 0.0f));
+			GameObject* alter = object::Instantiate<GameObject>(enums::eLayerType::NPC);
 			AlterScript* alterScript = alter->AddComponent<AlterScript>();
 
 			mGameObjects.insert(std::make_pair(L"Alter", alter));
 
-
-			ReadXML xml;
-			xml.LoadXML(L"..\\Resources\\rootabyss\\tile\\tile.xml");
-			xml.CreateTileMap(mTileMap);
-
+			GameObject* bellum = object::Instantiate<GameObject>(enums::eLayerType::Monster);
+			mGameObjects.insert(std::make_pair(L"Bellum", bellum));
+			LoadTileMap(L"..\\Resources\\rootabyss\\tile\\tile.xml");
+			LoadMapObject(L"..\\Resources\\rootabyss\\mapObject.xml");
+			LoadBossMonster(L"..\\Resources\\rootabyss\\bellum\\bellum.xml");
+			BellumScript* bellumScript = bellum->AddComponent<BellumScript>();
+			bellumScript->SetPlayer(mPlayer);
 
 		}
 	}
@@ -118,11 +121,27 @@ namespace maple {
 	}
 
 	void PlayScene::LoadTileMap(const std::wstring& path) {
-		ReadXML xml;
-		xml.LoadXML(path);
-
-		
+		ReadXML* xml = new ReadXML();
+		xml->LoadXML(path);
+		xml->CreateTileMap(mTileMap);
+		delete xml;
 	}
+
+	void PlayScene::LoadMapObject(const std::wstring& path) {
+		ReadXML* xml = new ReadXML();
+		xml->LoadXML(path);
+		xml->CreateMapObject(mMapObjects);
+		delete xml;
+	}
+
+	void PlayScene::LoadBossMonster(const std::wstring& path) {
+		ReadXML* xml = new ReadXML();
+		xml->LoadXML(path);
+		xml->LoadBossMonster(path, mGameObjects[L"Bellum"]);
+		delete xml;
+	}
+
+	
 
 }
 

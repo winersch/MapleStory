@@ -75,7 +75,6 @@ namespace maple {
 		CollisionManager::Update();
 		UIManager::Update();
 		SceneManager::Update();
-
 	}
 	void Application::LateUpdate() {
 		CollisionManager::LateUpdate();

@@ -10,6 +10,7 @@
 #include "MBellum.h" 
 #include "MBellumScript.h"
 #include "MRenderer.h"
+#include "MPlayScene.h"
 
 namespace maple {
 
@@ -91,10 +92,10 @@ namespace maple {
 	}
 
 	void AlterScript::summonBellum() {
-		GameObject* bellum = object::Instantiate<GameObject>(enums::eLayerType::Monster);
-		//SceneManager::GetActiveScene()->AddGameObject(bellum, L"Bellum", enums::eLayerType::Monster);
-		BellumScript* bellumScript = bellum->AddComponent<BellumScript>();
-
+		PlayScene* playScene = dynamic_cast<PlayScene*>(SceneManager::GetActiveScene());
+		GameObject* bellum = playScene->GetGameObject(L"Bellum");
+		BellumScript* bellumScript = bellum->GetComponent<BellumScript>();
+		bellumScript->Summon();
 	}
 
 }

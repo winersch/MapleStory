@@ -51,9 +51,13 @@ namespace maple {
 
 		void CreateAnimationByFolder(const std::wstring& name
 			, const std::wstring& path);
+		void CreateAnimationWithOffset(const std::wstring& name
+			, std::vector<std::wstring>& path, std::vector<float>& duration, std::vector<Vector3>& offset
+			, std::vector<std::vector<Animation::Hitbox>> hitboxes, std::vector<bool> hide);
 
 		Animation* FindAnimation(const std::wstring& name);
-		void PlayAnimation(const std::wstring& name, bool loop = true);
+		void PlayAnimation(const std::wstring& name, bool loop = true, bool flip = false);
+		void StopAnimation();
 
 		Events* FindEvents(const std::wstring& name);
 		std::function<void()>& GetStartEvent(const std::wstring& name);
@@ -62,6 +66,7 @@ namespace maple {
 
 		bool IsCompleted() { return mActiveAnimation->IsCompleted(); }
 
+		Animation* GetActiveAnimation() { return mActiveAnimation; }
 
 	private:
 		std::map<std::wstring, Animation*> mAnimations;

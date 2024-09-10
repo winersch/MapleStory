@@ -10,7 +10,9 @@
 
 namespace maple {
 
-	CameraScript::CameraScript() {
+	CameraScript::CameraScript()
+		:mTarget(nullptr)
+	{
 	}
 
 	CameraScript::~CameraScript() {
@@ -20,23 +22,22 @@ namespace maple {
 	}
 
 	void CameraScript::Update() {
+		if (mTarget == nullptr) {
+			return;
+		}
 		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Vector3 pos = tr->GetPosition();
+		Vector3 currentPos = tr->GetPosition();
 
-		if (Input::GetKey(eKeyCode::A))
-			pos += 200.0f * -tr->Right() * Time::DeltaTime();
-		if (Input::GetKey(eKeyCode::W))
-			pos += 200.0f * tr->Up() * Time::DeltaTime();
-		if (Input::GetKey(eKeyCode::D))
-			pos += 200.0f * tr->Right() * Time::DeltaTime();
-		if (Input::GetKey(eKeyCode::S))
-			pos += 200.0f * -tr->Up() * Time::DeltaTime();
-		if (Input::GetKey(eKeyCode::E))
-			pos += 200.0f * tr->Foward() * Time::DeltaTime();
-		if (Input::GetKey(eKeyCode::Q))
-			pos += 200.0f * -tr->Foward() * Time::DeltaTime();
 
-		tr->SetPosition(pos);
+		Transform* targetTransform = mTarget->GetComponent<Transform>();
+		Vector3 targetPos = targetTransform->GetPosition();
+
+		// 부드럽게 따라가기 위한 보간 비율
+		float followSpeed = 5.0f * Time::DeltaTime();
+
+		Vector3 newPos = Vector3::Lerp(currentPos, targetPos, followSpeed);
+		newPos.z = currentPos.z;
+		tr->SetPosition(newPos);
 	}
 
 	void CameraScript::LateUpdate() {

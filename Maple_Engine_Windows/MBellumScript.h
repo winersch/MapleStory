@@ -1,6 +1,7 @@
 #pragma once
 #include "MScript.h"
 #include "MAnimator.h"
+#include "MPlayer.h" 
 
 namespace maple {
 
@@ -11,9 +12,16 @@ namespace maple {
 		enum class eState {
 			Idle,
 			Summon,
-			Moving,
-			Attack,
-			Dead,
+			Move,
+			ShortAttack,
+			LongAttack,
+			DigAttack,
+			FireAttack,
+			PoisonAttack,
+			PoisonAttacking,
+			BreathAttack,
+			BreathAttacking,
+			Death,
 		};
 
 		BellumScript();
@@ -24,15 +32,45 @@ namespace maple {
 		void LateUpdate() override;
 		void Render() override;
 
+		void Idle();
 		void Summon();
+		void Move();
+		void ShortAttack();		//cooldown 0
+		void LongAttack();		//cooldown 1
+		void DigAttack();		//cooldown 2
+		void FireAttack();		//cooldown 3
+		void PoisonAttack();		//cooldown 4
+		void BreathAttack();		//cooldown 5
+		void Death();
 
+		void PlayAnimation(const std::wstring& name, bool loop = false);	
+
+		void CooldownUpdate();
+
+		void SetPlayer(Player* player) { mPlayer = player; }
+		void PlayerDistanceUpdate();
+		void InitializeAnimationEvent();
 
 	private:
+		Animator* mAnimator;
+		Player* mPlayer;
+
 		float mTime;
 		float mSpeed;
 		long long mHP;
 
-		Animator* mAnimator;
+		float mCooldown[6];
+		float mCooldownTime[6];
+		float mDistance;
+		eState mState;
+		bool mbHide;
+		bool mbSummon;
+		bool mbFlip;
+
+		int mFireAttackStep;
+
+
+
 
 	};
 

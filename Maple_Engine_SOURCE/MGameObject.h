@@ -27,6 +27,10 @@ namespace maple {
 
 		template <typename T>
 		T* AddComponent() {
+			T* component = GetComponent<T>();
+			if (component != nullptr) {
+				return component;
+			}
 			T* comp = new T();
 			comp->SetOwner(this);
 			comp->Initialize();

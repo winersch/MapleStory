@@ -19,6 +19,7 @@ namespace maple {
 		void Render() override;
 
 		void SetSprite(graphics::Texture* sprite) { mSprite = sprite; }
+		graphics::Texture* GetSprite() { return mSprite; }
 		void SetMaterial(Material* material) { mMaterial = material; }
 
 	private:

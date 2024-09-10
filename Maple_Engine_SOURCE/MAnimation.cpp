@@ -8,7 +8,7 @@
 
 namespace maple {
 
-	Animation::Animation() 
+	Animation::Animation()
 		: Resource(enums::eResourceType::Animation)
 		, mAnimator(nullptr)
 		, mTexture(nullptr)
@@ -16,10 +16,14 @@ namespace maple {
 		, mIndex(-1)
 		, mTime(0.0f)
 		, mbComplete(false)
+		, mbFlip(false)
 	{
 	}
 
 	Animation::~Animation() {
+		mAnimationFrame.clear();
+		mOffset.clear();
+		mHitboxes.clear();
 	}
 
 	HRESULT Animation::Save(const std::wstring& path) {
@@ -35,21 +39,52 @@ namespace maple {
 			return;
 		}
 		mTime += Time::DeltaTime();
-
+		Transform* transform = mAnimator->GetOwner()->GetComponent<Transform>();
+		mOriginPos = transform->GetPosition();
 		if (mAnimationFrame[mIndex].duration < mTime) {
+			Texture* texture = mAnimationFrame[mIndex].texture;
 			mTime = 0;
-			if (mIndex < mAnimationFrame.size()-1) {
+			if (mIndex < mAnimationFrame.size() - 1) {
+				Transform* transform = mAnimator->GetOwner()->GetComponent<Transform>();
+				transform->SetScale(mAnimationFrame[mIndex].texture->GetWidth(), mAnimationFrame[mIndex].texture->GetHeight(), 0.0f);
+				if (mbFlip) {
+					Vector3 rotation = transform->GetRotation();
+					rotation.y = 180;
+					transform->SetRotation(rotation);
+				}
+				else {
+					Vector3 rotation = transform->GetRotation();
+					rotation.y = 0;
+					transform->SetRotation(rotation);
+				}
+				if (mbOffset) {
+					Vector3 pos = mOriginPos;
+					if (mbFlip) {
+						pos.y -= mOffset[mIndex].y;
+						pos.x += mOffset[mIndex].x;
+						pos.x -= texture->GetWidth() / 2;
+					}
+					else {
+						pos -= mOffset[mIndex];
+						pos.x += texture->GetWidth() / 2;
+					}
+					pos.y -= texture->GetHeight() / 2;
+					transform->SetRenderPos(pos);
+				}
+				else {
+					transform->ResetRenderPos();
+				}
 				mAnimator->GetOwner()->GetComponent<SpriteRenderer>()->SetSprite(mAnimationFrame[mIndex].texture);
-				//mSpriteRenderer->SetSprite(mAnimationFrame[mIndex].texture);
 				mIndex++;
-			} else {
+			}
+			else {
+				//mAnimator->GetOwner()->GetComponent<Transform>()->ResetRenderPos();
 				mbComplete = true;
 			}
 		}
 	}
 
 	void Animation::Render() {
-		// 알파블렌드를 쓸수 있는 조건 : 해당이미지 알파채널이 있어야 함
 		if (mTexture == nullptr) {
 			return;
 		}
@@ -61,7 +96,6 @@ namespace maple {
 		for (size_t i = 0; i < animationFrame.size(); i++) {
 			mAnimationFrame[i] = animationFrame[i].second;
 		}
-
 	}
 
 	void Animation::Reset() {

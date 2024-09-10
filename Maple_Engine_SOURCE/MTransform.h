@@ -34,6 +34,9 @@ namespace maple {
 		void SetScale(Vector3 scale) { mScale = scale; }
 		void SetScale(float x, float y, float z) { mScale = Vector3(x, y, z); }
 
+		void SetRenderPos(Vector3 pos) { mRenderPos = pos; mbRenderPos = true; }
+		void ResetRenderPos() { mbRenderPos = false; }
+
 		const Vector3 Foward() { return mForward; };
 		const Vector3 Right() { return mRight; };
 		const Vector3 Up() { return mUp; };
@@ -51,6 +54,8 @@ namespace maple {
 		Vector3 mRight;
 		Vector3 mUp;
 
+		bool mbRenderPos;
+		Vector3 mRenderPos;
 	};
 
 }

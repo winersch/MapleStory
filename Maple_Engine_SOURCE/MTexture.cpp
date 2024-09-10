@@ -48,6 +48,11 @@ namespace maple::graphics {
 			, mSRV.GetAddressOf()
 		);
 
+		auto metadata = mImage.GetMetadata();
+		if (metadata.format == DXGI_FORMAT_R8G8B8A8_UNORM || metadata.format == DXGI_FORMAT_B8G8R8A8_UNORM) {
+			metadata.format = DXGI_FORMAT_R8G8B8A8_UNORM_SRGB; // ¶Ç´Â DXGI_FORMAT_B8G8R8A8_UNORM_SRGB
+		}
+
 		if (hr == S_FALSE)
 			assert(false/*"Textrue load fail!!"*/);
 

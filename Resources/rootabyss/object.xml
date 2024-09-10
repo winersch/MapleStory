@@ -1,0 +1,347 @@
+<dir name="obj">
+    <dir name="0">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="-1775" />
+        <int32 name="y" value="77" />
+        <int32 name="z" value="6" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="0" />
+    </dir>
+    <dir name="1">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="1" />
+        <int32 name="x" value="-1568" />
+        <int32 name="y" value="78" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="1" />
+    </dir>
+    <dir name="2">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="3" />
+        <int32 name="x" value="624" />
+        <int32 name="y" value="83" />
+        <int32 name="z" value="12" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="2" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="2" />
+    </dir>
+    <dir name="4">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="5" />
+        <int32 name="x" value="1015" />
+        <int32 name="y" value="88" />
+        <int32 name="z" value="11" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="2" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="4" />
+    </dir>
+    <dir name="5">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="6" />
+        <int32 name="x" value="-1392" />
+        <int32 name="y" value="235" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="5" />
+    </dir>
+    <dir name="6">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stalagmite" />
+        <string name="l2" value="3" />
+        <int32 name="x" value="-1090" />
+        <int32 name="y" value="405" />
+        <int32 name="z" value="4" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="6" />
+    </dir>
+    <dir name="7">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="7" />
+        <int32 name="x" value="-1241" />
+        <int32 name="y" value="63" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="7" />
+    </dir>
+    <dir name="8">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="altar" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="-195" />
+        <int32 name="y" value="290" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="8" />
+    </dir>
+    <dir name="9">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stalagmite" />
+        <string name="l2" value="2" />
+        <int32 name="x" value="313" />
+        <int32 name="y" value="398" />
+        <int32 name="z" value="6" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="9" />
+    </dir>
+    <dir name="10">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stalagmite" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="85" />
+        <int32 name="y" value="-247" />
+        <int32 name="z" value="5" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="10" />
+    </dir>
+    <dir name="11">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stalagmite" />
+        <string name="l2" value="1" />
+        <int32 name="x" value="-436" />
+        <int32 name="y" value="-247" />
+        <int32 name="z" value="0" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="11" />
+    </dir>
+    <dir name="12">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stone" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="-643" />
+        <int32 name="y" value="370" />
+        <int32 name="z" value="7" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="12" />
+    </dir>
+    <dir name="13">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stone" />
+        <string name="l2" value="1" />
+        <int32 name="x" value="181" />
+        <int32 name="y" value="329" />
+        <int32 name="z" value="13" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="13" />
+    </dir>
+    <dir name="15">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="skull" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="203" />
+        <int32 name="y" value="413" />
+        <int32 name="z" value="13" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="15" />
+    </dir>
+    <dir name="16">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="skull" />
+        <string name="l2" value="1" />
+        <int32 name="x" value="-578" />
+        <int32 name="y" value="400" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="16" />
+    </dir>
+    <dir name="14">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="torch" />
+        <string name="l2" value="1" />
+        <int32 name="x" value="-513" />
+        <int32 name="y" value="317" />
+        <int32 name="z" value="10" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="14" />
+    </dir>
+    <dir name="3">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="torch" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="-815" />
+        <int32 name="y" value="343" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="1" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="3" />
+    </dir>
+    <dir name="17">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="1" />
+        <int32 name="x" value="823" />
+        <int32 name="y" value="78" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="0" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="17" />
+    </dir>
+    <dir name="18">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="inSide" />
+        <string name="l2" value="4" />
+        <int32 name="x" value="453" />
+        <int32 name="y" value="-39" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="0" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="18" />
+    </dir>
+    <dir name="19">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stalagmite" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="-1503" />
+        <int32 name="y" value="-249" />
+        <int32 name="z" value="5" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="0" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="19" />
+    </dir>
+    <dir name="20">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="stalagmite" />
+        <string name="l2" value="0" />
+        <int32 name="x" value="-974" />
+        <int32 name="y" value="-249" />
+        <int32 name="z" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="0" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="20" />
+    </dir>
+    <dir name="21">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="torch" />
+        <string name="l2" value="2" />
+        <int32 name="x" value="74" />
+        <int32 name="y" value="305" />
+        <int32 name="z" value="15" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="0" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="21" />
+    </dir>
+    <dir name="22">
+        <string name="oS" value="rootabyss" />
+        <string name="l0" value="bellum" />
+        <string name="l1" value="torch" />
+        <string name="l2" value="3" />
+        <int32 name="x" value="354" />
+        <int32 name="y" value="335" />
+        <int32 name="z" value="15" />
+        <int32 name="f" value="0" />
+        <int32 name="zM" value="0" />
+        <int32 name="r" value="0" />
+        <int32 name="move" value="0" />
+        <int32 name="dynamic" value="0" />
+        <int32 name="piece" value="22" />
+    </dir>
+</dir>

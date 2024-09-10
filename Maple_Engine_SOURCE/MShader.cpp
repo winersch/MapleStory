@@ -5,7 +5,7 @@ namespace maple::graphics
 {
 	Shader::Shader()
 		: Resource(enums::eResourceType::Shader)
-		, mRasterizerState(eRasterizerState::SolidBack)
+		, mRasterizerState(eRasterizerState::SolidNone)
 		, mBlendState(eBlendState::AlphaBlend)
 		, mDepthStencilState(eDepthStencilState::LessEqual) 
 	{

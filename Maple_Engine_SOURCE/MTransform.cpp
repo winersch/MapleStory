@@ -14,6 +14,9 @@ namespace maple {
 		, mScale(Vector3::One)
 		, mRotation(Vector3::Zero)
 		, mPosition(Vector3::Zero)
+		, mbRenderPos(false)
+		, mRenderPos(Vector3::Zero)
+		, mParent(nullptr)
 	{
 	}
 
@@ -31,7 +34,13 @@ namespace maple {
 		Matrix rotation = Matrix::CreateRotationX(math::Radian(mRotation.x));
 		rotation *= Matrix::CreateRotationY(math::Radian(mRotation.y));
 		rotation *= Matrix::CreateRotationZ(math::Radian(mRotation.z));
-		Matrix translation = Matrix::CreateTranslation(mPosition);
+		Matrix translation;
+		if (mbRenderPos) {
+			translation = Matrix::CreateTranslation(mRenderPos);
+		}
+		else {
+			translation = Matrix::CreateTranslation(mPosition);
+		}
 
 		mWorldMatrix = scale * rotation * translation;
 
