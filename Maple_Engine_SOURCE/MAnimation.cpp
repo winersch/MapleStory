@@ -38,15 +38,16 @@ namespace maple {
 		if (mbComplete) {
 			return;
 		}
-		mTime += Time::DeltaTime();
+		mTime -= Time::DeltaTime();
 		Transform* transform = mAnimator->GetOwner()->GetComponent<Transform>();
 		mOriginPos = transform->GetPosition();
-		if (mAnimationFrame[mIndex].duration < mTime) {
-			Texture* texture = mAnimationFrame[mIndex].texture;
-			mTime = 0;
-			if (mIndex < mAnimationFrame.size() - 1) {
+
+		if (mTime <= 0.0001f) {
+			mTime = 0.0f;
+			if (mIndex <= mAnimationFrame.size() - 1) {
+				Texture* texture = mAnimationFrame[mIndex].texture;
 				Transform* transform = mAnimator->GetOwner()->GetComponent<Transform>();
-				transform->SetScale(mAnimationFrame[mIndex].texture->GetWidth(), mAnimationFrame[mIndex].texture->GetHeight(), 0.0f);
+				transform->SetScale((float)mAnimationFrame[mIndex].texture->GetWidth(), (float)mAnimationFrame[mIndex].texture->GetHeight(), 0.0f);
 				if (mbFlip) {
 					Vector3 rotation = transform->GetRotation();
 					rotation.y = 180;
@@ -75,6 +76,10 @@ namespace maple {
 					transform->ResetRenderPos();
 				}
 				mAnimator->GetOwner()->GetComponent<SpriteRenderer>()->SetSprite(mAnimationFrame[mIndex].texture);
+				mTime += mAnimationFrame[mIndex].duration;
+				if (mAnimationFrame[mIndex].duration > 1.0f) {
+					int a = 0;
+				}
 				mIndex++;
 			}
 			else {

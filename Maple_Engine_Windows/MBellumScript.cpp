@@ -192,7 +192,6 @@ namespace maple {
 
 		GetOwner()->GetComponent<Transform>()->SetPosition(pos);
 
-
 	}
 
 	void BellumScript::ShortAttack() {

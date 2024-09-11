@@ -169,8 +169,6 @@ namespace maple {
 								size_t pos = tmpOffsetStr.find(',');
 								tmpOffset.x = std::stoi(tmpOffsetStr.substr(0, pos));
 								tmpOffset.y = -std::stoi(tmpOffsetStr.substr(pos + 1));
-								//tmpOffset.x /= 2;
-								//tmpOffset.y /= 2;
 								offset.push_back(tmpOffset);
 							}
 							else if (elementNameNext == "lt") {
