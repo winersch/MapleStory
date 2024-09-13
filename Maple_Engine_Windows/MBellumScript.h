@@ -32,6 +32,8 @@ namespace maple {
 		void LateUpdate() override;
 		void Render() override;
 
+		void AttackUpdate();
+
 		void Idle();
 		void Summon();
 		void Move();
@@ -42,6 +44,8 @@ namespace maple {
 		void PoisonAttack();		//cooldown 4
 		void BreathAttack();		//cooldown 5
 		void Death();
+
+
 
 		void PlayAnimation(const std::wstring& name, bool loop = false);	
 
@@ -57,6 +61,7 @@ namespace maple {
 
 		float mTime;
 		float mSpeed;
+		float mDelay;
 		long long mHP;
 
 		float mCooldown[6];

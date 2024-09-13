@@ -163,6 +163,7 @@ namespace maple {
 		if (animation == nullptr) {
 			return;
 		}
+		mActiveAnimationName = name;
 		mActiveAnimation = animation;
 		mActiveAnimation->Reset();
 		mActiveAnimation->setFlip(flip);

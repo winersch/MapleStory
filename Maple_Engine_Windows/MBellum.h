@@ -15,6 +15,8 @@ namespace maple {
 		void Render() override;	
 
 
+	private:
+
 
 	};
 }

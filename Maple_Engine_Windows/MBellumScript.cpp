@@ -12,9 +12,9 @@
 /// Long Attack : attack1
 /// Short Attack : attack7
 /// Fire Attack : attack2 -> attack5 -> attack3 -> attack4 -> attack6
-/// Dig Attack : attack8
-/// Poision Attack : attack13 -> attack 14(repeat) -> attack 16
-/// Breath Attack : attack9 -> attack 10(repeat) -> attack 11 -> attack 12
+/// Dig Attack : attack8	// 80% 20sec
+/// Poision Attack : attack13 -> attack 14(repeat) -> attack 16 // 60% 20sec
+/// Breath Attack : attack9 -> attack 10(repeat) -> attack 11 -> attack 12 // 40% 50sec
 /// </summary>
 
 namespace maple {
@@ -27,7 +27,8 @@ namespace maple {
 		, mState(eState::Idle)
 		, mCooldown{}
 		, mCooldownTime{}
-		, mbSummon(false) {
+		, mbSummon(false)
+		, mDelay(0.0f){
 	}
 
 	BellumScript::~BellumScript() {
@@ -47,32 +48,23 @@ namespace maple {
 		sr->SetSprite(tex);
 
 		mAnimator = GetOwner()->GetComponent<Animator>();
-		mAnimator->CreateAnimationByFolder(L"Summon", L"..\\Resources\\rootabyss\\bellum\\bellum1\\summon");
+		mAnimator->CreateAnimationByFolder(L"Summon", L"..\\Resources\\rootabyss\\bellum\\bellum\\summon");
 
 		InitializeAnimationEvent();
 
 		mCooldownTime[0] = 6.0f;
 		mCooldownTime[1] = 6.0f;
-		mCooldownTime[2] = 0.0f;
-		mCooldownTime[3] = 30.0f;
-		mCooldownTime[4] = 30.0f;
-		mCooldownTime[5] = 60.0f;
+		mCooldownTime[2] = 20.0f;
+		mCooldownTime[3] = 20.0f;
+		mCooldownTime[4] = 20.0f;
+		mCooldownTime[5] = 50.0f;
 
 	}
 
 	void BellumScript::Update() {
-		Transform* ttt = GetOwner()->GetComponent<Transform>();
 		if (!mbSummon) {
 			return;
 		}
-		//if (!mAnimator->IsCompleted() && mState != eState::Idle) {
-		//	SpriteRenderer* sr = GetOwner()->GetComponent<SpriteRenderer>();
-		//	graphics::Texture* tex = sr->GetSprite();
-		//	Transform* tr = GetOwner()->GetComponent<Transform>();
-		//	Vector3 pos = tr->GetPosition();
-		//	pos.y = -450.0f + tex->GetHeight() / 2;
-		//	tr->SetPosition(pos);
-		//}
 
 		Script::Update();
 		mTime += Time::DeltaTime();
@@ -123,6 +115,45 @@ namespace maple {
 		Script::Render();
 	}
 
+	void BellumScript::AttackUpdate() {
+		if (mCooldown[5] <= 0.0f) {
+			mState = eState::BreathAttack;
+			PlayAnimation(L"attack9", false);
+			mCooldown[5] = mCooldownTime[5];
+			return;
+		}
+		if (mCooldown[4] <= 0.0f) {
+			mState = eState::PoisonAttack;
+			PlayAnimation(L"attack13", false);
+			mCooldown[4] = mCooldownTime[4];
+			return;
+		}
+		if (mCooldown[2] <= 0.0f) {
+			mState = eState::DigAttack;
+			PlayAnimation(L"attack8", false);
+			mCooldown[2] = mCooldownTime[2];
+			return;
+		}
+		if (mCooldown[3] <= 0.0f) {
+			mState = eState::FireAttack;
+			PlayAnimation(L"attack2", false);
+			mCooldown[3] = mCooldownTime[3];
+			return;
+		}
+		if (mCooldown[1] <= 0.0f) {
+			mState = eState::LongAttack;
+			PlayAnimation(L"attack1", false);
+			mCooldown[1] = mCooldownTime[1];
+			return;
+		}
+		if (mCooldown[0] <= 0.0f) {
+			mState = eState::ShortAttack;
+			PlayAnimation(L"attack7", false);
+			mCooldown[0] = mCooldownTime[0];
+			return;
+		}
+	}
+
 	void BellumScript::Idle() {
 		if (!mAnimator->IsCompleted()) {
 			return;
@@ -140,24 +171,7 @@ namespace maple {
 			else {
 				mbFlip = true;
 			}
-			mAnimator->StopAnimation();
-			mState = eState::PoisonAttack;
-			return;
-			if (mCooldown[2] <= 0.1f) {
-				mState = eState::FireAttack;
-				mCooldown[2] = mCooldownTime[2];
-				return;
-			}
-			//if (mCooldown[0] <= 0.1f) {
-			//	mState = eState::ShortAttack;
-			//	mAnimator->PlayAnimation(L"attack7", false);  // 다음 애니메이션 재생
-			//	return;
-			//}
-			//if (mCooldown[1] <= 0.1f) {
-			//	mState = eState::LongAttack;
-			//	mAnimator->PlayAnimation(L"attack1", false);  // 다음 애니메이션 재생
-			//	return;
-			//}
+			AttackUpdate();
 		}
 		else {
 			mAnimator->PlayAnimation(L"move", false);
@@ -167,7 +181,10 @@ namespace maple {
 
 	void BellumScript::Summon() {
 		mAnimator->PlayAnimation(L"Summon", false);
-		//mState = eState::Idle;
+
+		for (size_t i = 0; i < 6; i++) {
+			mCooldown[i] = mCooldownTime[i];
+		}
 	}
 
 	void BellumScript::Move() {
@@ -196,8 +213,6 @@ namespace maple {
 
 	void BellumScript::ShortAttack() {
 		if (mAnimator->IsCompleted()) {
-			mState = eState::Idle;
-			//mAnimator->PlayAnimation(L"Move", false);
 			mCooldown[0] = mCooldownTime[0];
 			mTime = 0.0f;
 		}
@@ -205,8 +220,6 @@ namespace maple {
 
 	void BellumScript::LongAttack() {
 		if (mAnimator->IsCompleted()) {
-			mState = eState::Idle;
-			//mAnimator->PlayAnimation(L"Move", false);
 			mCooldown[1] = mCooldownTime[1];
 			mTime = 0.0f;
 		}

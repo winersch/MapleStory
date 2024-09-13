@@ -67,10 +67,12 @@ namespace maple {
 		bool IsCompleted() { return mActiveAnimation->IsCompleted(); }
 
 		Animation* GetActiveAnimation() { return mActiveAnimation; }
+		std::wstring GetActiveAnimationName() { return mActiveAnimationName; }
 
 	private:
 		std::map<std::wstring, Animation*> mAnimations;
 		Animation* mActiveAnimation;
+		std::wstring mActiveAnimationName;
 		bool mbLoop;
 
 		std::map<std::wstring, Events*> mEvents;

@@ -77,9 +77,6 @@ namespace maple {
 				}
 				mAnimator->GetOwner()->GetComponent<SpriteRenderer>()->SetSprite(mAnimationFrame[mIndex].texture);
 				mTime += mAnimationFrame[mIndex].duration;
-				if (mAnimationFrame[mIndex].duration > 1.0f) {
-					int a = 0;
-				}
 				mIndex++;
 			}
 			else {
