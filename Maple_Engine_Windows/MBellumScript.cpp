@@ -6,6 +6,7 @@
 #include "MTexture.h"
 #include "MResources.h"
 #include "MTime.h"
+#include <random>
 
 /// <summary>
 /// bellum attack pattern
@@ -28,7 +29,9 @@ namespace maple {
 		, mCooldown{}
 		, mCooldownTime{}
 		, mbSummon(false)
-		, mDelay(0.0f){
+		, mDelay(0.0f)
+		, mHP(100)
+		, mMaxHP(100){
 	}
 
 	BellumScript::~BellumScript() {
@@ -43,7 +46,6 @@ namespace maple {
 		GetOwner()->GetComponent<Transform>()->SetPosition(-195.0f, -95.0f, 0.0f);
 		//GetOwner()->GetComponent<Transform>()->SetScale((float)tex->GetWidth(), (float)tex->GetHeight(), 0.0f);
 
-
 		SpriteRenderer* sr = GetOwner()->AddComponent<SpriteRenderer>();
 		sr->SetSprite(tex);
 
@@ -52,11 +54,11 @@ namespace maple {
 
 		InitializeAnimationEvent();
 
-		mCooldownTime[0] = 6.0f;
-		mCooldownTime[1] = 6.0f;
-		mCooldownTime[2] = 20.0f;
-		mCooldownTime[3] = 20.0f;
-		mCooldownTime[4] = 20.0f;
+		mCooldownTime[0] = 10.0f;
+		mCooldownTime[1] = 10.0f;
+		mCooldownTime[2] = 25.0f;
+		mCooldownTime[3] = 30.0f;
+		mCooldownTime[4] = 30.0f;
 		mCooldownTime[5] = 50.0f;
 
 	}
@@ -116,42 +118,57 @@ namespace maple {
 	}
 
 	void BellumScript::AttackUpdate() {
-		if (mCooldown[5] <= 0.0f) {
-			mState = eState::BreathAttack;
-			PlayAnimation(L"attack9", false);
-			mCooldown[5] = mCooldownTime[5];
-			return;
-		}
-		if (mCooldown[4] <= 0.0f) {
-			mState = eState::PoisonAttack;
-			PlayAnimation(L"attack13", false);
-			mCooldown[4] = mCooldownTime[4];
-			return;
-		}
-		if (mCooldown[2] <= 0.0f) {
+		
+		//if (mHP / mMaxHP < 0.4f && mCooldown[5] <= 0.0f) {
+		//	std::random_device rd;
+		//	std::mt19937 gen(rd());
+		//	std::uniform_int_distribution<int> rand(0, 1);
+		//	int a = rand(gen);
+		//	if (a == 0) {
+		//		mbFlip = true;
+		//		Transform* tr = GetOwner()->GetComponent<Transform>();
+		//		Vector3 pos = tr->GetPosition();
+		//		pos.x = 0.0f;
+		//		tr->SetPosition(pos);
+		//	}
+		//	else {
+		//		mbFlip = false;
+		//	}
+		//	mState = eState::BreathAttack;
+		//	PlayAnimation(L"attack9", false);
+		//	mCooldown[5] = mCooldownTime[5];
+		//	return;
+		//}
+		//if (mHP / mMaxHP < 0.6f && mCooldown[4] <= 0.0f) {
+		//	mState = eState::PoisonAttack;
+		//	PlayAnimation(L"attack13", false);
+		//	mCooldown[4] = mCooldownTime[4];
+		//	return;
+		//}
+		if (mHP / mMaxHP < 0.8f && mCooldown[2] <= 0.0f || true) {
 			mState = eState::DigAttack;
 			PlayAnimation(L"attack8", false);
-			mCooldown[2] = mCooldownTime[2];
+			//mCooldown[2] = mCooldownTime[2];
 			return;
 		}
-		if (mCooldown[3] <= 0.0f) {
-			mState = eState::FireAttack;
-			PlayAnimation(L"attack2", false);
-			mCooldown[3] = mCooldownTime[3];
-			return;
-		}
-		if (mCooldown[1] <= 0.0f) {
-			mState = eState::LongAttack;
-			PlayAnimation(L"attack1", false);
-			mCooldown[1] = mCooldownTime[1];
-			return;
-		}
-		if (mCooldown[0] <= 0.0f) {
-			mState = eState::ShortAttack;
-			PlayAnimation(L"attack7", false);
-			mCooldown[0] = mCooldownTime[0];
-			return;
-		}
+		//if (mCooldown[3] <= 0.0f) {
+		//	mState = eState::FireAttack;
+		//	PlayAnimation(L"attack2", false);
+		//	mCooldown[3] = mCooldownTime[3];
+		//	return;
+		//}
+		//if (mCooldown[1] <= 0.0f) {
+		//	mState = eState::LongAttack;
+		//	PlayAnimation(L"attack1", false);
+		//	mCooldown[1] = mCooldownTime[1];
+		//	return;
+		//}
+		//if (mCooldown[0] <= 0.0f) {
+		//	mState = eState::ShortAttack;
+		//	PlayAnimation(L"attack7", false);
+		//	mCooldown[0] = mCooldownTime[0];
+		//	return;
+		//}
 	}
 
 	void BellumScript::Idle() {

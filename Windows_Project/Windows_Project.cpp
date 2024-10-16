@@ -79,7 +79,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,         // 프로그램의 인�
 				TranslateMessage(&msg);
 				DispatchMessage(&msg);
 			}
-		} else {
+		}
+		else {
 			application.Run();
 			// 메시지가 없으면 여기서 처리
 			// 게임 로직이 들어가면 된다.
@@ -111,7 +112,8 @@ ATOM MyRegisterClass(HINSTANCE hInstance, const wchar_t* name, WNDPROC proc) {
 	wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINDOWSPROJECT));
 	wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
 	wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-	wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_WINDOWSPROJECT);
+	//wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_WINDOWSPROJECT); 메뉴 제거
+	wcex.lpszMenuName = nullptr;
 	wcex.lpszClassName = name;
 	wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
@@ -131,8 +133,8 @@ ATOM MyRegisterClass(HINSTANCE hInstance, const wchar_t* name, WNDPROC proc) {
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow) {
 	hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
-	const UINT width = 1600;
-	const UINT height = 900;
+	const UINT width = 1366;
+	const UINT height = 768;
 
 	HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, 0, width, height, nullptr, nullptr, hInstance, nullptr);
@@ -192,11 +194,21 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 			}
 		}
 		break;
+
+		case WM_SYSCOMMAND:
+			// Alt 키 입력을 무시하기 위해 SC_KEYMENU를 필터링
+			if ((wParam & 0xFFF0) == SC_KEYMENU) {
+				return 0;
+			}
+			return DefWindowProc(hWnd, message, wParam, lParam);
+
+		break;
+
 		case WM_PAINT:
 		{
 			PAINTSTRUCT ps;
 			HDC hdc = NULL;
-			hdc	= BeginPaint(hWnd, &ps);
+			hdc = BeginPaint(hWnd, &ps);
 
 			EndPaint(hWnd, &ps);
 		}

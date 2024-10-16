@@ -8,13 +8,19 @@
 #include "MObject.h"
 #include "MRigidbody.h"
 #include "MUIManager.h"
+#include "MSkillManager.h"
+#include "MSkill.h"
+#include "MReadXML.h"
 
 namespace maple {
 
 	PlayerScript::PlayerScript()
-		:mState(eState::Idle)
+		:mState(eState::Stand)
 		, mAnimator(nullptr)
-	
+		, mTime(0.0f)
+		, mbPlashJumped(false)
+		, mDirection(1)
+
 	{
 	}
 
@@ -22,51 +28,55 @@ namespace maple {
 	}
 
 	void PlayerScript::Initialize() {
-		Animator* mAnimator = GetOwner()->AddComponent<Animator>();
-		mAnimator->CreateAnimationByFolder(L"Idle", L"..\\Resources\\Cat\\stand");
+		mAnimator = GetOwner()->AddComponent<Animator>();
+		mAnimator->CreateAnimationByFolder(L"Stand", L"..\\Resources\\Cat\\stand");
+		mAnimator->CreateAnimationByFolder(L"Move", L"..\\Resources\\Cat\\move");
+		mAnimator->CreateAnimationByFolder(L"Attack", L"..\\Resources\\Cat\\attack");
 
-		
-		mAnimator->PlayAnimation(L"Idle", true);
+		mAnimator->PlayAnimation(L"Stand", true);
+
+		for (auto& a : mAnimator->GetAnimations()) {
+			a.second->SetFixedFlip(true);
+		}
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		tr->SetPosition(-745.0f, -376.0f, 0.0f);
+
+		GetOwner()->AddComponent<Rigidbody>();
+		GetOwner()->AddComponent<SkillManager>();
+
+		SkillInitialize();
+
 	}
 
 	void PlayerScript::Update() {
-		if (mAnimator == nullptr) {
-			mAnimator = GetOwner()->GetComponent<Animator>();
+		Transform* tr = GetOwner()->GetComponent<Transform>();
+		Vector3 pos = tr->GetPosition();
+		Rigidbody* playerRb = GetOwner()->GetComponent<Rigidbody>();
+		mTime += Time::DeltaTime();
+		mDelay -= Time::DeltaTime();
+
+		if (mbFlip) {
+			GetOwner()->GetComponent<Transform>()->SetRotation(Vector3(0, 180, 0));
 		}
-		//switch (mState) {
-		//	case PlayerScript::eState::Idle:
-		//		idle();
-		//		break;
-		//	case PlayerScript::eState::Walk:
-		//		move();
-		//		break;
-		//	case PlayerScript::eState::Sleep:
-		//		break;
-		//	case PlayerScript::eState::GiveWater:
-		//		giveWater();
-		//		break;
-		//	case PlayerScript::eState::Attack:
-		//		break;
-		//	default:
-		//		break;
-		//}
+		else {
+			GetOwner()->GetComponent<Transform>()->SetRotation(Vector3(0,0,0));
+		}
+
+		if (pos.y <= -410.0f) {
+			playerRb->SetGround(true);
+			mbPlashJumped = false;
+			pos.y = -409.9f;
+			tr->SetPosition(pos);
+		}
+		else {
+			//playerRb->SetGround(false);
+		}
+
 		move();
-		//Transform* tr = GetOwner()->GetComponent<Transform>();
-		//Vector3 pos = tr->GetPosition();
-		//COLORREF color = mPixelMap->GetPixel(pos.x, pos.y + 50);
 
-		//Rigidbody* playerRb = GetOwner()->GetComponent<Rigidbody>();
-		//if (color == RGB(255, 0, 0)) {
-		//	playerRb->SetGround(true);
-
-		//	pos.y -= 1;
-		//	tr->SetPosition(pos);
-		//} else {
-		//	playerRb->SetGround(false);
-		//}
+		Rigidbody* rb = GetOwner()->GetComponent<Rigidbody>();
+		Vector2 velocity = rb->GetVelocity();
 
 	}
 
@@ -76,51 +86,28 @@ namespace maple {
 	void PlayerScript::Render() {
 	}
 
+	void PlayerScript::SkillInitialize() {
+		mSkillManager = GetOwner()->AddComponent<SkillManager>();
+
+		ReadXML* xml = new ReadXML();
+		xml->LoadSkill(L"..\\Resources\\skill\\skill.xml", mSkillManager);
+
+	}
+
+	void PlayerScript::SkillUpdate() {
+	}
+
+	void PlayerScript::SkillLateUpdate() {
+	}
+
 	void PlayerScript::AttackEffect() {
-		//Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
-		//CatScript* catSrc = cat->AddComponent<CatScript>();
-
-		//catSrc->SetPlayer(GetOwner());
-
-		//graphics::Texture* catTex = Resources::Find<graphics::Texture>(L"Cat");
-		//Animator* catAnimator = cat->AddComponent<Animator>();
-		//catAnimator->CreateAnimation(L"DownWalk", catTex
-		//	, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		//catAnimator->CreateAnimation(L"RightWalk", catTex
-		//	, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		//catAnimator->CreateAnimation(L"UpWalk", catTex
-		//	, Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		//catAnimator->CreateAnimation(L"LeftWalk", catTex
-		//	, Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		//catAnimator->CreateAnimation(L"SitDown", catTex
-		//	, Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		//catAnimator->CreateAnimation(L"Grooming", catTex
-		//	, Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-		//catAnimator->CreateAnimation(L"LayDown", catTex
-		//	, Vector2(0.0f, 192.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
-
-		//catAnimator->PlayAnimation(L"SitDown", false);
-
-		//Transform* tr = GetOwner()->GetComponent<Transform>();
-
-		//cat->GetComponent<Transform>()->SetPosition(tr->GetPosition());
-		//cat->GetComponent<Transform>()->SetScale(Vector2(2.0f, 2.0f));
-
-		//Vector2 mousePos = Input::GetMousePosition();
-		//catSrc->mDest = mousePos;
 
 	}
 
 	void PlayerScript::OnCollisionEnter(Collider* other) {
-		float ny = rand() % 672;
-		float nx = rand() % 486;
-		//other->GetOwner()->GetComponent<Transform>()->SetPosition(Vector2(nx, ny));
 	}
 
 	void PlayerScript::OnCollisionStay(Collider* other) {
-		float ny = rand() % 672;
-		float nx = rand() % 486;
-		//other->GetOwner()->GetComponent<Transform>()->SetPosition(Vector2(nx, ny));
 
 	}
 
@@ -129,7 +116,7 @@ namespace maple {
 	}
 
 	void PlayerScript::idle() {
-		
+
 	}
 
 	void PlayerScript::move() {
@@ -137,38 +124,80 @@ namespace maple {
 		Vector3 pos = tr->GetPosition();
 
 		Rigidbody* rb = GetOwner()->GetComponent<Rigidbody>();
+		Vector2 velocity = rb->GetVelocity();
 
 		if (Input::GetKey(eKeyCode::Right)) {
-			pos.x += 200.0f * Time::DeltaTime();
-			//rb->AddForce(Vector2(200.0f, 0.0f));
+			//pos.x += 200.0f * Time::DeltaTime();
+			if (abs(velocity.x) <= 1000.0f) {
+				if (rb->GetGround()) {
+					rb->AddForce(Vector2(1000.0f, 0.0f));
+				}
+				else {
+					rb->AddForce(Vector2(200.0f, 0.0f));
+				}
+			}
+			mDirection = 1;
+			mbFlip = true;
 		}
 		if (Input::GetKey(eKeyCode::Left)) {
-			pos.x -= 200.0f * Time::DeltaTime();
-			//rb->AddForce(Vector2(-200.0f, 0.0f));
+			//pos.x -= 200.0f * Time::DeltaTime();
+			if (abs(velocity.x) >= -1000.0f) {
+				if (rb->GetGround()) {
+					rb->AddForce(Vector2(-1000.0f, 0.0f));
+				}
+				else {
+					rb->AddForce(Vector2(-200.0f, 0.0f));
+				}
+			}
+			mDirection = -1;
+			mbFlip = false;
 		}
-		if (Input::GetKey(eKeyCode::Up)) {
-			pos.y += 200.0f * Time::DeltaTime();
-			//rb->AddForce(Vector2(0.0f, 200.0f));
+		if (Input::GetKeyDown(eKeyCode::Up) || Input::GetKeyDown(eKeyCode::Alt)) {
+			bool b = rb->GetGround();
+			if (rb->GetGround()) {
+				velocity.y = 300.0f;
+				rb->SetVelocity(velocity);
+				rb->SetGround(false);
+				mbPlashJumped = false;
+			}
+			else if (!mbPlashJumped) {
+				mbPlashJumped = true;
+				velocity.y += 100.0f;
+				velocity.x = 500.0f * mDirection;
+				rb->SetVelocity(velocity);
+				mSkillManager->PlayAnimation(L"FlashJump", false, mbFlip);
+			}
 		}
-		if (Input::GetKey(eKeyCode::Down)){
-			pos.y -= 200.0f * Time::DeltaTime();
-			//rb->AddForce(Vector2(0.0f, 200.0f));
+		if (Input::GetKey(eKeyCode::Down)) {
 		}
 
-		tr->SetPosition(pos);
+		if (Input::GetKey(eKeyCode::W)) {
+			if (mDelay < 0.001f) {
+				mSkillManager->PlayAnimation(L"KramaFury", false, mbFlip);
+				mDelay = 1.9f;
+			}
+		}
 
-		if (Input::GetKeyUp(eKeyCode::D) || Input::GetKeyUp(eKeyCode::A)
-			|| Input::GetKeyUp(eKeyCode::W) || Input::GetKeyUp(eKeyCode::S)) {
-			mState = PlayerScript::eState::Idle;
-			mAnimator->PlayAnimation(L"SitDown", false);
+		if (Input::GetKey(eKeyCode::Ctrl)) {
+			if (mDelay < 0.001f) {
+				mSkillManager->PlayAnimation(L"PhantomBlow", false, mbFlip);
+				mSkillManager->PlayAnimation(L"PhantomBlow0", false, mbFlip);
+				mDelay = 0.7f;
+			}
 		}
+
+
+		//if (velocity.x > 250) {
+		//	velocity.x = 250;
+		//}
+		//if (velocity.x < -250) {
+		//	velocity.x = -250;
+		//}
+
+		//tr->SetPosition(pos);
+
 	}
-	void PlayerScript::giveWater() {
-		if (mAnimator->IsCompleted()) {
-			mState = eState::Idle;
-			mAnimator->PlayAnimation(L"Idle", false);
-		}
-	}
+	
 
 
 

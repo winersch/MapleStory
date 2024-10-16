@@ -52,12 +52,18 @@ namespace maple {
 		void SetComplete(bool complete) { mbComplete = complete; }
 		void SetAnimator(class Animator* animator) { mAnimator = animator; }
 		void setFlip(bool flip) { mbFlip = flip; }
+		void setModifyRotation(bool modify) { mbModifyRotation = modify; }
+		void SetOwner(GameObject* owner) { mOwner = owner; }
+		void SetFixedPos(bool fixed) { mbFixedPos = fixed; }
+		void SetOriginPos(Vector3 pos) { mOriginPos = pos; }
+		void SetFixedFlip(bool fixed) { mbFixedFlip = fixed; }
 
 		int GetIndex() const { return mIndex; }
 
 	private:
 		class Animator* mAnimator;
 		graphics::Texture* mTexture;
+		GameObject* mOwner;
 
 		std::vector<Sprite> mAnimationFrame;
 		std::vector<Vector3> mOffset;
@@ -68,7 +74,10 @@ namespace maple {
 		float mTime;
 		bool mbComplete;
 		bool mbFlip;
+		bool mbModifyRotation;
 		bool mbOffset;
+		bool mbFixedPos;
+		bool mbFixedFlip;
 
 		Vector3 mOriginPos;
 

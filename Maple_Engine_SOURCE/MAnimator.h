@@ -5,18 +5,17 @@
 
 namespace maple {
 
-	class Animator : public Component{
+	class Animator : public Component {
 
 	public:
 
 		struct Event {
 
-			void operator = (std::function<void()> func){
+			void operator = (std::function<void()> func) {
 				mEvent = std::move(func);
 			}
 
-
-			void operator()(){
+			void operator()() {
 				if (mEvent) {
 					mEvent();
 				}
@@ -55,8 +54,13 @@ namespace maple {
 			, std::vector<std::wstring>& path, std::vector<float>& duration, std::vector<Vector3>& offset
 			, std::vector<std::vector<Animation::Hitbox>> hitboxes, std::vector<bool> hide);
 
+		void CreateAnimationWithOffset(const std::wstring& name
+			, std::vector<std::wstring>& path, std::vector<float>& duration, std::vector<Vector3>& offset);
+
 		Animation* FindAnimation(const std::wstring& name);
+		void AddAnimation(const std::wstring& name, Animation* animation);
 		void PlayAnimation(const std::wstring& name, bool loop = true, bool flip = false);
+		void PlayAnimation(Animation* animation, bool loop = true, bool flip = false);
 		void StopAnimation();
 
 		Events* FindEvents(const std::wstring& name);
@@ -67,7 +71,9 @@ namespace maple {
 		bool IsCompleted() { return mActiveAnimation->IsCompleted(); }
 
 		Animation* GetActiveAnimation() { return mActiveAnimation; }
+		Animation* GetAnimation(const std::wstring& name) { return mAnimations[name]; }
 		std::wstring GetActiveAnimationName() { return mActiveAnimationName; }
+		std::map<std::wstring, Animation*>& GetAnimations() { return mAnimations; }
 
 	private:
 		std::map<std::wstring, Animation*> mAnimations;

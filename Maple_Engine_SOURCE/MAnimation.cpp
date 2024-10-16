@@ -5,6 +5,7 @@
 #include "MGameObject.h"
 #include "MRenderer.h"
 #include "MCamera.h"
+#include "MResources.h"
 
 namespace maple {
 
@@ -17,6 +18,7 @@ namespace maple {
 		, mTime(0.0f)
 		, mbComplete(false)
 		, mbFlip(false)
+		, mbFixedFlip(false)
 	{
 	}
 
@@ -40,30 +42,42 @@ namespace maple {
 		}
 		mTime -= Time::DeltaTime();
 		Transform* transform = mAnimator->GetOwner()->GetComponent<Transform>();
-		mOriginPos = transform->GetPosition();
-
+		if (!mbFixedPos) {
+			mOriginPos = transform->GetPosition();
+		}
+		if (mAnimator->GetActiveAnimationName() == L"FlashJump" || mAnimator->GetActiveAnimationName() == L"KramaFury" || mAnimator->GetActiveAnimationName() == L"PhantomBlow") {
+			int a = 0;
+		}
 		if (mTime <= 0.0001f) {
-			mTime = 0.0f;
+
 			if (mIndex <= mAnimationFrame.size() - 1) {
 				Texture* texture = mAnimationFrame[mIndex].texture;
 				Transform* transform = mAnimator->GetOwner()->GetComponent<Transform>();
 				transform->SetScale((float)mAnimationFrame[mIndex].texture->GetWidth(), (float)mAnimationFrame[mIndex].texture->GetHeight(), 0.0f);
-				if (mbFlip) {
-					Vector3 rotation = transform->GetRotation();
-					rotation.y = 180;
-					transform->SetRotation(rotation);
-				}
-				else {
-					Vector3 rotation = transform->GetRotation();
-					rotation.y = 0;
-					transform->SetRotation(rotation);
+				Vector3 rotation = transform->GetRotation();
+
+				if (!mbFixedFlip) {
+					if (mbFlip) {
+						rotation.y = 180;
+						transform->SetRotation(rotation);
+					}
+					else {
+						rotation.y = 0;
+						transform->SetRotation(rotation);
+					}
 				}
 				if (mbOffset) {
 					Vector3 pos = mOriginPos;
-					if (mbFlip) {
-						pos.y -= mOffset[mIndex].y;
-						pos.x += mOffset[mIndex].x;
-						pos.x -= texture->GetWidth() / 2;
+					if (!mbFixedFlip) {
+						if (mbFlip) {
+							pos.y -= mOffset[mIndex].y;
+							pos.x += mOffset[mIndex].x;
+							pos.x -= texture->GetWidth() / 2;
+						}
+						else {
+							pos -= mOffset[mIndex];
+							pos.x += texture->GetWidth() / 2;
+						}
 					}
 					else {
 						pos -= mOffset[mIndex];
@@ -76,12 +90,13 @@ namespace maple {
 					transform->ResetRenderPos();
 				}
 				mAnimator->GetOwner()->GetComponent<SpriteRenderer>()->SetSprite(mAnimationFrame[mIndex].texture);
-				mTime += mAnimationFrame[mIndex].duration;
+				mTime = mAnimationFrame[mIndex].duration;
 				mIndex++;
 			}
 			else {
 				//mAnimator->GetOwner()->GetComponent<Transform>()->ResetRenderPos();
 				mbComplete = true;
+				//mAnimator->GetOwner()->GetComponent<SpriteRenderer>()->SetSprite(Resources::Find<graphics::Texture>(L"Empty"));
 			}
 		}
 	}

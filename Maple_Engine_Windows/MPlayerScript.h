@@ -2,6 +2,7 @@
 #include "..\\Maple_Engine_SOURCE\\MScript.h"
 #include "MAnimator.h"
 #include "MTexture.h"
+#include "MSkillManager.h"
 
 namespace maple {
 
@@ -9,11 +10,9 @@ namespace maple {
 
 	public:
 		enum class eState {
-			Idle,
-			Walk,
-			Sleep,
-			GiveWater,
-			Attack,
+			Stand,
+			Move,
+			Attack
 		};
 
 
@@ -26,6 +25,10 @@ namespace maple {
 		void LateUpdate() override;
 		void Render() override;
 
+		void SkillInitialize();
+		void SkillUpdate();
+		void SkillLateUpdate();
+
 		void AttackEffect();
 
 		void OnCollisionEnter(Collider* other) override;
@@ -36,11 +39,20 @@ namespace maple {
 	private:
 		void idle();
 		void move();
-		void giveWater();
+
 
 	private:
 		eState mState;
 		Animator* mAnimator;
+
+		SkillManager* mSkillManager;
+
+		float mTime;
+		float mDelay;
+		int mDirection;
+
+		bool mbFlip;
+		bool mbPlashJumped;
 		
 				
 	};

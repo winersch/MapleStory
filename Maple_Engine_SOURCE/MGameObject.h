@@ -39,6 +39,11 @@ namespace maple {
 
 			return comp;
 		}
+		template <typename T>
+		T* AddComponent(T* component) {
+			mComponents[(UINT)component->GetType()] = component;
+			return component;
+		}
 
 		template <typename T>
 		T* GetComponent() {
@@ -56,6 +61,7 @@ namespace maple {
 			if (power == true) mState = eState::Active;
 			if (power == false) mState = eState::Paused;
 		}
+		void SetDead() { death(); }
 		bool IsActive() const { return mState == eState::Active; }
 		bool IsDead() const { return mState == eState::Dead; }
 		void SetLayerType(eLayerType layerType) { mLayerType = layerType; }

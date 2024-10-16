@@ -63,6 +63,13 @@
     <ClCompile Include="MBossMonster.cpp">
       <Filter>GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="MSkillManager.cpp" />
+    <ClCompile Include="MFlashJump.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="MSkillObjectPool.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MAlterScript.h">
@@ -114,6 +121,13 @@
     </ClInclude>
     <ClInclude Include="MBossMonster.h">
       <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MSkillManager.h" />
+    <ClInclude Include="MFlashJump.h">
+      <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="MSkillObjectPool.h">
+      <Filter>Skill</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -37,6 +37,14 @@ namespace maple {
 
 		Vector3 newPos = Vector3::Lerp(currentPos, targetPos, followSpeed);
 		newPos.z = currentPos.z;
+
+		if (newPos.x > 400 || newPos.x < -1200) {
+			newPos.x = currentPos.x;
+		}
+		if (newPos.y < -200) {
+			newPos.y = -200;
+		}
+
 		tr->SetPosition(newPos);
 	}
 

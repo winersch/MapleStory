@@ -5,7 +5,7 @@
 namespace maple {
 
 
-	class Skill : public Component{
+	class Skill{
 
 	public:
 
@@ -23,7 +23,9 @@ namespace maple {
 		virtual void LateUpdate();
 		virtual void Render();
 
-		
+		void SetSkillType(eSkillType type) { mSkillType = type; }
+		eSkillType GetSkillType() { return mSkillType; }
+
 	private:
 		eSkillType mSkillType;
 

@@ -4040,6 +4040,7 @@
       <int32 name="z" value="0" />
       <int32 name="delay" value="1200" />
       <int32 name="hide" value="1" />
+      <string name="_outlink" value="..\Resources\rootabyss\bellum\bellum/attack8/12" />
     </png>
     <png name="13" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
       <vector name="origin" value="85, 11" />
@@ -4220,14 +4221,14 @@
       <int32 name="z" value="0" />
       <int32 name="delay" value="90" />
       <int32 name="hide" value="1" />
-      <string name="_outlink" value="..\Resources\rootabyss\bellum\bellum/attack1/31" />
+      <string name="_outlink" value="..\Resources\rootabyss\bellum\bellum/attack8/30" />
     </png>
     <png name="31" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
       <vector name="origin" value="1308, 226" />
       <int32 name="z" value="0" />
       <int32 name="delay" value="90" />
       <int32 name="hide" value="1" />
-      <string name="_outlink" value="..\Resources\rootabyss\bellum\bellum/attack7/32" />
+      <string name="_outlink" value="..\Resources\rootabyss\bellum\bellum/attack8/31" />
     </png>
   </dir>
   <dir name="attack9">

@@ -9,7 +9,7 @@ namespace maple::enums {
 		Script,
 		SpriteRenderer,
 		Animator,
-		Skill,
+		SkillManager,
 		Camera,
 		AudioListener,
 		AudioSource,

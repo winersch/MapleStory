@@ -63,6 +63,7 @@ namespace maple {
 		float mSpeed;
 		float mDelay;
 		long long mHP;
+		long long mMaxHP;
 
 		float mCooldown[6];
 		float mCooldownTime[6];

@@ -154,7 +154,6 @@ namespace maple {
 					std::vector<Animation::Hitbox> hitbox;
 					bool tmpHide = false;
 					Vector3 lt, rb;
-
 					// info 태그의 값을 읽음
 					if (elementName == "info") {
 
@@ -232,11 +231,48 @@ namespace maple {
 				animator->CreateAnimationWithOffset(ConvertToWString(dirName), path, duration, offset, hitboxes, hide);
 			}
 
-
 		}
 
+	}
+
+	void ReadXML::LoadSkill(const std::wstring& path, SkillManager* skillManager) {
+		LoadXML(path);
+		Animator* animator = skillManager->GetAnimator();
+		tinyxml2::XMLElement* root = mDoc.FirstChildElement("dir");
+		std::string s = root->Attribute("name");
+		if (!root || std::string(root->Attribute("name")) != "skill") {
+			return;
+		}
+
+		for (tinyxml2::XMLElement* dirElement = root->FirstChildElement("dir"); dirElement != nullptr; dirElement = dirElement->NextSiblingElement("dir")) {
+			std::string dirName = dirElement->Attribute("name");
+			std::vector<Vector3> offset;
+			std::vector<float> duration;
+			std::vector<std::wstring> path;	
+			for (tinyxml2::XMLElement* element = dirElement->FirstChildElement(); element != nullptr; element = element->NextSiblingElement())
+			for (tinyxml2::XMLElement* child = element->FirstChildElement(); child != nullptr; child = child->NextSiblingElement()) {
+				std::string elementName = child->Attribute("name");
+				if (elementName == "origin") {
+					Vector3 tmpOffset;
+					std::string tmpOffsetStr = child->Attribute("value");
+					size_t pos = tmpOffsetStr.find(',');
+					tmpOffset.x = std::stoi(tmpOffsetStr.substr(0, pos));
+					tmpOffset.y = -std::stoi(tmpOffsetStr.substr(pos + 1));
+					offset.push_back(tmpOffset);
+				}
+				if (elementName == "delay") {
+					int tmp = std::stoi(child->Attribute("value"));
+					duration.push_back(tmp / 1000.0f);
+				}
+				if (elementName == "_outlink") {
+					path.push_back(ConvertToWString(child->Attribute("value")) + L".png");
+				}
+			}
+			animator->CreateAnimationWithOffset(ConvertToWString(dirName), path, duration, offset);
+		}
 
 	}
+	
 }
 
 

@@ -7,8 +7,7 @@ namespace maple {
 
 
 	Skill::Skill()
-		:Component(enums::eComponentType::Skill)
-		, mSkillType(eSkillType::None){
+		: mSkillType(eSkillType::None) {
 	}
 
 	Skill::~Skill() {

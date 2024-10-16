@@ -1,0 +1,347 @@
+<dir name="skill">
+  <dir name="FlashJump">
+    <png name="0" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-1, 90" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1\0" />
+    </png>
+    <png name="1" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-2, 99" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1/1" />
+    </png>
+    <png name="2" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="0, 99" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1/2" />
+    </png>
+    <png name="3" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-2, 100" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1/3" />
+    </png>
+    <png name="4" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-11, 102" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1/4" />
+    </png>
+    <png name="5" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-12, 102" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1/5" />
+    </png>
+    <png name="6" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-13, 103" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1/6" />
+    </png>
+    <png name="7" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-36, 88" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\Flying1/7" />
+    </png>
+    <png name="8" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="-36, 88" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\empty" />
+    </png>
+  </dir>
+  <dir name="KramaFury">
+    <png name="0" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="481, 502" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/0" />
+    </png>
+    <png name="1" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="647, 562" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/1" />
+    </png>
+    <png name="2" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="485, 646" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/2" />
+    </png>
+    <png name="3" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="434, 618" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/3" />
+    </png>
+    <png name="4" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="441, 565" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/4" />
+    </png>
+    <png name="5" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="479, 539" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/5" />
+    </png>
+    <png name="6" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="526, 596" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/6" />
+    </png>
+    <png name="7" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="503, 583" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/7" />
+    </png>
+    <png name="8" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="479, 541" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/8" />
+    </png>
+    <png name="9" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="479, 545" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/9" />
+    </png>
+    <png name="10" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="479, 503" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/10" />
+    </png>
+    <png name="11" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="825, 620" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/11" />
+    </png>
+    <png name="12" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="873, 620" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/12" />
+    </png>
+    <png name="13" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="875, 620" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/13" />
+    </png>
+    <png name="14" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="878, 620" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/14" />
+    </png>
+    <png name="15" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="882, 618" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/15" />
+    </png>
+    <png name="16" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="881, 541" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/16" />
+    </png>
+    <png name="17" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="879, 535" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/17" />
+    </png>
+    <png name="18" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="871, 522" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/18" />
+    </png>
+    <png name="19" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="405, 453" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/19" />
+    </png>
+    <png name="20" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="405, 453" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/20" />
+    </png>
+    <png name="21" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="404, 446" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/21" />
+    </png>
+    <png name="22" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="397, 428" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/22" />
+    </png>
+    <png name="23" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="233, 436" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/23" />
+    </png>
+    <png name="24" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="232, 443" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/24" />
+    </png>
+    <png name="25" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="231, 353" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\KramaFury/25" />
+    </png>
+    <png name="26" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="231, 353" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\empty" />
+    </png>
+    <int32 name="a0" value="225" />
+  </dir>
+  <dir name="PhantomBlow">
+    <png name="0" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="351, 131" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/0" />
+    </png>
+    <png name="1" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="368, 200" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/1" />
+    </png>
+    <png name="2" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="373, 210" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/2" />
+    </png>
+    <png name="3" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="389, 187" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/3" />
+    </png>
+    <png name="4" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="405, 212" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/4" />
+    </png>
+    <png name="5" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="415, 213" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/5" />
+    </png>
+    <png name="6" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="421, 175" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/6" />
+    </png>
+    <png name="7" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="443, 169" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/7" />
+    </png>
+    <png name="8" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="456, 165" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/8" />
+    </png>
+    <png name="9" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="351, 128" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/9" />
+    </png>
+  </dir>
+  <dir name="PhantomBlow0">
+    <png name="0" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="51, 76" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/0" />
+    </png>
+    <png name="1" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="45, 84" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/1" />
+    </png>
+    <png name="2" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="47, 89" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/2" />
+    </png>
+    <png name="3" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="51, 90" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/3" />
+    </png>
+    <png name="4" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="58, 91" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/4" />
+    </png>
+    <png name="5" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="51, 92" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/5" />
+    </png>
+    <png name="6" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="45, 92" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/6" />
+    </png>
+    <png name="7" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="47, 90" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/7" />
+    </png>
+    <png name="8" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="50, 91" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/8" />
+    </png>
+    <png name="9" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="57, 78" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="90" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect0/9" />
+    </png>
+  </dir>
+</dir>

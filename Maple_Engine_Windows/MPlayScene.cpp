@@ -70,7 +70,7 @@ namespace maple {
 
 			SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
 			Texture* playerTex = Resources::Find<graphics::Texture>(L"Player");
-			sr->SetSprite(playerTex);
+			//sr->SetSprite(playerTex);
 
 			Transform* playerTransform = mPlayer->GetComponent<Transform>();
 			playerTransform->SetScale(playerTex->GetWidth()*2, playerTex->GetHeight()*2, 0.0f);

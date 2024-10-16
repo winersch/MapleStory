@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -24,6 +24,7 @@
     <ClCompile Include="MBellumScript.cpp" />
     <ClCompile Include="MBossMonster.cpp" />
     <ClCompile Include="MCameraScript.cpp" />
+    <ClCompile Include="MFlashJump.cpp" />
     <ClCompile Include="MFloor.cpp" />
     <ClCompile Include="MKarmaFury.cpp" />
     <ClCompile Include="MLoadingScene.cpp" />
@@ -33,6 +34,8 @@
     <ClCompile Include="MPlayScene.cpp" />
     <ClCompile Include="MSceneObject.cpp" />
     <ClCompile Include="MSkill.cpp" />
+    <ClCompile Include="MSkillManager.cpp" />
+    <ClCompile Include="MSkillObjectPool.cpp" />
     <ClCompile Include="MTile.cpp" />
     <ClCompile Include="MTitleScene.cpp" />
   </ItemGroup>
@@ -42,6 +45,7 @@
     <ClInclude Include="MBellumScript.h" />
     <ClInclude Include="MBossMonster.h" />
     <ClInclude Include="MCameraScript.h" />
+    <ClInclude Include="MFlashJump.h" />
     <ClInclude Include="MFloor.h" />
     <ClInclude Include="MKarmaFury.h" />
     <ClInclude Include="MLoadingScene.h" />
@@ -53,6 +57,8 @@
     <ClInclude Include="MPlayScene.h" />
     <ClInclude Include="MSceneObject.h" />
     <ClInclude Include="MSkill.h" />
+    <ClInclude Include="MSkillManager.h" />
+    <ClInclude Include="MSkillObjectPool.h" />
     <ClInclude Include="MTile.h" />
     <ClInclude Include="MTitleScene.h" />
   </ItemGroup>

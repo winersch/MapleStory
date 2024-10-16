@@ -34,7 +34,6 @@ namespace maple {
 	void Animator::Update() {
 		if (mActiveAnimation) {
 			mActiveAnimation->Update();
-
 			Events* events = FindEvents(mActiveAnimation->GetName());
 
 			if (mActiveAnimation->IsCompleted() == true) {
@@ -149,6 +148,30 @@ namespace maple {
 		mAnimations.insert(make_pair(name, animation));
 	}
 
+	void Animator::CreateAnimationWithOffset(const std::wstring& name, std::vector<std::wstring>& path, std::vector<float>& duration, std::vector<Vector3>& offset) {
+		Animation* animation = nullptr;
+
+		animation = new Animation();
+		animation->SetName(name);
+		animation->SetAnimator(this);
+
+		std::vector<std::pair<int, Animation::Sprite>> sprites = {};
+
+		for (size_t i = 0; i < path.size(); i++) {
+			graphics::Texture* texture = Resources::Load<graphics::Texture>(path[i], path[i]);
+			Animation::Sprite sprite = {};
+			sprite.texture = texture;
+			sprite.duration = duration[i];
+			sprites.push_back(std::make_pair(i, sprite));
+		}
+
+		animation->CreateAnimation(sprites);
+		animation->SetOffset(offset);
+		Events* events = new Events();
+		mEvents.insert(std::make_pair(name, events));
+		mAnimations.insert(make_pair(name, animation));
+	}
+
 	Animation* Animator::FindAnimation(const std::wstring& name) {
 		auto iter = mAnimations.find(name);
 		if (iter == mAnimations.end()) {
@@ -158,12 +181,36 @@ namespace maple {
 		return iter->second;
 	}
 
+	void Animator::AddAnimation(const std::wstring& name, Animation* animation) {
+		mAnimations.insert(std::make_pair(name, animation));
+		Events* events = new Events();
+		mEvents.insert(std::make_pair(name, events));
+	}
+
 	void Animator::PlayAnimation(const std::wstring& name, bool loop, bool flip) {
 		Animation* animation = FindAnimation(name);
 		if (animation == nullptr) {
 			return;
 		}
 		mActiveAnimationName = name;
+		mActiveAnimation = animation;
+		mActiveAnimation->Reset();
+		mActiveAnimation->setFlip(flip);
+		mbLoop = loop;
+		Events* currentEvents = FindEvents(mActiveAnimation->GetName());
+		if (currentEvents) {
+			currentEvents->EndEvent();
+		}
+		Events* nextEvents = FindEvents(mActiveAnimation->GetName());
+		if (nextEvents) {
+			nextEvents->StartEvent();
+		}
+	}
+	void Animator::PlayAnimation(Animation* animation, bool loop, bool flip) {
+		if (animation == nullptr) {
+			return;
+		}
+		mActiveAnimationName = animation->GetName();
 		mActiveAnimation = animation;
 		mActiveAnimation->Reset();
 		mActiveAnimation->setFlip(flip);
