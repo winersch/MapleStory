@@ -10,7 +10,7 @@ namespace maple {
 		: Resource(enums::eResourceType::AudioClip)
 		, mSound(nullptr)
 		, mChannel(nullptr)
-		, mMinDistance(1.0f)
+		, mMinDistance(0.0f)
 		, mMaxDistance(1000.0f)
 		, mbLoop(false) {
 	}
@@ -28,6 +28,10 @@ namespace maple {
 		mSound->set3DMinMaxDistance(mMinDistance, mMaxDistance);
 
 		return S_OK;
+	}
+
+	HRESULT AudioClip::Save(const std::wstring& path) {
+		return E_NOTIMPL;
 	}
 
 	void AudioClip::Play() {

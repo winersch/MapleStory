@@ -1,5 +1,6 @@
 #pragma once
 #include "MResource.h"
+#include <filesystem>
 
 
 
@@ -35,6 +36,27 @@ namespace maple {
 			return resource;
 		}
 
+		template <typename T>
+		static std::vector<T*> LoadFromFolder(const std::wstring& folderPath) {
+			std::vector<T*> loadedResources;
+
+			// 폴더 경로에 있는 모든 파일을 순회
+			for (const auto& entry : std::filesystem::directory_iterator(folderPath)) {
+				if (entry.is_regular_file()) {  // 파일인 경우에만 처리
+					std::wstring filePath = entry.path().wstring();  // 파일 경로
+					std::wstring fileName = entry.path().stem().wstring();  // 파일 이름
+
+					// 파일 이름을 key로 사용하여 리소스를 로드
+					T* resource = Load<T>(fileName, filePath);
+					if (resource != nullptr) {
+						loadedResources.push_back(resource);  // 로드된 리소스를 벡터에 추가
+					}
+				}
+			}
+			return loadedResources;
+		}
+
+
 		static void Insert(const std::wstring& key, Resource* resource) {
 			if (key == L"") {
 				return;
@@ -50,6 +72,9 @@ namespace maple {
 				iter.second = nullptr;
 			}
 		}
+
+
+
 
 	private:
 

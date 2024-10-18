@@ -10,7 +10,7 @@ namespace maple {
 		: Component(enums::eComponentType::Rigidbody)
 		, mbGround(false)
 		, mMass(1.0f)
-		, mFriction(1000.0f)
+		, mFriction(1500.0f)
 		, mForce(Vector2::Zero)
 		, mVelocity(Vector2::Zero)
 		, mLimitedVelocity(Vector2(2000.0f, 1000.0f))

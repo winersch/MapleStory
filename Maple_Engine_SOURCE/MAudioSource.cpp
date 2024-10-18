@@ -2,6 +2,7 @@
 #include "MTransform.h"
 #include "MGameObject.h"
 #include "MFmod.h"
+#include "MResources.h"
 
 namespace maple {
 
@@ -30,6 +31,11 @@ namespace maple {
 	}
 
 	void AudioSource::Play() {
+		mAudioClip->Play();
+	}
+
+	void AudioSource::Play(std::wstring name) {
+		SetClip(Resources::Find<AudioClip>(name));
 		mAudioClip->Play();
 	}
 

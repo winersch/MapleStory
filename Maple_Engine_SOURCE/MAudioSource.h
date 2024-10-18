@@ -16,6 +16,7 @@ namespace maple {
 		void Render() override;
 
 		void Play();
+		void Play(std::wstring name);
 		void Stop();
 		void SetLoop(bool loop);
 

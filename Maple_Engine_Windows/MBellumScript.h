@@ -2,6 +2,7 @@
 #include "MScript.h"
 #include "MAnimator.h"
 #include "MPlayer.h" 
+#include "MAudioSource.h" 
 
 namespace maple {
 
@@ -58,6 +59,7 @@ namespace maple {
 	private:
 		Animator* mAnimator;
 		Player* mPlayer;
+		AudioSource* mAudioSource;
 
 		float mTime;
 		float mSpeed;

@@ -3,6 +3,7 @@
 #include "MAnimator.h"
 #include "MTexture.h"
 #include "MSkillManager.h"
+#include "MAudioSource.h"
 
 namespace maple {
 
@@ -12,6 +13,7 @@ namespace maple {
 		enum class eState {
 			Stand,
 			Move,
+			Jump,
 			Attack
 		};
 
@@ -25,6 +27,8 @@ namespace maple {
 		void LateUpdate() override;
 		void Render() override;
 
+		void PlayerAnimationUpdate();
+
 		void SkillInitialize();
 		void SkillUpdate();
 		void SkillLateUpdate();
@@ -35,6 +39,7 @@ namespace maple {
 		void OnCollisionStay(Collider* other) override;
 		void OnCollisionExit(Collider* other) override;
 
+		
 
 	private:
 		void idle();
@@ -44,6 +49,7 @@ namespace maple {
 	private:
 		eState mState;
 		Animator* mAnimator;
+		AudioSource* mAudioSource;
 
 		SkillManager* mSkillManager;
 
@@ -52,7 +58,8 @@ namespace maple {
 		int mDirection;
 
 		bool mbFlip;
-		bool mbPlashJumped;
+		bool mbFlashJumped;
+		bool mbDoubleFlashJumped;
 		
 				
 	};

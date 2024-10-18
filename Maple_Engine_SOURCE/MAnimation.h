@@ -2,6 +2,7 @@
 #include "MTexture.h"
 #include "MResource.h"
 #include "MSpriteRenderer.h"
+#include "MAudioClip.h"
 
 namespace maple {
 

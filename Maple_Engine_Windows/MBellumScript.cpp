@@ -6,6 +6,8 @@
 #include "MTexture.h"
 #include "MResources.h"
 #include "MTime.h"
+#include "MAudioClip.h"
+#include "MAudioSource.h"
 #include <random>
 
 /// <summary>
@@ -23,6 +25,7 @@ namespace maple {
 
 	BellumScript::BellumScript()
 		: mAnimator(nullptr)
+		, mAudioSource(nullptr)
 		, mTime(0.0f)
 		, mbHide(true)
 		, mState(eState::Idle)
@@ -53,6 +56,9 @@ namespace maple {
 		mAnimator->CreateAnimationByFolder(L"Summon", L"..\\Resources\\rootabyss\\bellum\\bellum\\summon");
 
 		InitializeAnimationEvent();
+
+		Resources::LoadFromFolder<AudioClip>(L"..\\Resources\\sound\\bellum");
+		mAudioSource = GetOwner()->AddComponent<AudioSource>();
 
 		mCooldownTime[0] = 10.0f;
 		mCooldownTime[1] = 10.0f;
@@ -307,6 +313,25 @@ namespace maple {
 				mState = eState::Idle;
 				};
 		}
+		for (size_t i = 1; i <= 16; i++) {
+			mAnimator->GetStartEvent(L"attack" + std::to_wstring(i)) = [this,i]() {
+				AudioClip* clip = Resources::Find<AudioClip>(L"Attack" + std::to_wstring(i));
+				GetOwner()->GetComponent<AudioSource>()->SetClip(clip);
+				GetOwner()->GetComponent<AudioSource>()->Play();
+				};
+		}
+
+		mAnimator->GetStartEvent(L"Summon") = [this]() {
+			AudioClip* clip = Resources::Find<AudioClip>(L"Attack1");
+			GetOwner()->GetComponent<AudioSource>()->SetClip(clip);
+			GetOwner()->GetComponent<AudioSource>()->Play();
+			};
+
+		mAnimator->GetStartEvent(L"die1") = [this]() {
+			AudioClip* clip = Resources::Find<AudioClip>(L"Die");
+			GetOwner()->GetComponent<AudioSource>()->SetClip(clip);
+			GetOwner()->GetComponent<AudioSource>()->Play();
+			};
 
 		mAnimator->GetCompleteEvent(L"attack2") = [this]() {
 			PlayAnimation(L"attack5", false);

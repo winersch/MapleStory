@@ -19,11 +19,15 @@ namespace maple {
 
 	Animator::~Animator() {
 		for (auto& iter : mEvents) {
-			delete iter.second;
+			if (iter.second != nullptr) {
+				delete iter.second;
+			}
 			iter.second = nullptr;
 		}
 		for (auto& iter : mAnimations) {
-			delete iter.second;
+			if (iter.second != nullptr) {
+				//delete iter.second;
+			}
 			iter.second = nullptr;
 		}
 	}
@@ -236,6 +240,8 @@ namespace maple {
 			// 애니메이션 중단
 			mActiveAnimation->Reset();
 			mActiveAnimation->SetComplete(true);
+			mActiveAnimation = nullptr;
+			mActiveAnimationName = L"";
 			mbLoop = false;
 		}
 	}

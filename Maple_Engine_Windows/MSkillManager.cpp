@@ -13,23 +13,23 @@ namespace maple {
 	}
 
 	SkillManager::~SkillManager() {
-		delete mSkillObjectPool;
-		for (auto& iter : mSkills) {
-			if (iter.second == nullptr) {
-				continue;
-			}
-			delete iter.second;
-			iter.second = nullptr;
-		}
-		for (auto& iter : mActiveSkills) {
-			if (iter == nullptr) {
-				continue;
-			}
-			delete iter;
-			iter = nullptr;
-		}
-		mSkills.clear();
-		mActiveSkills.clear();
+		//delete mSkillObjectPool;
+		//for (auto& iter : mSkills) {
+		//	if (iter.second == nullptr) {
+		//		continue;
+		//	}
+		//	delete iter.second;
+		//	iter.second = nullptr;
+		//}
+		//for (auto& iter : mActiveSkills) {
+		//	if (iter == nullptr) {
+		//		continue;
+		//	}
+		//	delete iter;
+		//	iter = nullptr;
+		//}
+		//mSkills.clear();
+		//mActiveSkills.clear();
 	}
 
 	void SkillManager::Initialize() {
@@ -59,11 +59,12 @@ namespace maple {
 		animation->SetFixedPos(true);
 		animation->SetOriginPos(GetOwner()->GetComponent<Transform>()->GetPosition());
 		animation->SetAnimator(animator);
-		//animation->setFlip(flip);
 		animator->AddAnimation(name, animation);
+
 		animator->GetCompleteEvent(name) = [object]() {
 			object->SetActive(false);
 			};
+
 		animator->PlayAnimation(name, loop, flip);
 	}
 
