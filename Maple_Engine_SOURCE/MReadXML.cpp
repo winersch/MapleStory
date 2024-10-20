@@ -251,30 +251,6 @@ namespace maple {
 							else if (elementNameNext == "_outlink") {
 								path.push_back(ConvertToWString(childNext->Attribute("value")) + L".png");
 							}
-							//else if (elementNameNext == "multiRect") {
-							//	for (tinyxml2::XMLElement* multiRectElement = childNext->FirstChildElement("dir"); multiRectElement != nullptr; multiRectElement = multiRectElement->NextSiblingElement("dir")) {
-							//		Vector3 lt, rb;
-
-							//		for (tinyxml2::XMLElement* vectorElement = multiRectElement->FirstChildElement("vector"); vectorElement != nullptr; vectorElement = vectorElement->NextSiblingElement("vector")) {
-							//			std::string vectorName = vectorElement->Attribute("name");
-							//			std::string vectorValue = vectorElement->Attribute("value");
-
-							//			// ÁÂÇ¥°ªÀ» ÆÄ½Ì
-							//			size_t pos = vectorValue.find(',');
-							//			float x = std::stof(vectorValue.substr(0, pos));
-							//			float y = std::stof(vectorValue.substr(pos + 1));
-
-							//			if (vectorName == "lt") {
-							//				lt = Vector3(x, y, 0);  // ÁÂÃø »ó´Ü ÁÂÇ¥
-							//			}
-							//			else if (vectorName == "rb") {
-							//				rb = Vector3(x, y, 0);  // ¿ìÃø ÇÏ´Ü ÁÂÇ¥
-							//			}
-							//		}
-							//		hitbox.push_back(Animation::Hitbox(lt, rb));
-							//	}
-
-							//}
 							else if (elementNameNext == "hide") {
 								tmpHide = true;
 							}

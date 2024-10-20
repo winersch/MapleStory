@@ -52,7 +52,6 @@ namespace maple {
 		graphics::Texture* tex = Resources::Find<graphics::Texture>(L"Bellum");
 
 		GetOwner()->GetComponent<Transform>()->SetPosition(-195.0f, -95.0f, 0.0f);
-		//GetOwner()->GetComponent<Transform>()->SetScale((float)tex->GetWidth(), (float)tex->GetHeight(), 0.0f);
 
 		SpriteRenderer* sr = GetOwner()->AddComponent<SpriteRenderer>();
 		sr->SetSprite(tex);
@@ -137,51 +136,7 @@ namespace maple {
 	}
 
 	void BellumScript::AttackUpdate() {
-		std::random_device rd;
-		std::mt19937 gen(rd());
-		std::uniform_int_distribution<int> rand(0, 1);
-		int a = rand(gen);
-
-		//if (a == 0) {
-		//	if (mCooldown[1] <= 0.0f) {
-		//		mState = eState::LongAttack;
-		//		PlayAnimation(L"attack1", false);
-		//		mCooldown[1] = mCooldownTime[1];
-		//		return;
-		//	}
-		//	if (mCooldown[0] <= 0.0f) {
-		//		mState = eState::ShortAttack;
-		//		PlayAnimation(L"attack7", false);
-		//		mCooldown[0] = mCooldownTime[0];
-		//		return;
-		//	}
-		//}
-		//if (mHP / mMaxHP < 0.4f && mCooldown[5] <= 0.0f) {
-		//	std::random_device rd;
-		//	std::mt19937 gen(rd());
-		//	std::uniform_int_distribution<int> rand(0, 1);
-		//	int a = rand(gen);
-		//	if (a == 0) {
-		//		mbFlip = true;
-		//		Transform* tr = GetOwner()->GetComponent<Transform>();
-		//		Vector3 pos = tr->GetPosition();
-		//		pos.x = 0.0f;
-		//		tr->SetPosition(pos);
-		//	}
-		//	else {
-		//		mbFlip = false;
-		//	}
-		//	mState = eState::BreathAttack;
-		//	PlayAnimation(L"attack9", false);
-		//	mCooldown[5] = mCooldownTime[5];
-		//	return;
-		//}
-		//if (mHP / mMaxHP < 0.6f && mCooldown[4] <= 0.0f) {
-		//	mState = eState::PoisonAttack;
-		//	PlayAnimation(L"attack13", false);
-		//	mCooldown[4] = mCooldownTime[4];
-		//	return;
-		//}
+		
 		if (mHP / mMaxHP < 0.8f && mCooldown[2] <= 0.0f) {
 			mState = eState::DigAttack;
 			PlayAnimation(L"attack8", false);

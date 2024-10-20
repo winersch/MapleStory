@@ -40,14 +40,6 @@ namespace maple {
 		void LateUpdate() override;
 		void Render() override;
 
-		void CreateAnimation(const std::wstring& name
-			, graphics::Texture* spriteSheet
-			, Vector2 leftTop
-			, Vector2 size
-			, Vector2 offset
-			, UINT spriteLength
-			, float duration);
-
 		void CreateAnimationByFolder(const std::wstring& name
 			, const std::wstring& path);
 		void CreateAnimationWithOffset(const std::wstring& name

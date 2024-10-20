@@ -1,11 +1,11 @@
 #pragma once
 #include "..\\Maple_Engine_SOURCE\\MScene.h"
 #include "..\\Maple_Engine_SOURCE\\MTexture.h"
-//#include "..\\Maple_Engine_Windows\Contents\MPlayer.h"
 #include "MTile.h"
 #include "MMapObject.h"
 #include "MBackGroundObject.h"
 #include "MAudioSource.h"
+#include "MPlayer.h"
 
 namespace maple {
 
@@ -31,7 +31,7 @@ namespace maple {
 		GameObject* GetGameObject(const std::wstring& name) { return mGameObjects[name]; }
 
 	private:
-		class Player* mPlayer;
+		Player* mPlayer;
 		std::map<std::wstring, GameObject*> mGameObjects;
 		std::map<std::wstring, std::vector<Tile*>> mTileMap;
 		std::map<std::wstring, std::vector<BackGroundObject*>> mBackGroundObjects;

@@ -26,7 +26,7 @@ namespace maple {
 		}
 		for (auto& iter : mAnimations) {
 			if (iter.second != nullptr) {
-				//delete iter.second;
+				delete iter.second;
 			}
 			iter.second = nullptr;
 		}
@@ -55,28 +55,8 @@ namespace maple {
 	}
 
 	void Animator::Render() {
-		//if (mActiveAnimation) {
-		//	mActiveAnimation->Render();
-		//}
 	}
 
-	void Animator::CreateAnimation(const std::wstring& name, graphics::Texture* spriteSheet, Vector2 leftTop, Vector2 size, Vector2 offset, UINT spriteLength, float duration) {
-		//Animation* animation = nullptr;
-		//animation = FindAnimation(name);
-		//if (animation != nullptr) {
-		//	return;
-		//}
-		//animation = new Animation();
-		//animation->SetName(name);
-		//animation->CreateAnimation(name, spriteSheet, leftTop, size, offset, spriteLength, duration);
-		//animation->SetAnimator(this);
-
-		//Events* events = new Events();
-		//mEvents.insert(std::make_pair(name, events));
-
-		//mAnimations.insert(std::make_pair(name, animation));
-
-	}
 
 	void Animator::CreateAnimationByFolder(const std::wstring& name, const std::wstring& path) {
 		Animation* animation = nullptr;
@@ -256,19 +236,16 @@ namespace maple {
 	}
 
 	std::function<void()>& Animator::GetStartEvent(const std::wstring& name) {
-		// TODO: 여기에 return 문을 삽입합니다.
 		Events* events = FindEvents(name);
 		return events->StartEvent.mEvent;
 	}
 
 	std::function<void()>& Animator::GetCompleteEvent(const std::wstring& name) {
-		// TODO: 여기에 return 문을 삽입합니다.
 		Events* events = FindEvents(name);
 		return events->CompleteEvent.mEvent;
 	}
 
 	std::function<void()>& Animator::GetEndEvent(const std::wstring& name) {
-		// TODO: 여기에 return 문을 삽입합니다.
 		Events* events = FindEvents(name);
 		return events->EndEvent.mEvent;
 	}

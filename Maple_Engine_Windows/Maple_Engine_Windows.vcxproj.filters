@@ -24,17 +24,11 @@
     <ClCompile Include="MSkill.cpp">
       <Filter>Skill</Filter>
     </ClCompile>
-    <ClCompile Include="MSceneObject.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="MBellum.cpp">
       <Filter>GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="MBellumScript.cpp">
       <Filter>Scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="MFloor.cpp">
-      <Filter>GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="MPlayer.cpp">
       <Filter>GameObjects</Filter>
@@ -60,10 +54,6 @@
     <ClCompile Include="MMapObject.cpp">
       <Filter>GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="MBossMonster.cpp">
-      <Filter>GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="MSkillManager.cpp" />
     <ClCompile Include="MFlashJump.cpp">
       <Filter>Skill</Filter>
     </ClCompile>
@@ -76,6 +66,9 @@
     <ClCompile Include="MBackGroundObject.cpp">
       <Filter>GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="MSkillManager.cpp">
+      <Filter>Skill</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MAlterScript.h">
@@ -87,17 +80,11 @@
     <ClInclude Include="MSkill.h">
       <Filter>Skill</Filter>
     </ClInclude>
-    <ClInclude Include="MSceneObject.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
     <ClInclude Include="MBellum.h">
       <Filter>GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="MBellumScript.h">
       <Filter>Scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="MFloor.h">
-      <Filter>GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="MPlayer.h">
       <Filter>GameObjects</Filter>
@@ -125,10 +112,6 @@
     <ClInclude Include="MMapObject.h">
       <Filter>GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="MBossMonster.h">
-      <Filter>GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="MSkillManager.h" />
     <ClInclude Include="MFlashJump.h">
       <Filter>Skill</Filter>
     </ClInclude>
@@ -140,6 +123,9 @@
     </ClInclude>
     <ClInclude Include="MBackGroundObject.h">
       <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MSkillManager.h">
+      <Filter>Skill</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

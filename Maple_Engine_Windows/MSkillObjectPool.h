@@ -20,13 +20,6 @@ namespace maple {
 		}
 		
 		~SkillObjectPool() {
-			//for (GameObject* object : mSkillObjects) {
-			//	if (object == nullptr) {
-			//		continue;
-			//	}
-			//	delete object;
-			//	object = nullptr;
-			//}
 		}
 
 		GameObject* GetObject() {

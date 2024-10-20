@@ -38,9 +38,6 @@ namespace maple {
 		bool flip = animation->GetFlip();
 		if ((index <= 2 ) && texture != nullptr) {
 			collider->SetSize(Vector2(texture->GetWidth(),texture->GetHeight()));
-			if (flip) {
-				//collider->SetOffset(Vector2((-1.0f * texture->GetWidth()), 0));
-			}
 			mbAttackable = true;
 		}
 		else {

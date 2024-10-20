@@ -18,7 +18,6 @@
 #include "MTilemapRenderer.h"
 #include "MRigidbody.h"
 #include "MCameraScript.h"
-#include "MFloor.h"
 #include "MUIManager.h"
 #include "MAudioClip.h"
 #include "MAudioListener.h"
@@ -26,7 +25,6 @@
 #include "MGraphicDevice_DX11.h"
 #include "MMaterial.h"
 #include "MTime.h"
-#include "MSceneObject.h"
 #include "MAlterScript.h"
 #include "MBellum.h"
 #include "MBellumScript.h"
@@ -70,7 +68,6 @@ namespace maple {
 
 			SpriteRenderer* sr = mPlayer->AddComponent<SpriteRenderer>();
 			Texture* playerTex = Resources::Find<graphics::Texture>(L"Player");
-			//sr->SetSprite(playerTex);
 
 			Transform* playerTransform = mPlayer->GetComponent<Transform>();
 			playerTransform->SetScale(playerTex->GetWidth()*2, playerTex->GetHeight()*2, 0.0f);
@@ -92,7 +89,6 @@ namespace maple {
 			BellumScript* bellumScript = bellum->AddComponent<BellumScript>();
 			bellumScript->SetPlayer(mPlayer);
 
-			//CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Monster, true);
 			CollisionManager::CollisionLayerCheck(eLayerType::Monster, eLayerType::Effect, true);
 
 			GameObject* audioSource = object::Instantiate<GameObject>(eLayerType::None);
@@ -123,13 +119,9 @@ namespace maple {
 
 	void PlayScene::OnEnter() {
 		Scene::OnEnter();
-		//CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Animal, true);
-		//CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Floor, true);
-		//UIManager::Push(eUIType::Button);
 	}
 
 	void PlayScene::OnExit() {
-		//UIManager::Pop(eUIType::Button);
 		Scene::OnExit();
 	}
 

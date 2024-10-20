@@ -23,10 +23,8 @@
     <ClCompile Include="MBackGroundObject.cpp" />
     <ClCompile Include="MBellum.cpp" />
     <ClCompile Include="MBellumScript.cpp" />
-    <ClCompile Include="MBossMonster.cpp" />
     <ClCompile Include="MCameraScript.cpp" />
     <ClCompile Include="MFlashJump.cpp" />
-    <ClCompile Include="MFloor.cpp" />
     <ClCompile Include="MKarmaFury.cpp" />
     <ClCompile Include="MLoadingScene.cpp" />
     <ClCompile Include="MMapObject.cpp" />
@@ -34,7 +32,6 @@
     <ClCompile Include="MPlayer.cpp" />
     <ClCompile Include="MPlayerScript.cpp" />
     <ClCompile Include="MPlayScene.cpp" />
-    <ClCompile Include="MSceneObject.cpp" />
     <ClCompile Include="MSkill.cpp" />
     <ClCompile Include="MSkillManager.cpp" />
     <ClCompile Include="MSkillObjectPool.cpp" />
@@ -46,10 +43,8 @@
     <ClInclude Include="MBackGroundObject.h" />
     <ClInclude Include="MBellum.h" />
     <ClInclude Include="MBellumScript.h" />
-    <ClInclude Include="MBossMonster.h" />
     <ClInclude Include="MCameraScript.h" />
     <ClInclude Include="MFlashJump.h" />
-    <ClInclude Include="MFloor.h" />
     <ClInclude Include="MKarmaFury.h" />
     <ClInclude Include="MLoadingScene.h" />
     <ClInclude Include="MLoadResources.h" />
@@ -59,7 +54,6 @@
     <ClInclude Include="MPlayer.h" />
     <ClInclude Include="MPlayerScript.h" />
     <ClInclude Include="MPlayScene.h" />
-    <ClInclude Include="MSceneObject.h" />
     <ClInclude Include="MSkill.h" />
     <ClInclude Include="MSkillManager.h" />
     <ClInclude Include="MSkillObjectPool.h" />

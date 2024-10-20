@@ -94,9 +94,7 @@ namespace maple {
 				mIndex++;
 			}
 			else {
-				//mAnimator->GetOwner()->GetComponent<Transform>()->ResetRenderPos();
 				mbComplete = true;
-				//mAnimator->GetOwner()->GetComponent<SpriteRenderer>()->SetSprite(Resources::Find<graphics::Texture>(L"Empty"));
 			}
 		}
 	}

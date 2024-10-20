@@ -13,23 +13,6 @@ namespace maple {
 	}
 
 	SkillManager::~SkillManager() {
-		//delete mSkillObjectPool;
-		//for (auto& iter : mSkills) {
-		//	if (iter.second == nullptr) {
-		//		continue;
-		//	}
-		//	delete iter.second;
-		//	iter.second = nullptr;
-		//}
-		//for (auto& iter : mActiveSkills) {
-		//	if (iter == nullptr) {
-		//		continue;
-		//	}
-		//	delete iter;
-		//	iter = nullptr;
-		//}
-		//mSkills.clear();
-		//mActiveSkills.clear();
 	}
 
 	void SkillManager::Initialize() {
