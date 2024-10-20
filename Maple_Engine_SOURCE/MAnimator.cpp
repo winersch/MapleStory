@@ -199,7 +199,7 @@ namespace maple {
 		mActiveAnimationName = name;
 		mActiveAnimation = animation;
 		mActiveAnimation->Reset();
-		mActiveAnimation->setFlip(flip);
+		mActiveAnimation->SetFlip(flip);
 		mbLoop = loop;
 		Events* currentEvents = FindEvents(mActiveAnimation->GetName());
 		if (currentEvents) {
@@ -217,7 +217,7 @@ namespace maple {
 		mActiveAnimationName = animation->GetName();
 		mActiveAnimation = animation;
 		mActiveAnimation->Reset();
-		mActiveAnimation->setFlip(flip);
+		mActiveAnimation->SetFlip(flip);
 		mbLoop = loop;
 		Events* currentEvents = FindEvents(mActiveAnimation->GetName());
 		if (currentEvents) {

@@ -55,14 +55,15 @@ namespace maple {
 		bool IsCompleted() const { return mbComplete; }
 		void SetComplete(bool complete) { mbComplete = complete; }
 		void SetAnimator(class Animator* animator) { mAnimator = animator; }
-		void setFlip(bool flip) { mbFlip = flip; }
-		void setModifyRotation(bool modify) { mbModifyRotation = modify; }
+		void SetFlip(bool flip) { mbFlip = flip; }
+		void SetModifyRotation(bool modify) { mbModifyRotation = modify; }
 		void SetOwner(GameObject* owner) { mOwner = owner; }
 		void SetFixedPos(bool fixed) { mbFixedPos = fixed; }
 		void SetOriginPos(Vector3 pos) { mOriginPos = pos; }
 		void SetFixedFlip(bool fixed) { mbFixedFlip = fixed; }
 
 		int GetIndex() const { return mIndex; }
+		bool GetFlip() const { return mbFlip; }
 
 	private:
 		class Animator* mAnimator;

@@ -92,7 +92,7 @@ namespace maple {
 			BellumScript* bellumScript = bellum->AddComponent<BellumScript>();
 			bellumScript->SetPlayer(mPlayer);
 
-			CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Monster, true);
+			//CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Monster, true);
 			CollisionManager::CollisionLayerCheck(eLayerType::Monster, eLayerType::Effect, true);
 
 			GameObject* audioSource = object::Instantiate<GameObject>(eLayerType::None);

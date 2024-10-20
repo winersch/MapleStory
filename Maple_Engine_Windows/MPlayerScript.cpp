@@ -78,10 +78,17 @@ namespace maple {
 			mbFlashJumped = false;
 			mbDoubleFlashJumped = false;
 			pos.y = -409.9f;
-			tr->SetPosition(pos);
 			mState = eState::Stand;
 		}
 
+		if (pos.x <= -1900.0f) {
+			pos.x = -1899.9f;
+		}
+		if (pos.x >= 1000.0f) {
+			pos.x = 999.9f;
+		}
+
+		tr->SetPosition(pos);
 		move();
 		PlayerAnimationUpdate();
 

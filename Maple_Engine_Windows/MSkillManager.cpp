@@ -53,6 +53,8 @@ namespace maple {
 
 	GameObject* SkillManager::PlayAnimation(std::wstring name, bool loop, bool flip) {
 		GameObject* object = mSkillObjectPool->GetObjectW();
+		Transform* tr = object->GetComponent<Transform>();
+		tr->SetPosition(GetOwner()->GetComponent<Transform>()->GetPosition());
 		object->AddComponent<SpriteRenderer>();
 		Animator* animator = object->AddComponent<Animator>();
 		Animation* animation = mAnimator->GetAnimation(name);
@@ -72,6 +74,8 @@ namespace maple {
 
 	GameObject* SkillManager::PlayAnimationWithOffset(std::wstring name, bool loop, Vector3 offset, bool flip) {
 		GameObject* object = mSkillObjectPool->GetObjectW();
+		Transform* tr = object->GetComponent<Transform>();
+		tr->SetPosition(GetOwner()->GetComponent<Transform>()->GetPosition());
 		object->AddComponent<SpriteRenderer>();
 		Animator* animator = object->AddComponent<Animator>();
 		Animation* animation = mAnimator->GetAnimation(name);

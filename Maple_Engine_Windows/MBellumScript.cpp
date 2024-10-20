@@ -36,6 +36,7 @@ namespace maple {
 		, mCooldown{}
 		, mCooldownTime{}
 		, mbSummon(false)
+		, mbDeath(false)
 		, mDelay(0.0f)
 		, mHP(200000000000.0f)
 		, mMaxHP(200000000000.0f) {
@@ -80,10 +81,10 @@ namespace maple {
 	}
 
 	void BellumScript::Update() {
-		if (!mbSummon) {
+		if (!mbSummon || mbDeath) {
 			return;
 		}
-
+		
 
 		mTime += Time::DeltaTime();
 		CooldownUpdate();
@@ -138,23 +139,23 @@ namespace maple {
 	void BellumScript::AttackUpdate() {
 		std::random_device rd;
 		std::mt19937 gen(rd());
-		std::uniform_int_distribution<int> rand(0, 2);
+		std::uniform_int_distribution<int> rand(0, 1);
 		int a = rand(gen);
 
-		if (a == 0) {
-			if (mCooldown[1] <= 0.0f) {
-				mState = eState::LongAttack;
-				PlayAnimation(L"attack1", false);
-				mCooldown[1] = mCooldownTime[1];
-				return;
-			}
-			if (mCooldown[0] <= 0.0f) {
-				mState = eState::ShortAttack;
-				PlayAnimation(L"attack7", false);
-				mCooldown[0] = mCooldownTime[0];
-				return;
-			}
-		}
+		//if (a == 0) {
+		//	if (mCooldown[1] <= 0.0f) {
+		//		mState = eState::LongAttack;
+		//		PlayAnimation(L"attack1", false);
+		//		mCooldown[1] = mCooldownTime[1];
+		//		return;
+		//	}
+		//	if (mCooldown[0] <= 0.0f) {
+		//		mState = eState::ShortAttack;
+		//		PlayAnimation(L"attack7", false);
+		//		mCooldown[0] = mCooldownTime[0];
+		//		return;
+		//	}
+		//}
 		//if (mHP / mMaxHP < 0.4f && mCooldown[5] <= 0.0f) {
 		//	std::random_device rd;
 		//	std::mt19937 gen(rd());
@@ -259,6 +260,7 @@ namespace maple {
 
 	void BellumScript::Summon() {
 		mAnimator->PlayAnimation(L"Summon", false);
+		mHP = mMaxHP;
 		InitializeHPBar();
 		for (size_t i = 0; i < 6; i++) {
 			mCooldown[i] = mCooldownTime[i];
@@ -318,7 +320,7 @@ namespace maple {
 	}
 
 	void BellumScript::Death() {
-		if (mAnimator->IsCompleted()) {
+		if (mAnimator->IsCompleted() && !mbDeath) {
 			PlayAnimation(L"die1", false);
 		}
 	}
@@ -373,7 +375,9 @@ namespace maple {
 
 		for (size_t i = 0; i < v.size(); i++) {
 			mAnimator->GetCompleteEvent(L"attack" + std::to_wstring(v[i])) = [this]() {
-				mState = eState::Idle;
+				if (mState != eState::Death) {
+					mState = eState::Idle;
+				}
 				};
 		}
 		for (size_t i = 1; i <= 16; i++) {
@@ -394,6 +398,11 @@ namespace maple {
 			AudioClip* clip = Resources::Find<AudioClip>(L"Die");
 			GetOwner()->GetComponent<AudioSource>()->SetClip(clip);
 			GetOwner()->GetComponent<AudioSource>()->Play();
+			};
+
+		mAnimator->GetCompleteEvent(L"die1") = [this]() {
+			GetOwner()->SetActive(false);
+			mbDeath = true;
 			};
 
 		mAnimator->GetCompleteEvent(L"attack2") = [this]() {
@@ -456,28 +465,25 @@ namespace maple {
 
 		Transform* mHPBarTransform = mHPBar->GetComponent<Transform>();
 
-		mHPBarTransform->SetScale(697.0f * (float)(mHP / mMaxHP), 10.0f, 0.0f);
+		mHPBarTransform->SetScale(697.0f * ((float)mHP / (float)mMaxHP), 10.0f, 0.0f);
 		Vector3 pos = mHPBarBackgroundTransform->GetPosition();
-		float newHPBarWidth = 697.0f * (float)(mHP / mMaxHP);
-		mHPBarTransform->SetPosition(pos.x + 20 - (697.0f - newHPBarWidth), pos.y + 10, 0.0f);
+		float newHPBarWidth = 697.0f * ((float)mHP / (float)mMaxHP);
+		mHPBarTransform->SetPosition(pos.x + 20 - (697.0f - newHPBarWidth) / 2, pos.y + 10, 0.0f);
 
 	}
 
 	void BellumScript::UpdateHPBar() {
 
 		Transform* mHPBarBackgroundTransform = mHPBarBackground->GetComponent<Transform>();
+		Transform* mHPBarTransform = mHPBar->GetComponent<Transform>();
 		Transform* cameraTransform = renderer::mainCamera->GetOwner()->GetComponent<Transform>();
 		Vector3 cameraPos = cameraTransform->GetPosition();
 
 		mHPBarBackgroundTransform->SetPosition(cameraPos.x, cameraPos.y + 364.0f, 0.0f);
-		graphics::Texture* mHPBarTex = Resources::Load<graphics::Texture>(L"HPGage", L"..\\Resources\\UI\\HPGage.png");
-
-		Transform* mHPBarTransform = mHPBar->GetComponent<Transform>();
-
 		mHPBarTransform->SetScale(697.0f * ((float)mHP / (float)mMaxHP), 10.0f, 0.0f);
 		Vector3 pos = mHPBarBackgroundTransform->GetPosition();
 		float newHPBarWidth = 697.0f * ((float)mHP / (float)mMaxHP);
-		mHPBarTransform->SetPosition(pos.x + 20 - (697.0f - newHPBarWidth), pos.y + 10, 0.0f);
+		mHPBarTransform->SetPosition(pos.x + 20 - (697.0f - newHPBarWidth)/2, pos.y + 10, 0.0f);
 	}
 
 	void BellumScript::GetHit(double damage) {

@@ -86,6 +86,7 @@ namespace maple {
 		bool mbHide;
 		bool mbSummon;
 		bool mbFlip;
+		bool mbDeath;
 
 		int mPoisionAttackCount;
 
