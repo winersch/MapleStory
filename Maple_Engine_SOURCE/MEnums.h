@@ -6,10 +6,10 @@ namespace maple::enums {
 		Transform,
 		Collider,
 		Rigidbody,
-		Script,
 		SpriteRenderer,
 		Animator,
 		SkillManager,
+		Script,
 		Camera,
 		AudioListener,
 		AudioSource,
@@ -26,6 +26,7 @@ namespace maple::enums {
 		Player,
 		Effect,
 		Particle,
+		UI,
 		Max = 16,
 	};
 

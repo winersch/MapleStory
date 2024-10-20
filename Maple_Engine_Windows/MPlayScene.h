@@ -4,6 +4,8 @@
 //#include "..\\Maple_Engine_Windows\Contents\MPlayer.h"
 #include "MTile.h"
 #include "MMapObject.h"
+#include "MBackGroundObject.h"
+#include "MAudioSource.h"
 
 namespace maple {
 
@@ -22,6 +24,7 @@ namespace maple {
 		void OnExit() override;
 
 		void LoadTileMap(const std::wstring& path);
+		void LoadBackGround(const std::wstring& path);
 		void LoadMapObject(const std::wstring& path);
 		void LoadBossMonster(const std::wstring& path);
 
@@ -31,6 +34,7 @@ namespace maple {
 		class Player* mPlayer;
 		std::map<std::wstring, GameObject*> mGameObjects;
 		std::map<std::wstring, std::vector<Tile*>> mTileMap;
+		std::map<std::wstring, std::vector<BackGroundObject*>> mBackGroundObjects;
 		std::map<std::wstring, std::vector<MapObject*>> mMapObjects;
 		float mTime;
 	};

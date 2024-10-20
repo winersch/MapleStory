@@ -273,4 +273,11 @@ namespace maple {
 		return events->EndEvent.mEvent;
 	}
 
+	bool Animator::IsCompleted() {
+		if (mActiveAnimation == nullptr) {
+			return true;
+		}
+		return mActiveAnimation->IsCompleted();
+	}
+
 }

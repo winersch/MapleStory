@@ -29,9 +29,6 @@ namespace maple {
 	void BoxCollider2D::Render() {
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector3 pos = tr->GetPosition();
-
-		
-
 	}
 
 }

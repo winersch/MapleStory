@@ -68,7 +68,7 @@ namespace maple {
 		std::function<void()>& GetCompleteEvent(const std::wstring& name);
 		std::function<void()>& GetEndEvent(const std::wstring& name);
 
-		bool IsCompleted() { return mActiveAnimation->IsCompleted(); }
+		bool IsCompleted();
 
 		Animation* GetActiveAnimation() { return mActiveAnimation; }
 		Animation* GetAnimation(const std::wstring& name) { return mAnimations[name]; }

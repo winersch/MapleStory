@@ -39,7 +39,6 @@ namespace maple {
 			mSound->setMode(FMOD_LOOP_NORMAL);
 		else
 			mSound->setMode(FMOD_LOOP_OFF);
-
 		Fmod::SoundPlay(mSound, &mChannel);
 	}
 

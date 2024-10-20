@@ -67,5 +67,10 @@ namespace maple {
 	void GameObject::initializeTransform() {
 		AddComponent<Transform>();
 	}
+
+	void GameObject::DeleteScript() {
+		delete mComponents[(UINT)enums::eComponentType::Script];
+		mComponents[(UINT)enums::eComponentType::Script] = nullptr;
+	}
 }
 

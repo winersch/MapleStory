@@ -1,0 +1,272 @@
+<dir name="back">
+    <dir name="0">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="0" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="0" />
+        <int32 name="y" value="0" />
+        <int32 name="rx" value="0" />
+        <int32 name="ry" value="0" />
+        <int32 name="type" value="3" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="1">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="1" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-55" />
+        <int32 name="y" value="-18" />
+        <int32 name="rx" value="0" />
+        <int32 name="ry" value="-40" />
+        <int32 name="type" value="1" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="2">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="2" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-94" />
+        <int32 name="y" value="155" />
+        <int32 name="rx" value="-10" />
+        <int32 name="ry" value="-45" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="3">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="1" />
+        <int32 name="no" value="0" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-153" />
+        <int32 name="y" value="-156" />
+        <int32 name="rx" value="-10" />
+        <int32 name="ry" value="-45" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="64" />
+    </dir>
+    <dir name="5">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="3" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="240" />
+        <int32 name="y" value="-88" />
+        <int32 name="rx" value="-10" />
+        <int32 name="ry" value="-45" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="6">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="4" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-352" />
+        <int32 name="y" value="-87" />
+        <int32 name="rx" value="-10" />
+        <int32 name="ry" value="-45" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="7">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="5" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="5" />
+        <int32 name="y" value="-332" />
+        <int32 name="rx" value="-10" />
+        <int32 name="ry" value="-45" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="4">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="1" />
+        <int32 name="no" value="1" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-177" />
+        <int32 name="y" value="27" />
+        <int32 name="rx" value="-10" />
+        <int32 name="ry" value="-45" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="8">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="1" />
+        <int32 name="no" value="3" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="150" />
+        <int32 name="y" value="-83" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="9">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="1" />
+        <int32 name="no" value="2" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-323" />
+        <int32 name="y" value="-53" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="10">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="9" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-412" />
+        <int32 name="y" value="231" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="11">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="6" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="293" />
+        <int32 name="y" value="181" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="12">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="7" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="195" />
+        <int32 name="y" value="-132" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="13">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="12" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-376" />
+        <int32 name="y" value="-145" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="15">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="10" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-429" />
+        <int32 name="y" value="63" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="14">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="8" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="252" />
+        <int32 name="y" value="-396" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="16">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="0" />
+        <int32 name="no" value="11" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="-456" />
+        <int32 name="y" value="-114" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+    <dir name="17">
+        <string name="bS" value="rootabyss2" />
+        <int32 name="front" value="0" />
+        <int32 name="ani" value="1" />
+        <int32 name="no" value="4" />
+        <int32 name="f" value="0" />
+        <int32 name="x" value="291" />
+        <int32 name="y" value="-84" />
+        <int32 name="rx" value="-15" />
+        <int32 name="ry" value="-50" />
+        <int32 name="type" value="0" />
+        <int32 name="cx" value="0" />
+        <int32 name="cy" value="0" />
+        <int32 name="a" value="255" />
+    </dir>
+</dir>

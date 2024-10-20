@@ -4,6 +4,8 @@
 #include "MTransform.h"
 #include "MObject.h"
 #include "MAnimator.h"
+#include "MTexture.h"
+#include "MResources.h"
 
 
 namespace maple {
@@ -66,6 +68,66 @@ namespace maple {
 			tileMap[uValue].push_back(tile);
 		}
 	}
+
+
+	void ReadXML::CreateBackGround(std::map<std::wstring, std::vector<BackGroundObject*>>& backGroundObjectMap) {
+		tinyxml2::XMLElement* root = mDoc.FirstChildElement("dir");
+
+		if (!root || std::string(root->Attribute("name")) != "back") {
+			return;
+		}
+		int x = 0, y = 0, no = 0, ani = 0, rx = 0, ry = 0;
+		for (tinyxml2::XMLElement* dirElement = root->FirstChildElement("dir"); dirElement != nullptr; dirElement = dirElement->NextSiblingElement("dir")) {
+			const char* dirName = dirElement->Attribute("name");
+			BackGroundObject* backGroundObject = object::Instantiate<BackGroundObject>(enums::eLayerType::BackGround);
+			Transform* transform = backGroundObject->GetComponent<Transform>();
+			SpriteRenderer* spriteRenderer = backGroundObject->AddComponent<SpriteRenderer>();
+
+			// 각 int32와 string 태그의 값을 읽음
+			for (tinyxml2::XMLElement* child = dirElement->FirstChildElement(); child != nullptr; child = child->NextSiblingElement()) {
+				std::string elementName = child->Name();
+				if (elementName == "int32") {
+					std::string nameAttr = child->Attribute("name");
+					if (nameAttr == "x") {
+						child->QueryIntAttribute("value", &x);
+					}
+					else if (nameAttr == "y") {
+						child->QueryIntAttribute("value", &y);
+					}
+					else if (nameAttr == "no") {
+						child->QueryIntAttribute("value", &no);
+					}
+					else if (nameAttr == "ani") {
+						child->QueryIntAttribute("value", &ani);
+					}
+					else if (nameAttr == "rx") {
+						child->QueryIntAttribute("value", &rx);
+					}
+					else if (nameAttr == "ry") {
+						child->QueryIntAttribute("value", &ry);
+					}
+				}
+			}
+			transform->SetPosition(x, -y, 0.0f);
+			backGroundObject->SetOriginPos(Vector3(x,-y,0.0f));
+
+			if (ani == 1) {
+				Animator* animator = backGroundObject->AddComponent<Animator>();
+				animator->CreateAnimationByFolder(L"..\\Resources\\rootabyss\\back\\" + std::to_wstring(no), L"..\\Resources\\rootabyss\\back\\" + std::to_wstring(no));
+				animator->PlayAnimation(L"..\\Resources\\rootabyss\\back\\" + std::to_wstring(no), true);
+			}
+			else {
+				graphics::Texture* texture = Resources::Load<graphics::Texture>(L"..\\Resources\\rootabyss\\back\\" + std::to_wstring(no) + L".png", L"..\\Resources\\rootabyss\\back\\" + std::to_wstring(no) + L".png");
+				spriteRenderer->SetSprite(texture);
+				transform->SetScale(texture->GetWidth(), texture->GetHeight(), 0.0f);
+			}
+			backGroundObject->SetRatio(rx / 500.0f, ry / 500.0f);
+			backGroundObjectMap[ConvertToWString(dirName)].push_back(backGroundObject);
+		}
+	}
+
+
+
 	void ReadXML::CreateMapObject(std::map<std::wstring, std::vector<MapObject*>>& mapObjects) {
 
 		tinyxml2::XMLElement* root = mDoc.FirstChildElement("dir");

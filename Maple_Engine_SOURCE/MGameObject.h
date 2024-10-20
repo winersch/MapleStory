@@ -66,6 +66,7 @@ namespace maple {
 		bool IsDead() const { return mState == eState::Dead; }
 		void SetLayerType(eLayerType layerType) { mLayerType = layerType; }
 		eLayerType GetLayerType() const { return mLayerType; }
+		void DeleteScript();
 
 	private:
 		void initializeTransform();

@@ -21,7 +21,8 @@ namespace maple {
 
 		void AddSkill(std::wstring &name, Skill* skill);
 		void AddActiveSkill(std::wstring& name) { mActiveSkills.push_back(mSkills[name]); }
-		void PlayAnimation(std::wstring name, bool loop, bool flip = false);
+		GameObject* PlayAnimation(std::wstring name, bool loop, bool flip = false);
+		GameObject* PlayAnimationWithOffset(std::wstring name, bool loop, Vector3 offset, bool flip = false);
 
 		Skill* GetSkill(std::wstring& name) { return mSkills[name]; }
 

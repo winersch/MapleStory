@@ -47,6 +47,9 @@ namespace maple {
 		void SetHide(std::vector<bool>& hide) { mbHide = hide; }
 		void SetHitboxes(std::vector<std::vector<Hitbox>>& hitboxes) { mHitboxes = hitboxes; }
 
+		bool GetHide(int index) { return mbHide[index]; }
+		std::vector<Hitbox>& GetHitboxes(int index) { return mHitboxes[index]; }
+
 		void Reset();
 
 		bool IsCompleted() const { return mbComplete; }

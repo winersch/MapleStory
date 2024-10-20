@@ -1,6 +1,8 @@
 #pragma once
 #include "MUIBase.h"
 #include "MTexture.h"
+#include "MGameObject.h"
+#include "CommonInclude.h"
 
 namespace maple {
 
@@ -19,7 +21,7 @@ namespace maple {
 
 	private:
 		graphics::Texture* mTexture;
-
+		std::vector<GameObject*> mUIs;
 
 	};
 

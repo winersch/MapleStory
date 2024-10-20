@@ -36,16 +36,25 @@ namespace maple {
 
 	void Collider::OnCollisionEnter(Collider* other) {
 		Script* script = GetOwner()->GetComponent<Script>();
+		if (script == nullptr) {
+			return;
+		}
 		script->OnCollisionEnter(other);
 	}
 
 	void Collider::OnCollisionStay(Collider* other) {
 		Script* script = GetOwner()->GetComponent<Script>();
+		if (script == nullptr) {
+			return;
+		}
 		script->OnCollisionStay(other);
 	}
 
 	void Collider::OnCollisionExit(Collider* other) {
 		Script* script = GetOwner()->GetComponent<Script>();
+		if (script == nullptr) {
+			return;
+		}
 		script->OnCollisionExit(other);
 	}
 

@@ -12,6 +12,7 @@
 #include "MSkill.h"
 #include "MReadXML.h"
 #include "MAudioClip.h"
+#include "MPhantomBlowScript.h"
 
 namespace maple {
 
@@ -21,6 +22,11 @@ namespace maple {
 		, mTime(0.0f)
 		, mbFlashJumped(false)
 		, mDirection(1)
+		, mbFlip(true)
+		, mDelay(0.0f)
+		, mbDoubleFlashJumped(false)
+		, mAudioSource(nullptr)
+		, mSkillManager(nullptr)
 
 	{
 	}
@@ -35,7 +41,7 @@ namespace maple {
 		mAnimator->CreateAnimationByFolder(L"Attack", L"..\\Resources\\Cat\\attack");
 		Resources::Load<graphics::Texture>(L"Jump", L"..\\Resources\\Cat\\jump.png");
 		Resources::Load<AudioClip>(L"JumpClip", L"..\\Resources\\sound\\player\\Jump.mp3");
-
+		
 		mAnimator->PlayAnimation(L"Stand", true);
 
 		for (auto& a : mAnimator->GetAnimations()) {
@@ -156,6 +162,17 @@ namespace maple {
 
 	}
 
+	void PlayerScript::PhantomBlowHit(Vector3 pos) {
+		if (!mbFlip) {
+			pos.x = -pos.x;
+		}
+
+		mSkillManager->PlayAnimationWithOffset(L"PhantomBlowHit", false, pos, mbFlip);
+		for (size_t i = 0; i < 3; i++) {
+			mAudioSource->Play(L"PhantomBlowHit");
+		}
+	}
+
 	void PlayerScript::idle() {
 
 	}
@@ -177,10 +194,9 @@ namespace maple {
 		}
 
 		if (Input::GetKey(eKeyCode::Right)) {
-			//pos.x += 200.0f * Time::DeltaTime();
-			if (velocity.x <= 1000.0f) {
+			if (velocity.x <= 180.0f && mDelay < 0.01f) {
 				if (rb->GetGround()) {
-					rb->AddForce(Vector2(2000.0f, 0.0f));
+					rb->AddForce(Vector2(4000.0f, 0.0f));
 				}
 				else {
 					rb->AddForce(Vector2(200.0f, 0.0f));
@@ -190,10 +206,9 @@ namespace maple {
 			mbFlip = true;
 		}
 		if (Input::GetKey(eKeyCode::Left)) {
-			//pos.x -= 200.0f * Time::DeltaTime();
-			if (velocity.x >= -1000.0f) {
+			if (velocity.x >= -180.0f && mDelay < 0.01f) {
 				if (rb->GetGround()) {
-					rb->AddForce(Vector2(-2000.0f, 0.0f));
+					rb->AddForce(Vector2(-4000.0f, 0.0f));
 				}
 				else {
 					rb->AddForce(Vector2(-200.0f, 0.0f));
@@ -245,21 +260,12 @@ namespace maple {
 			if (mDelay < 0.001f) {
 				mState = eState::Attack;
 				mAudioSource->Play(L"PhantomBlowUse");
-				mSkillManager->PlayAnimation(L"PhantomBlow", false, mbFlip);
-				//mSkillManager->PlayAnimation(L"PhantomBlow0", false, mbFlip);
+				GameObject* skillObject = mSkillManager->PlayAnimation(L"PhantomBlow", false, mbFlip);
+				PhantomBlowScript* phantomBlowScript = skillObject->AddComponent<PhantomBlowScript>();
+				phantomBlowScript->SetPlayer(GetOwner());
 				mDelay = 0.7f;
 			}
 		}
-
-
-		//if (velocity.x > 250) {
-		//	velocity.x = 250;
-		//}
-		//if (velocity.x < -250) {
-		//	velocity.x = -250;
-		//}
-
-		//tr->SetPosition(pos);
 
 	}
 

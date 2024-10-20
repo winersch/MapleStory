@@ -3,6 +3,7 @@
 #include "MAnimator.h"
 #include "MPlayer.h" 
 #include "MAudioSource.h" 
+#include "MBoxCollider2D.h"
 
 namespace maple {
 
@@ -34,6 +35,7 @@ namespace maple {
 		void Render() override;
 
 		void AttackUpdate();
+		void HitboxUpdate();
 
 		void Idle();
 		void Summon();
@@ -46,7 +48,9 @@ namespace maple {
 		void BreathAttack();		//cooldown 5
 		void Death();
 
-
+		void OnCollisionEnter(Collider* other) override;
+		void OnCollisionStay(Collider* other) override;
+		void OnCollisionExit(Collider* other) override;
 
 		void PlayAnimation(const std::wstring& name, bool loop = false);	
 
@@ -55,17 +59,25 @@ namespace maple {
 		void SetPlayer(Player* player) { mPlayer = player; }
 		void PlayerDistanceUpdate();
 		void InitializeAnimationEvent();
+		void InitializeHPBar();
+		void UpdateHPBar();
+		void GetHit(double damage);
 
 	private:
 		Animator* mAnimator;
 		Player* mPlayer;
 		AudioSource* mAudioSource;
+		BoxCollider2D* mCollider;
+
+		GameObject* mHPBar;
+		GameObject* mHPBarBackground;
+
 
 		float mTime;
 		float mSpeed;
 		float mDelay;
-		long long mHP;
-		long long mMaxHP;
+		double mHP;
+		double mMaxHP;
 
 		float mCooldown[6];
 		float mCooldownTime[6];
@@ -75,7 +87,7 @@ namespace maple {
 		bool mbSummon;
 		bool mbFlip;
 
-		int mFireAttackStep;
+		int mPoisionAttackCount;
 
 
 

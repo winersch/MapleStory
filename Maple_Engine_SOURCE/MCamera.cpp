@@ -63,6 +63,12 @@ namespace maple {
 		GetClientRect(application.GetHwnd(), &winRect);
 		float width = (winRect.right - winRect.left);
 		float height = (winRect.bottom - winRect.top);
+
+		// 디버깅 시 화면 크기가 0이 되는 것을 방지
+		if (width <= 0 || height <= 0) {
+			width = 1.0f;
+			height = 1.0f;
+		}
 		mAspectRatio = width / height;
 		
 		switch (type) {

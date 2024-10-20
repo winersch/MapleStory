@@ -70,6 +70,12 @@
     <ClCompile Include="MSkillObjectPool.cpp">
       <Filter>Skill</Filter>
     </ClCompile>
+    <ClCompile Include="MPhantomBlowScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="MBackGroundObject.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MAlterScript.h">
@@ -128,6 +134,12 @@
     </ClInclude>
     <ClInclude Include="MSkillObjectPool.h">
       <Filter>Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="MPhantomBlowScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="MBackGroundObject.h">
+      <Filter>GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,7 @@ namespace maple {
 
 		void SetTarget(GameObject* target) { mTarget = target; }
 
+
 	private:
 		GameObject* mTarget;
 

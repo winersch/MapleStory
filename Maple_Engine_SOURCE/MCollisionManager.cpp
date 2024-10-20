@@ -98,7 +98,7 @@ namespace maple {
 
 		// 충돌 체크를 해준다
 		if (Intersect(left, right)) {
-			//최초 충돌할??
+			//최초 충돌
 			if (iter->second == false) {
 				left->OnCollisionEnter(right);
 				right->OnCollisionEnter(left);
@@ -126,9 +126,9 @@ namespace maple {
 		Vector2 leftPos = leftTr->GetPosition() + left->GetOffset();
 		Vector2 rightPos = rightTr->GetPosition() + right->GetOffset();
 
-		// size 1,1 일떄 기본크기가 100픽셀
-		Vector2 leftSize = left->GetSize() * 100.0f;
-		Vector2 rightSize = right->GetSize() * 100.0f;
+		
+		Vector2 leftSize = left->GetSize();
+		Vector2 rightSize = right->GetSize();
 
 		//AABB 충돌
 		enums::eColliderType leftType = left->GetColliderType();

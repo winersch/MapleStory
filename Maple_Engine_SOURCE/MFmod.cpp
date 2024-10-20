@@ -16,6 +16,9 @@ namespace maple {
 		mCoreSystem->setSoftwareFormat(0, FMOD_SPEAKERMODE_5POINT1, 0);
 
 		mSystem->initialize(1024, FMOD_STUDIO_INIT_NORMAL, FMOD_INIT_NORMAL, extraDriverData);
+		
+		
+
 
 		//FMOD::Studio::Bank* masterBank = NULL;
 		//FMOD::Sound* sound1;

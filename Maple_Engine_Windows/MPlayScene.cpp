@@ -86,10 +86,23 @@ namespace maple {
 			GameObject* bellum = object::Instantiate<GameObject>(enums::eLayerType::Monster);
 			mGameObjects.insert(std::make_pair(L"Bellum", bellum));
 			LoadTileMap(L"..\\Resources\\rootabyss\\tile\\tile.xml");
+			LoadBackGround(L"..\\Resources\\rootabyss\\backGround.xml");
 			LoadMapObject(L"..\\Resources\\rootabyss\\mapObject.xml");
 			LoadBossMonster(L"..\\Resources\\rootabyss\\bellum\\bellum.xml");
 			BellumScript* bellumScript = bellum->AddComponent<BellumScript>();
 			bellumScript->SetPlayer(mPlayer);
+
+			CollisionManager::CollisionLayerCheck(eLayerType::Player, eLayerType::Monster, true);
+			CollisionManager::CollisionLayerCheck(eLayerType::Monster, eLayerType::Effect, true);
+
+			GameObject* audioSource = object::Instantiate<GameObject>(eLayerType::None);
+			AudioSource* audioSourceComp = audioSource->AddComponent<AudioSource>();
+			Resources::Load<AudioClip>(L"bgm", L"..\\Resources\\sound\\AbyssCave.mp3");
+			audioSourceComp->SetClip(Resources::Find<AudioClip>(L"bgm"));
+			audioSourceComp->SetLoop(true);
+			audioSourceComp->Play();
+
+
 
 		}
 	}
@@ -124,6 +137,13 @@ namespace maple {
 		ReadXML* xml = new ReadXML();
 		xml->LoadXML(path);
 		xml->CreateTileMap(mTileMap);
+		delete xml;
+	}
+
+	void PlayScene::LoadBackGround(const std::wstring& path) {
+		ReadXML* xml = new ReadXML();
+		xml->LoadXML(path);
+		xml->CreateBackGround(mBackGroundObjects);
 		delete xml;
 	}
 

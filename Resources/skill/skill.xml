@@ -282,6 +282,38 @@
       <string name="_outlink" value="..\Resources\skill\PhantomBlow/effect/9" />
     </png>
   </dir>
+  <dir name="PhantomBlowHit">
+    <png name="0" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="137, -84" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/hit/0" />
+    </png>
+    <png name="1" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="136, -82" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/hit/1" />
+    </png>
+    <png name="2" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="126, -77" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/hit/2" />
+    </png>
+    <png name="3" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="124, -57" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/hit/3" />
+    </png>
+    <png name="4" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
+      <vector name="origin" value="79, -34" />
+      <int32 name="z" value="0" />
+      <int32 name="delay" value="60" />
+      <string name="_outlink" value="..\Resources\skill\PhantomBlow/hit/4" />
+    </png>
+  </dir>
   <dir name="PhantomBlow0">
     <png name="0" value="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY2BgYGAAAAAFAAGKM+MAAAAAAElFTkSuQmCC">
       <vector name="origin" value="51, 76" />

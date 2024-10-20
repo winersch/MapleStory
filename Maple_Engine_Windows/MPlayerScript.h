@@ -39,6 +39,7 @@ namespace maple {
 		void OnCollisionStay(Collider* other) override;
 		void OnCollisionExit(Collider* other) override;
 
+		void PhantomBlowHit(Vector3 pos);
 		
 
 	private:
